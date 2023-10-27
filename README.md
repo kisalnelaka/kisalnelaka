@@ -14,5 +14,5 @@
   </a>
 </p>
 <p align="center">
-<img align="left" alt="ChickenDevs' Stats" src="https://profile-counter.glitch.me/kisalnelaka/count.svg">
+<img align="center" alt="kisalnelaka' Stats" src="https://profile-counter.glitch.me/kisalnelaka/count.svg">
 </p>

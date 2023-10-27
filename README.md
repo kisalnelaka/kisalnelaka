@@ -7,6 +7,8 @@
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img align="center" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight" />
   </a>  
-  ### Profile Visitor Count
+</p>
+<p align="center">
+### Profile Visitor Count
 <img align="left" alt="ChickenDevs' Stats" src="https://profile-counter.glitch.me/kisalnelaka/count.svg">
 </p>

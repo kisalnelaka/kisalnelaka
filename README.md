@@ -89,7 +89,7 @@ I'm a full-stack developer turned hacker who is continuously looking for somethi
   </a>
 </div>
   <div align="center">
- <img src="[[https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)]])"/>
+ <img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)"/>
   </div>
 
 

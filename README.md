@@ -82,16 +82,17 @@ I'm a full-stack developer turned hacker who is continuously looking for somethi
 </div>
 
 ###
-<div>
-<div align="left">
+
+<div align="center">
   <a href="https://open.spotify.com/user/jf6cnrnlzyrfj546v4qh0nfkg">
     <img src="https://spotify-recently-played-readme.vercel.app/api?user=jf6cnrnlzyrfj546v4qh0nfkg&count=3" alt="Spotify recently played"  />
   </a>
 </div>
-  <div align="right">
+  <div align="center">
  <img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&cover_image=true&theme=compact&show_offline=false&background_color=121212&interchange=false)"/>
-  </div></div>
-###
+  </div>
+
+
 <div align="center">
   <br>
   <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/salesp07/salesp07/output/github-contribution-grid-snake.svg" />

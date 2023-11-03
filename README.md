@@ -21,6 +21,10 @@
 <div align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=kisalnelaka.kisalnelaka&"  />
 </div>
+###
+ <div align="center">
+ <img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)"/>
+  </div>
 
 ###
 
@@ -82,16 +86,6 @@ I'm a full-stack developer turned hacker who is continuously looking for somethi
 </div>
 
 ###
-
-<div align="center">
-  <a href="https://open.spotify.com/user/jf6cnrnlzyrfj546v4qh0nfkg">
-    <img src="https://spotify-recently-played-readme.vercel.app/api?user=jf6cnrnlzyrfj546v4qh0nfkg&count=3" alt="Spotify recently played"  />
-  </a>
-</div>
-  <div align="center">
- <img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=jf6cnrnlzyrfj546v4qh0nfkg&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true)"/>
-  </div>
-
 
 <div align="center">
   <br>

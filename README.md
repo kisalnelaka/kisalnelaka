@@ -26,7 +26,7 @@
 
 # 🐱‍💻 Kisal Nelaka
 
-**`Digital Tinkere (Hacker/Developer/Learner)`**
+**`Digital Tinkerer (Hacker/Developer/Learner)`**
 
 I'm a full-stack developer turned hacker who is continuously looking for something exciting.
 

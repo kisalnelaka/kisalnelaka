@@ -34,7 +34,7 @@ I'm a full-stack developer turned hacker who is continuously looking for somethi
 
 ### 📊 Stats
 
-![Kisal's GitHub stats](https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=gruvbox)
+![Kisal's GitHub stats](https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=dark)
 
 <!-- ![GitHub Streak](https://streak-stats.demolab.com?user=ForrestKnight&theme=gruvbox&border_radius=4.5) -->
 

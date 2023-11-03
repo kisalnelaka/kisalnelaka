@@ -22,7 +22,7 @@ I'm a full-stack developer turned hacker who is continuously looking for somethi
 
 ###
 
-<img align="right" height="150" src="https://media.giphy.com/media/f3KwliaH4MLtli8z7D/giphy.gif"  />
+<img align="right" height="150" src="https://media.giphy.com/media/HoffxyN8ghVuw/giphy.gif"  />
 
 ###
 

@@ -96,5 +96,5 @@ I'm a full-stack developer turned hacker who is continuously looking for somethi
   <br/><br/><br/>
 </div>
 <div align="center">
-[![trophy](https://github-profile-trophy.vercel.app/kisalnelaka=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?kisalnelaka=ryo-ma)](https://github.com/ryo-ma/github-profile-trophy)
 </div>

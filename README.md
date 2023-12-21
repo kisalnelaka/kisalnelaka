@@ -83,9 +83,9 @@ I'm a full-stack developer turned hacker who is continuously looking for somethi
 
 ###
 
-<div align="center">
-(https://github-readme-stats.vercel.app/api?username=kisalnelaka&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
-</div>
+
+![mystats](https://github-readme-stats.vercel.app/api?username=kisalnelaka&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+
 
 ###
 

@@ -19,6 +19,10 @@
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
+- [Don’t Get Hooked: Unmasking the Deceptive World of Phishing](https://medium.com/@kisalnelaka6/dont-get-hooked-unmasking-the-deceptive-world-of-phishing-7ea22be9cb49?source=rss-3dd06b9e0f4------2)
+- [Data Detectives: Unearthing Secrets with Government Open Data](https://medium.com/@kisalnelaka6/data-detectives-unearthing-secrets-with-government-open-data-63fe758cff39?source=rss-3dd06b9e0f4------2)
+- [Unmasking the Truth: Dive into the World of Media OSINT](https://medium.com/@kisalnelaka6/unmasking-the-truth-dive-into-the-world-of-media-osint-21300e8696b1?source=rss-3dd06b9e0f4------2)
+- [Unveiling the Shadows: A Deep Dive into Open-Source Intelligence &lpar;OSINT&rpar;](https://medium.com/@kisalnelaka6/unveiling-the-shadows-a-deep-dive-into-open-source-intelligence-osint-affc85dc5203?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 <h3 align="left">Connect with me:</h3>

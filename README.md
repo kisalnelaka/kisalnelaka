@@ -16,6 +16,7 @@
 - 📫 How to reach me **kisalnelaka6@gmail.com**
 
 - ⚡ Fun fact **do you know L? Gods of death love apples.**
+
   
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
@@ -36,6 +37,12 @@
 - [Data Detectives: Unearthing Secrets with Government Open Data](https://medium.com/@kisalnelaka6/data-detectives-unearthing-secrets-with-government-open-data-63fe758cff39?source=rss-3dd06b9e0f4------2)
 - [Unmasking the Truth: Dive into the World of Media OSINT](https://medium.com/@kisalnelaka6/unmasking-the-truth-dive-into-the-world-of-media-osint-21300e8696b1?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
+
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/kisalnelaka/kisalnelaka/output/snake.svg" alt="Snake animation" />
+
+###
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

@@ -15,7 +15,7 @@
 
 - 📫 How to reach me **kisalnelaka6@gmail.com**
 
-- ⚡ Fun fact ** do you know L? Gods of death love apples.**
+- ⚡ Fun fact **do you know L? Gods of death love apples.**
   
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)

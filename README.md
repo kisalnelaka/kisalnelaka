@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Kisal Nelaka</h1>
-<h3 align="center">developer\hacker\researcher\student</h3>
+<h3 align="center">Wandering Soul</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kisalnelaka&label=Profile%20views&color=0e75b6&style=flat" alt="kisalnelaka" /> </p>
 
@@ -15,7 +15,19 @@
 
 - 📫 How to reach me **kisalnelaka6@gmail.com**
 
-- ⚡ Fun fact **do you know L? Gods of death love apples.**
+- ⚡ Fun fact ** do you know L? Gods of death love apples.**
+  
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=kk&limit=5&theme=discord&combine_all_yearly_contributions=true)
+
+### 😂 Random Dev Meme
+<img src='https://randommeme-five.vercel.app/' style="height: 400px;"/>
+
+---
+[![](https://visitcount.itsvg.in/api?id=kk&icon=0&color=0)](https://visitcount.itsvg.in)
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->

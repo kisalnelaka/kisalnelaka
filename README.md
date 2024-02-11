@@ -38,7 +38,6 @@
 - [Unmasking the Truth: Dive into the World of Media OSINT](https://medium.com/@kisalnelaka6/unmasking-the-truth-dive-into-the-world-of-media-osint-21300e8696b1?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
-![snake gif](https://github.com/kisalnelaka/kisalnelaka/blob/output/github-contribution-grid-snake.svg)
 
 ###
 

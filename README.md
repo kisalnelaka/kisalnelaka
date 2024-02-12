@@ -32,10 +32,10 @@
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
+- [Hack Like a Hero &lpar;Ethically, of course!&rpar;: Unveiling the Secrets with Nmap](https://medium.com/@kisalnelaka6/hack-like-a-hero-ethically-of-course-unveiling-the-secrets-with-nmap-90e71fff6a04?source=rss-3dd06b9e0f4------2)
 - [Apple Vision Pro: A Glimpse into the Future, or a Privacy Pandora’s Box?](https://medium.com/@kisalnelaka6/apple-vision-pro-a-glimpse-into-the-future-or-a-privacy-pandoras-box-ee099fcd76ff?source=rss-3dd06b9e0f4------2)
 - [Don’t Get Hooked: Unmasking the Deceptive World of Phishing](https://medium.com/@kisalnelaka6/dont-get-hooked-unmasking-the-deceptive-world-of-phishing-7ea22be9cb49?source=rss-3dd06b9e0f4------2)
 - [Data Detectives: Unearthing Secrets with Government Open Data](https://medium.com/@kisalnelaka6/data-detectives-unearthing-secrets-with-government-open-data-63fe758cff39?source=rss-3dd06b9e0f4------2)
-- [Unmasking the Truth: Dive into the World of Media OSINT](https://medium.com/@kisalnelaka6/unmasking-the-truth-dive-into-the-world-of-media-osint-21300e8696b1?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 

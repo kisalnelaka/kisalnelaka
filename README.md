@@ -32,10 +32,10 @@
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
+- [Unleash the Dragon: Taming the Metasploit Framework for Ethical Hacking Adventures!](https://medium.com/@kisalnelaka6/unleash-the-dragon-taming-the-metasploit-framework-for-ethical-hacking-adventures-581d518e4c7c?source=rss-3dd06b9e0f4------2)
 - [Unveiling the Secrets: A Beginner’s Guide to Metasploit Framework](https://medium.com/@kisalnelaka6/unveiling-the-secrets-a-beginners-guide-to-metasploit-framework-1162149e1e10?source=rss-3dd06b9e0f4------2)
 - [Netcat: The Swiss Army Knife of Network Communication &lpar;But Be Careful How You Use It!&rpar;](https://medium.com/@kisalnelaka6/netcat-the-swiss-army-knife-of-network-communication-but-be-careful-how-you-use-it-010633cc9de3?source=rss-3dd06b9e0f4------2)
 - [Hack Like a Hero &lpar;Ethically, of course!&rpar;: Unveiling the Secrets with Nmap](https://medium.com/@kisalnelaka6/hack-like-a-hero-ethically-of-course-unveiling-the-secrets-with-nmap-90e71fff6a04?source=rss-3dd06b9e0f4------2)
-- [Apple Vision Pro: A Glimpse into the Future, or a Privacy Pandora’s Box?](https://medium.com/@kisalnelaka6/apple-vision-pro-a-glimpse-into-the-future-or-a-privacy-pandoras-box-ee099fcd76ff?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 

@@ -1,5 +1,6 @@
 <h1 align="center">Hi 👋, I'm Kisal Nelaka</h1>
-<h3 align="center">Wandering Soul</h3>
+<h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>
+<h3> <a href="https://kisalnelaka.github.io/resume">My Resume</a></h3>
 
 
 

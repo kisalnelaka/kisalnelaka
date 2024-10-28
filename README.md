@@ -29,10 +29,10 @@
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
+- [Building a Blockchain-Powered, Encrypted Chat Application with Python](https://medium.com/@kisalnelaka6/building-a-blockchain-powered-encrypted-chat-application-with-python-103f116fad34?source=rss-3dd06b9e0f4------2)
 - [Demystifying Shellcode Generation: A Guide for Beginners](https://medium.com/@kisalnelaka6/demystifying-shellcode-generation-a-guide-for-beginners-e8b536599296?source=rss-3dd06b9e0f4------2)
 - [Navigating the Dragon’s Lair: A Guide to Metasploit Framework’s Menu in Linux](https://medium.com/@kisalnelaka6/navigating-the-dragons-lair-a-guide-to-metasploit-framework-s-menu-in-linux-33e96954c8cc?source=rss-3dd06b9e0f4------2)
 - [Unleash the Dragon: Taming the Metasploit Framework for Ethical Hacking Adventures!](https://medium.com/@kisalnelaka6/unleash-the-dragon-taming-the-metasploit-framework-for-ethical-hacking-adventures-581d518e4c7c?source=rss-3dd06b9e0f4------2)
-- [Unveiling the Secrets: A Beginner’s Guide to Metasploit Framework](https://medium.com/@kisalnelaka6/unveiling-the-secrets-a-beginners-guide-to-metasploit-framework-1162149e1e10?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 ###

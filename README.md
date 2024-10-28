@@ -6,7 +6,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka" alt="kisalnelaka" /></a> </p>
 
-- 🔭 I’m currently working on [projectX](https://github.com/kisalnelaka/projectX)
+- 🔭 I’m currently working on [lanchat](https://github.com/kisalnelaka/lanchat)
 
 - 👨‍💻 All of my projects are available at [https://github.com/kisalnelaka](https://github.com/kisalnelaka)
 
@@ -26,7 +26,7 @@
 ![](https://github-contributor-stats.vercel.app/api?username=kisalnelaka&limit=5&theme=discord&combine_all_yearly_contributions=true)
 
 ### 😂 Random Dev Meme
-<img src='https://randommeme-five.vercel.app/' style="height: 400px;"/>
+<img src="https://randommeme-five.vercel.app/" style="height: 400;"/>
 
 ---
 [![](https://visitcount.itsvg.in/api?id=kk&icon=0&color=0)](https://visitcount.itsvg.in)

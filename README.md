@@ -1,9 +1,7 @@
 <h1 align="center">Hi 👋, I'm Kisal Nelaka</h1>
-###
-<img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2g3eDV0dGEwbTU3Z2V1ZHB1bWQyMGp0OTBvd2Z3MnpwNGlhMjZyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6OrCT1jVbonHG/giphy.gif"  />
-###
-<h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>
 
+
+<h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>
 <h3> <a href="https://kisalnelaka.github.io/resume">My Resume</a></h3>
 
 
@@ -20,8 +18,10 @@
 - 📫 How to reach me **kisalnelaka6@gmail.com**
 
 ###
+<img align="left" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2g3eDV0dGEwbTU3Z2V1ZHB1bWQyMGp0OTBvd2Z3MnpwNGlhMjZyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6OrCT1jVbonHG/giphy.gif"  />
 <img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMW9jd2NxazR1NHYwZGQxbjZkaHpra21hc2ptYTBteHQ5ZmpnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif"  />
 ###
+
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
   <img width="12" />

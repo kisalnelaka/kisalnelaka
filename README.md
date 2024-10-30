@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Kisal Nelaka</h1>
-
+###
 <img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2g3eDV0dGEwbTU3Z2V1ZHB1bWQyMGp0OTBvd2Z3MnpwNGlhMjZyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6OrCT1jVbonHG/giphy.gif"  />
-
+###
 <h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>
 
 <h3> <a href="https://kisalnelaka.github.io/resume">My Resume</a></h3>
@@ -21,7 +21,7 @@
 
 ###
 <img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMW9jd2NxazR1NHYwZGQxbjZkaHpra21hc2ptYTBteHQ5ZmpnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif"  />
-
+###
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
   <img width="12" />
@@ -68,11 +68,11 @@
 <a href="https://medium.com/@kisalnelaka6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@kisalnelaka6" height="30" width="40" /></a>
 </p>
 
-<img align="right" height="150" src="https://tenor.com/eq3NQmY0p6U.gif"  />
+<img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW52OG1tMjY0dnZiMDJudnUxYWZ4OWRhMTNnMTFjN3I4d24zemtjcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13HBDT4QSTpveU/giphy.gif"  />
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=kisalnelaka&show_icons=true&locale=en&layout=compact" alt="kisalnelaka" /></p>
 
-<img align="right" height="150" src="https://tenor.com/bcY7G.gif"  />
-<p>&nbsp;<img align="left" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&locale=en" alt="kisalnelaka" /></p>
+<img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWF2ZzRqcGV1Z2cwYWd4eDZzMm1lMWc3bDFwZzZqcWFkZjNlOXg1bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MF1kR4YmC2Z20/giphy.gif"  />
+<p><img align="left" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&locale=en" alt="kisalnelaka" /></p>
 
-<img align="right" height="150" src="https://tenor.com/wGIz.gif"  />
+<img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXZnZGdkcnlkZDZhNWp0eXczeDhjYnByNTlhczZjMTljamF1NHB2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmHueA88mFABT9GkkR/giphy.gif"  />
 <p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&" alt="kisalnelaka" /></p>

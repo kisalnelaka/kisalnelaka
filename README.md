@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Kisal Nelaka</h1>
+<h1 align="center">I'm Kisal Nelaka</h1>
 
 
 <h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>

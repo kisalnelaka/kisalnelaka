@@ -7,6 +7,8 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka" alt="kisalnelaka" /></a> </p>
 
+<img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMW9jd2NxazR1NHYwZGQxbjZkaHpra21hc2ptYTBteHQ5ZmpnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif"  />
+
 - 🔭 I’m currently working on [lanchat](https://github.com/kisalnelaka/lanchat)
 
 - 👨‍💻 All of my projects are available at [https://github.com/kisalnelaka](https://github.com/kisalnelaka)
@@ -21,12 +23,10 @@
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-<img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMW9jd2NxazR1NHYwZGQxbjZkaHpra21hc2ptYTBteHQ5ZmpnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif"  />
-
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=kisalnelaka&limit=5&theme=discord&combine_all_yearly_contributions=true)
 
----
+
 [![](https://visitcount.itsvg.in/api?id=kk&icon=0&color=0)](https://visitcount.itsvg.in)
 
 ### Blogs posts

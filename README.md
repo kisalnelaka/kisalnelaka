@@ -21,6 +21,8 @@
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
+<img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMW9jd2NxazR1NHYwZGQxbjZkaHpra21hc2ptYTBteHQ5ZmpnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif"  />
+
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=kisalnelaka&limit=5&theme=discord&combine_all_yearly_contributions=true)
 

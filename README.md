@@ -19,6 +19,19 @@
 
 - 📫 How to reach me **kisalnelaka6@gmail.com**
 
+###
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="30" alt="php logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
+</div>
+
+###
   
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
@@ -36,6 +49,14 @@
 - [Navigating the Dragon’s Lair: A Guide to Metasploit Framework’s Menu in Linux](https://medium.com/@kisalnelaka6/navigating-the-dragons-lair-a-guide-to-metasploit-framework-s-menu-in-linux-33e96954c8cc?source=rss-3dd06b9e0f4------2)
 - [Unleash the Dragon: Taming the Metasploit Framework for Ethical Hacking Adventures!](https://medium.com/@kisalnelaka6/unleash-the-dragon-taming-the-metasploit-framework-for-ethical-hacking-adventures-581d518e4c7c?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
+
+###
+
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/kisalnelaka/kisalnelaka/output/snake.svg" alt="Snake animation" />
+
+###
 
 ###
 

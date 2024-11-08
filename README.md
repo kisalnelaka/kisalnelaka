@@ -36,6 +36,7 @@
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
+- [Part 3: Lure Creation — The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613?source=rss-3dd06b9e0f4------2)
 - [Part 2: The Reconnaissance Phase — Uncovering the Secrets of Phishing Preparation](https://medium.com/@kisalnelaka6/part-2-the-reconnaissance-phase-uncovering-the-secrets-of-phishing-preparation-05f34de00b7b?source=rss-3dd06b9e0f4------2)
 - [The Lifecycle of a Phishing Attack: How Cybercriminals Bait, Hook, and Exploit](https://medium.com/@kisalnelaka6/the-lifecycle-of-a-phishing-attack-how-cybercriminals-bait-hook-and-exploit-e05cce7e4f5f?source=rss-3dd06b9e0f4------2)
 - [PhishCatcher: Real-Time Phishing Detection with Chrome Extensions and Machine Learning](https://medium.com/@kisalnelaka6/phishcatcher-real-time-phishing-detection-with-chrome-extensions-and-machine-learning-450bf06e78c2?source=rss-3dd06b9e0f4------2)
@@ -45,7 +46,6 @@
 - [Unleash the Dragon: Taming the Metasploit Framework for Ethical Hacking Adventures!](https://medium.com/@kisalnelaka6/unleash-the-dragon-taming-the-metasploit-framework-for-ethical-hacking-adventures-581d518e4c7c?source=rss-3dd06b9e0f4------2)
 - [Unveiling the Secrets: A Beginner’s Guide to Metasploit Framework](https://medium.com/@kisalnelaka6/unveiling-the-secrets-a-beginners-guide-to-metasploit-framework-1162149e1e10?source=rss-3dd06b9e0f4------2)
 - [Netcat: The Swiss Army Knife of Network Communication &lpar;But Be Careful How You Use It!&rpar;](https://medium.com/@kisalnelaka6/netcat-the-swiss-army-knife-of-network-communication-but-be-careful-how-you-use-it-010633cc9de3?source=rss-3dd06b9e0f4------2)
-- [Hack Like a Hero &lpar;Ethically, of course!&rpar;: Unveiling the Secrets with Nmap](https://medium.com/@kisalnelaka6/hack-like-a-hero-ethically-of-course-unveiling-the-secrets-with-nmap-90e71fff6a04?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 ###

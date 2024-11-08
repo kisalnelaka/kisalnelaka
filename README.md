@@ -1,10 +1,3 @@
-<h1 align="center">I'm Kisal Nelaka</h1>
-
-
-<h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>
-<h3> <a href="https://kisalnelaka.github.io/resume">My Resume</a></h3>
-
-
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka" alt="kisalnelaka" /></a> </p>
 
 - 🔭 I’m currently working on [lanchat](https://github.com/kisalnelaka/lanchat)
@@ -17,6 +10,8 @@
 
 - 📫 How to reach me **kisalnelaka6@gmail.com**
 
+<h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>
+<h3> <a href="https://kisalnelaka.github.io/resume">My Resume</a></h3>
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />

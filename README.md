@@ -18,6 +18,8 @@
 ## 👨‍💻 What I Do
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=32CD32&width=435&lines=Hacker;+Developer;+%7C+Tech+Enthusiast;Open+Source+Contributor;Lifelong+Learner)](https://git.io/typing-svg)
 
+## ✨ Inspirational Quote
+![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />

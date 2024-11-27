@@ -15,6 +15,10 @@
 <h3> <a href="https://kisalnelaka.github.io">My Portfolio</a></h3>
 <h3> <a href="https://kisalnelaka.github.io/resume">My Resume</a></h3>
 
+## 👨‍💻 What I Do
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=32CD32&width=435&lines=Hacker;+Developer;+%7C+Tech+Enthusiast;Open+Source+Contributor;Lifelong+Learner)](https://git.io/typing-svg)
+
+
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
   <img width="12" />

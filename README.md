@@ -1,4 +1,4 @@
-![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=60&section=header&text=Hello!&fontSize=40)
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=header&text=Hello!&fontSize=40)
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka" alt="kisalnelaka" /></a> </p>
 

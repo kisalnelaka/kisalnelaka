@@ -41,6 +41,7 @@
 
 ### Blogs posts
 <!-- BLOG-POST-LIST:START -->
+- [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57?source=rss-3dd06b9e0f4------2)
 - [JavaScript for Clueless Newbies:Part 1 — Variables, Data Types, &amp; Operators](https://medium.com/@kisalnelaka6/javascript-for-clueless-newbies-part-1-variables-data-types-operators-ae71e4d01ce8?source=rss-3dd06b9e0f4------2)
 - [Part 3: Lure Creation — The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613?source=rss-3dd06b9e0f4------2)
 - [Part 2: The Reconnaissance Phase — Uncovering the Secrets of Phishing Preparation](https://medium.com/@kisalnelaka6/part-2-the-reconnaissance-phase-uncovering-the-secrets-of-phishing-preparation-05f34de00b7b?source=rss-3dd06b9e0f4------2)
@@ -50,7 +51,6 @@
 - [Demystifying Shellcode Generation: A Guide for Beginners](https://medium.com/@kisalnelaka6/demystifying-shellcode-generation-a-guide-for-beginners-e8b536599296?source=rss-3dd06b9e0f4------2)
 - [Navigating the Dragon’s Lair: A Guide to Metasploit Framework’s Menu in Linux](https://medium.com/@kisalnelaka6/navigating-the-dragons-lair-a-guide-to-metasploit-framework-s-menu-in-linux-33e96954c8cc?source=rss-3dd06b9e0f4------2)
 - [Unleash the Dragon: Taming the Metasploit Framework for Ethical Hacking Adventures!](https://medium.com/@kisalnelaka6/unleash-the-dragon-taming-the-metasploit-framework-for-ethical-hacking-adventures-581d518e4c7c?source=rss-3dd06b9e0f4------2)
-- [Unveiling the Secrets: A Beginner’s Guide to Metasploit Framework](https://medium.com/@kisalnelaka6/unveiling-the-secrets-a-beginners-guide-to-metasploit-framework-1162149e1e10?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 ###

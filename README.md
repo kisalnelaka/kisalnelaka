@@ -2,13 +2,13 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka" alt="kisalnelaka" /></a> </p>
 
-- 🔭 I’m currently working on [FocusFlow Hub](https://github.com/kisalnelaka/FocusFlow-Hub)
+- 🔭 I’m currently working on [bunny](https://github.com/socialrabbit/bunny)
 
-- 👨‍💻 All of my projects are available at [https://github.com/kisalnelaka](https://github.com/kisalnelaka)
+- 👨‍💻 All of my projects are available at [my github](https://github.com/kisalnelaka)
 
-- 📝 I regularly write articles on [https://medium.com/@kisalnelaka6](https://medium.com/@kisalnelaka6)
+- 📝 I regularly write articles on [Medium](https://medium.com/@kisalnelaka6)
 
-- 💬 Ask me about **Social Engineering**
+- 💬 Ask me about **libraries**
 
 - 📫 How to reach me **kisalnelaka6@gmail.com**
 

@@ -1,4 +1,4 @@
-![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=header&text=Hello!&fontSize=40)
+![Header](https://capsule-render.vercel.app/api?type=speech&height=100&color=gradient&text=Hi,%20I'm%20Kisal%20Nelaka&reversal=true&textBg=false)
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka" alt="kisalnelaka" /></a> </p>
 
@@ -16,7 +16,7 @@
 <h3> <a href="https://kisalnelaka.github.io/resume">My Resume</a></h3>
 
 ## 👨‍💻 What I Do
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=32CD32&width=435&lines=Hacker;+Developer;+%7C+Tech+Enthusiast;Open+Source+Contributor;Lifelong+Learner)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=32CD32&width=435&lines=Developer;+%7C+Tech+Enthusiast;Open+Source+Contributor;Lifelong+Learner)](https://git.io/typing-svg)
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" alt="linux logo"  />
@@ -67,7 +67,6 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/kisalnelaka" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="kisalnelaka" height="30" width="40" /></a>
-<a href="https://instagram.com/kisal.nelaka" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="kisal.nelaka" height="30" width="40" /></a>
 <a href="https://medium.com/@kisalnelaka6" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@kisalnelaka6" height="30" width="40" /></a>
 </p>
 
@@ -80,4 +79,4 @@
 <img align="left" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTNtMW9jd2NxazR1NHYwZGQxbjZkaHpra21hc2ptYTBteHQ5ZmpnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qPa9vUYCUrx6w/giphy.gif"  />
 
 <img align="right" height="150" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXZnZGdkcnlkZDZhNWp0eXczeDhjYnByNTlhczZjMTljamF1NHB2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KmHueA88mFABT9GkkR/giphy.gif"  />
-<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&" alt="kisalnelaka" /></p>
+<p><img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka" alt="kisalnelaka" /></p>

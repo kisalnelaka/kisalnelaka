@@ -2,7 +2,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka" alt="kisalnelaka" /></a> </p>
 
-- 🔭 I’m currently working on [bunny](https://github.com/socialrabbit/bunny)
+- 🔭 I’m currently working on [Adaptive Block Sort]([https://github.com/socialrabbit/bunny](https://github.com/kisalnelaka/Adaptive-Block-Sort))
 
 - 👨‍💻 All of my projects are available at [my github](https://github.com/kisalnelaka)
 

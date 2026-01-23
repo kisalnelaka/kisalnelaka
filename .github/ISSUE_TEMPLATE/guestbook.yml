@@ -1,0 +1,13 @@
+name: Guestbook Entry
+description: Sign my profile guestbook!
+title: "Guestbook Entry"
+labels: ["guestbook"]
+body:
+  - type: textarea
+    id: message
+    attributes:
+      label: Message
+      description: Write a nice message here!
+      placeholder: Hello from [Your Name]!
+    validations:
+      required: true

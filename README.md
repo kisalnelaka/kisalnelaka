@@ -125,6 +125,13 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 ---
 
+### 📚 Advanced Project & Career Metrics
+<div align="center">
+  <img src="github-metrics.svg" alt="Advanced Metrics" width="100%" />
+</div>
+
+---
+
 ### 📊 GitHub Analytics & Productivity
 
 <div align="center">
@@ -180,6 +187,23 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 ### 🐍 Contribution Activity
 <div align="center">
   <img src="https://raw.githubusercontent.com/kisalnelaka/kisalnelaka/output/snake.svg" alt="Snake animation" />
+</div>
+
+---
+
+### 📔 Guestbook
+<div align="center">
+  <p>Say hello! Click the link below to sign my profile guestbook.</p>
+  <a href="https://github.com/kisalnelaka/kisalnelaka/issues/new?template=guestbook.yml&title=Guestbook+Entry&body=Hello%20from%20%5BYour%20Name%5D!">
+    <img src="https://img.shields.io/badge/Sign%20my-Guestbook-blue?style=for-the-badge&logo=github" />
+  </a>
+</div>
+
+<div align="center">
+
+<!-- START_SECTION:guestbook -->
+<!-- END_SECTION:guestbook -->
+
 </div>
 
 ---

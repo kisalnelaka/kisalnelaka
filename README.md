@@ -118,7 +118,14 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 ---
 
-### 📊 GitHub Analytics & Activity
+### 💬 Random Dev Quote
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Dev Quote" />
+</div>
+
+---
+
+### 📊 GitHub Analytics & Productivity
 
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=kisalnelaka&theme=radical&area=true&hide_border=true&border_radius=10" width="100%" alt="Activity Graph" />
@@ -127,18 +134,8 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 <br />
 
 <div align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=radical&border_radius=10" alt="GitHub Stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=radical&border_radius=10&count_private=true&include_all_commits=true" alt="GitHub Stats" />
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kisalnelaka&layout=compact&theme=radical&border_radius=10" alt="Top Languages" />
-</div>
-
-<br />
-
-<div align="center">
-  <p align="center">
-    <a href="https://github.com/kisalnelaka">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&theme=radical" alt="GitHub Streak" />
-    </a>
-  </p>
 </div>
 
 ---

@@ -121,12 +121,6 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 ### 📊 GitHub Analytics & Activity
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka&theme=radical&no-bg=true" alt="Trophies" />
-</div>
-
-<br />
-
-<div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=kisalnelaka&theme=radical&area=true&hide_border=true&border_radius=10" width="100%" alt="Activity Graph" />
 </div>
 
@@ -147,7 +141,7 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 ### 🧱 3D Contribution Visualizer
 <div align="center">
-  <img src="https://raw.githubusercontent.com/kisalnelaka/kisalnelaka/main/profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" width="100%" />
+  <img src="profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" width="100%" />
 </div>
 
 ---
@@ -189,6 +183,6 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 <br />
 <div align="center">
-  <img src="https://visitcount.itsvg.in/api?id=kisalnelaka&icon=0&color=0" alt="Views" />
+  <img src="https://komarev.com/ghpvc/?username=kisalnelaka&color=green&style=flat-square" alt="Views" />
 </div>
 

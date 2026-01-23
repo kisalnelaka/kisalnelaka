@@ -96,11 +96,11 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 ---
 
-### 🏆 Featured Projects
+### 🏆 Featured Projects & Organizations
 
 <div align="center">
-  <a href="https://github.com/kisalnelaka/Bunny">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kisalnelaka&repo=Bunny&theme=radical&border_radius=10" />
+  <a href="https://github.com/socialrabbit/bunny">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=socialrabbit&repo=bunny&theme=radical&border_radius=10" />
   </a>
   <a href="https://github.com/kisalnelaka/Adaptive-Block-Sort">
     <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kisalnelaka&repo=Adaptive-Block-Sort&theme=radical&border_radius=10" />
@@ -108,11 +108,11 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 </div>
 <br />
 <div align="center">
-  <a href="https://github.com/kisalnelaka/kisalnelaka">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kisalnelaka&repo=kisalnelaka&theme=radical&border_radius=10" />
+  <a href="https://github.com/kisalnelaka/phishcatcher">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kisalnelaka&repo=phishcatcher&theme=radical&border_radius=10" />
   </a>
-  <a href="https://github.com/kisalnelaka/PhishCatcher">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kisalnelaka&repo=PhishCatcher&theme=radical&border_radius=10" />
+  <a href="https://github.com/kisalnelaka/mywitch">
+    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=kisalnelaka&repo=mywitch&theme=radical&border_radius=10" />
   </a>
 </div>
 
@@ -121,7 +121,7 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 ### 📊 GitHub Analytics & Activity
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka&theme=radical&no-bg=true&column=7" alt="Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=kisalnelaka&theme=radical&no-bg=true" alt="Trophies" />
 </div>
 
 <br />
@@ -133,22 +133,21 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 <br />
 
 <div align="center">
-  <table>
-    <tr>
-      <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=radical&rank_icon=github&border_radius=10" alt="GitHub Stats" />
-      </td>
-      <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kisalnelaka&layout=normal&theme=radical&border_radius=10&langs_count=8" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=radical&border_radius=10" alt="GitHub Stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kisalnelaka&layout=compact&theme=radical&border_radius=10&langs_count=8" alt="Top Languages" />
 </div>
 
 <br />
 
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&theme=radical&border_radius=10" alt="GitHub Streak" />
+</div>
+
+---
+
+### 🧱 3D Contribution Visualizer
+<div align="center">
+  <img src="https://raw.githubusercontent.com/kisalnelaka/kisalnelaka/main/profile-3d-contrib/profile-night-green.svg" alt="3D Contribution Graph" width="100%" />
 </div>
 
 ---
@@ -173,7 +172,7 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 ---
 
-### 🐍 GitHub Contribution
+### 🐍 Contribution Activity
 <div align="center">
   <img src="https://raw.githubusercontent.com/kisalnelaka/kisalnelaka/output/snake.svg" alt="Snake animation" />
 </div>

@@ -125,6 +125,23 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 ---
 
+### ♟️ Let's Play Chess!
+<div align="center">
+  <p>Wait... is that a game in a README? <strong>Yes.</strong> Click a piece to start a move!</p>
+  <a href="https://github.com/kisalnelaka/kisalnelaka/issues/new?title=chess%3A%20%3CMOVE%3E&body=%3C!----%20DO%20NOT%20MODIFY%20----%3E%0APress%20'Submit%20new%20issue'%20to%20make%20your%20move.">
+    <img src="https://github-readme-chess.vercel.app/api/board?username=kisalnelaka&theme=radical" alt="Chess Board" />
+  </a>
+</div>
+
+---
+
+### 🕒 Weekly Development Breakdown
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=kisalnelaka&theme=radical&layout=compact" alt="WakaTime Stats" />
+</div>
+
+---
+
 ### 📊 GitHub Analytics & Productivity
 
 <div align="center">

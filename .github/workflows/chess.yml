@@ -1,0 +1,15 @@
+name: README Chess
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  move:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.issue.title, 'chess:')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: timburganov/github-readme-chess@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

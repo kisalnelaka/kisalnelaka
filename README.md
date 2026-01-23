@@ -128,13 +128,17 @@ Currently, I focus on integrating **Cybersecurity** practices into development l
 
 <div align="center">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=radical&border_radius=10" alt="GitHub Stats" />
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kisalnelaka&layout=compact&theme=radical&border_radius=10&langs_count=8" alt="Top Languages" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kisalnelaka&layout=compact&theme=radical&border_radius=10" alt="Top Languages" />
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&theme=radical&border_radius=10" alt="GitHub Streak" />
+  <p align="center">
+    <a href="https://github.com/kisalnelaka">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&theme=radical" alt="GitHub Streak" />
+    </a>
+  </p>
 </div>
 
 ---

@@ -1,5 +1,5 @@
 # Kisal Nelaka
-### Senior Full Stack Developer | Cybersecurity Specialist
+### Senior Full Stack Developer | I have a Cybersecurity Degree (Don't test me)
 
 <div align="center">
   <img src="https://github-readme-stats-fast.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true" alt="Kisal's GitHub Stats" />
@@ -9,7 +9,9 @@
 
 I’ve spent **8+ years** writing code and I still don't know why I do this to myself. I have the attention span of a goldfish and enough caffeine in my system to kill a horse. I build systems that are smarter than me because honestly, that’s not a high bar.
 
-I write **PHP** and **Laravel** because I hate myself. I do **Cybersecurity** because I like finding out people's secrets. If you see me zoning out, I'm probably thinking about that one bug I wrote in 2018 or wondering if a hotdog is a sandwich.
+I write **PHP** and **Laravel** because I hate my life. I have a **Cybersecurity Degree** and extensive history with the "dark arts" (red teaming, blackhat stuff I won't put on LinkedIn), but I'm not a "Cybersecurity Professional" because I hate writing reports. I just build tools that make security engineers sweat. 
+
+If you see me zoning out, I'm probably dissociating or wondering if a hotdog is a sandwich.
 
 ---
 
@@ -18,7 +20,7 @@ I write **PHP** and **Laravel** because I hate myself. I do **Cybersecurity** be
 - **Languages**: PHP (gross, I know), Python (for hacking things), JavaScript (for pain), Dart, C++, SQL.
 - **Frameworks**: Laravel (my toxic trait), Filament, React, Vue, Flutter, Qt.
 - **Infrastructure**: Docker (it works on my machine), Linux (because Windows is for noobs).
-- **Security**: Digital Forensics. I know what you did last summer.
+- **Security**: I have the degree and the tools. I know things I shouldn't.
 
 ---
 

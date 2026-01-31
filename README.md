@@ -2,23 +2,23 @@
 ### Senior Full Stack Developer | Cybersecurity Specialist
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Kisal's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true" alt="Kisal's GitHub Stats" />
 </div>
 
 <br />
 
-I’ve spent the last **8+ years** obsessing over clean architecture, breaking systems just to see how they bleed, and then rebuilding them to be bulletproof. I don’t just "write code"—I engineer digital ecosystems that survive production hell. 
+I’ve spent **8+ years** staring at screens until the pixels started talking back. I specialize in building systems that work so smoothly it’s actually suspicious. I break things for a living (Cybersecurity), and then I fix them (Full Stack), mostly because I enjoy the control.
 
-My stack is whatever gets the job done fastest and safest, but I live in **Laravel**, **PHP**, and **Python**. I have a healthy paranoia about security (Digital Forensics degree, sorry), so if your code isn't secure, I *will* judge you.
+I write code in **Laravel**, **PHP**, and **Python**. I don't argue about frameworks; I just use whatever gives me the most power with the least amount of typing. If you see me staring blankly into the distance, I'm probably debugging a race condition in my head.
 
 ---
 
-### The Tech I Abuse Daily
+### The Tech I Hoard
 
-- **Languages**: PHP (yes, it runs the web, deal with it), Python, JavaScript, Dart, C++, SQL.
-- **Frameworks**: Laravel (my weapon of choice), Filament, React, Vue, Flutter, Qt.
-- **Infrastructure**: Docker, Linux (where I actually live), CI/CD pipelines that actually pass.
-- **Security**: Breaking things, OWASP, Digital Forensics, making sure you don't get hacked.
+- **Languages**: PHP (it pays the bills, quiet down), Python, JavaScript, Dart, C++, SQL.
+- **Frameworks**: Laravel, Filament, React, Vue, Flutter, Qt.
+- **Infrastructure**: Docker, Linux (I trust the terminal more than I trust people).
+- **Security**: Digital Forensics. I know where the logs are buried.
 
 ---
 
@@ -26,35 +26,35 @@ My stack is whatever gets the job done fastest and safest, but I live in **Larav
 
 #### [IntraFlow](https://github.com/kisalnelaka)
 **Enterprise SaaS/MSP Platform**
-I built this beast to handle complex telecom operations so humans don't have to. It's a massive Laravel 11 & Filament v3 system that automates everything from inventory to billing. It’s the kind of system that runs entire companies.
+I built a system that runs telecom companies. It handles everything. Inventory, billing, automation. It never sleeps. Sometimes I worry it's becoming sentient, but for now, it just generates revenue.
 
 #### [ASAN (Adaptive Symmetry-Aware Network)](https://github.com/kisalnelaka/ASAN)
 **AI & Deep Learning**
-This is where I get mathematically unhinged. A deep learning architecture I designed for 3D molecular property prediction. It’s neural networks meeting chemistry in a dark alley.
+I taught a neural network to understand 3D molecular chemistry because why not? It predicts properties of molecules. It does math I barely remember learning. It’s smarter than me, and I’m okay with that.
 
 #### [Bunny](https://github.com/socialrabbit/bunny)
 **Laravel Framework Architecture**
-I got tired of writing the same boilerplate code, so I wrote code that writes code. Bunny generates production-ready backend scaffolding because life is too short for CRUD.
+Writing boilerplate is boring, so I automated it. Bunny generates the code I don’t want to write. It’s like having an intern that doesn't ask questions and works at the speed of light.
 
 #### [Oha Asa](https://github.com/kisalnelaka/oha_asa_app)
 **Cross-Platform Mobile Application**
-A Flutter app effectively bringing Japanese "Oha Asa" luck tracking to the west. I reverse-engineered the vibe and built a premium, native-widget-powered experience. It’s polished, it’s automatic, and it looks better than your calendar.
+A premium Flutter app for Japanese luck tracking. I wanted to know my fortune, so I engineered a high-performance cross-platform application to tell me. It’s very pretty. It’s very smooth. It knows if you’re going to have a bad day.
 
 #### [BatSignal](https://github.com/kisalnelaka/batsignal)
 **Systems Programming & Linux Integration**
-My Bluetooth headphones kept dying and it pissed me off. So I wrote a C++/Qt widget for KDE Plasma to scream at me when my battery is low. Deep DBus integration because I like talking directly to the kernel.
+My Bluetooth headphones died during a song once. I took it personally. Now I have a custom C++ widget in my KDE panel that monitors every battery byte via DBus. The kernel reports to me now.
 
 #### [PhishCatcher](https://github.com/kisalnelaka/phishcatcher)
 **Cybersecurity & Machine Learning**
-I trained an ML model to spot phishing sites faster than you can click "unsubscribe." It runs in real-time inside the browser. It hunts scams so you don't fall for them.
+I trained an ML model to judge websites. It lives in the browser and sniffs out phishing scams in real-time. It’s paranoid, so you don’t have to be.
 
 #### [Backpacker](https://github.com/kisalnelaka/backpacker)
 **Automation & Utilities**
-Moving browser data between Windows and Linux is a nightmare, so I wrote a Python script to automate the pain away. It grabs everything—history, bookmarks, cookies—and ports it over. Pure utility.
+I switch between Windows and Linux constantly and manually moving browser data was annoying. So I wrote a script to do it for me. It takes everything. No data left behind.
 
 ---
 
-### My Rants & Writings
+### Things I've Written Down
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc?source=rss-3dd06b9e0f4------2)

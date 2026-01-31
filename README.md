@@ -1,52 +1,60 @@
 # Kisal Nelaka
 ### Senior Full Stack Developer | Cybersecurity Specialist
 
-Senior Full Stack Developer with **8+ years of experience** in building, maintaining, and optimizing scalable web applications. Proficient in **PHP**, **JavaScript**, and **Python**, with deep expertise in the **Laravel** ecosystem and modern frontend frameworks. Strong background in **Cybersecurity and Digital Forensics**, integrating security best practices into every stage of the development lifecycle.
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Kisal's GitHub Stats" />
+</div>
+
+<br />
+
+I’ve spent the last **8+ years** obsessing over clean architecture, breaking systems just to see how they bleed, and then rebuilding them to be bulletproof. I don’t just "write code"—I engineer digital ecosystems that survive production hell. 
+
+My stack is whatever gets the job done fastest and safest, but I live in **Laravel**, **PHP**, and **Python**. I have a healthy paranoia about security (Digital Forensics degree, sorry), so if your code isn't secure, I *will* judge you.
 
 ---
 
-### Technical Expertise
+### The Tech I Abuse Daily
 
-- **Languages**: PHP, JavaScript/TypeScript, Python, Dart, C++, SQL
-- **Frameworks**: Laravel, Ecosystem (Filament, Livewire), React, Vue.js, Flutter, Qt
-- **Infrastructure**: Docker, Linux Administration, CI/CD, MySQL, PostgreSQL
-- **Security**: OWASP Standards, Penetration Testing, Digital Forensics, Secure Coding Practices
+- **Languages**: PHP (yes, it runs the web, deal with it), Python, JavaScript, Dart, C++, SQL.
+- **Frameworks**: Laravel (my weapon of choice), Filament, React, Vue, Flutter, Qt.
+- **Infrastructure**: Docker, Linux (where I actually live), CI/CD pipelines that actually pass.
+- **Security**: Breaking things, OWASP, Digital Forensics, making sure you don't get hacked.
 
 ---
 
-### Selected Projects
+### The Heavy Artillery
 
 #### [IntraFlow](https://github.com/kisalnelaka)
 **Enterprise SaaS/MSP Platform**
-A unified operations, automation, and security platform for Managed Service Providers. Built with Laravel 11 and Filament v3, it handles complex telecom operations, inventory management, and automated workflows.
+I built this beast to handle complex telecom operations so humans don't have to. It's a massive Laravel 11 & Filament v3 system that automates everything from inventory to billing. It’s the kind of system that runs entire companies.
 
 #### [ASAN (Adaptive Symmetry-Aware Network)](https://github.com/kisalnelaka/ASAN)
 **AI & Deep Learning**
-A specialized deep learning architecture designed for 3D molecular property prediction. Demonstrates advanced application of neural networks and mathematical modeling in scientific computing.
+This is where I get mathematically unhinged. A deep learning architecture I designed for 3D molecular property prediction. It’s neural networks meeting chemistry in a dark alley.
 
 #### [Bunny](https://github.com/socialrabbit/bunny)
 **Laravel Framework Architecture**
-An open-source Laravel scaffolding package that accelerates development by generating production-ready backend boilerplate. Revolutionizes rapid application development workflows.
+I got tired of writing the same boilerplate code, so I wrote code that writes code. Bunny generates production-ready backend scaffolding because life is too short for CRUD.
 
 #### [Oha Asa](https://github.com/kisalnelaka/oha_asa_app)
 **Cross-Platform Mobile Application**
-A premium Flutter application for tracking daily zodiac luck. Features a high-performance rendering engine, native Android widgets, and a sophisticated, polished UI/UX.
+A Flutter app effectively bringing Japanese "Oha Asa" luck tracking to the west. I reverse-engineered the vibe and built a premium, native-widget-powered experience. It’s polished, it’s automatic, and it looks better than your calendar.
 
 #### [BatSignal](https://github.com/kisalnelaka/batsignal)
 **Systems Programming & Linux Integration**
-A C++ and Qt-based KDE Plasma widget for monitoring Bluetooth device battery levels. showcases deep integration with Linux DBus and system hardware interfaces.
+My Bluetooth headphones kept dying and it pissed me off. So I wrote a C++/Qt widget for KDE Plasma to scream at me when my battery is low. Deep DBus integration because I like talking directly to the kernel.
 
 #### [PhishCatcher](https://github.com/kisalnelaka/phishcatcher)
 **Cybersecurity & Machine Learning**
-A real-time phishing detection system leveraging machine learning algorithms and browser extension APIs to identify and block malicious websites instantly.
+I trained an ML model to spot phishing sites faster than you can click "unsubscribe." It runs in real-time inside the browser. It hunts scams so you don't fall for them.
 
 #### [Backpacker](https://github.com/kisalnelaka/backpacker)
 **Automation & Utilities**
-A robust cross-platform Python utility for seamless browser data migration and profile management. Automates complex file handling and data portability tasks across Windows and Linux.
+Moving browser data between Windows and Linux is a nightmare, so I wrote a Python script to automate the pain away. It grabs everything—history, bookmarks, cookies—and ports it over. Pure utility.
 
 ---
 
-### Latest Articles
+### My Rants & Writings
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc?source=rss-3dd06b9e0f4------2)

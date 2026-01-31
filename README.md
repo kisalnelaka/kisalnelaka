@@ -2,59 +2,59 @@
 ### Senior Full Stack Developer | Cybersecurity Specialist
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true" alt="Kisal's GitHub Stats" />
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true" alt="Kisal's GitHub Stats" />
 </div>
 
 <br />
 
-I’ve spent **8+ years** staring at screens until the pixels started talking back. I specialize in building systems that work so smoothly it’s actually suspicious. I break things for a living (Cybersecurity), and then I fix them (Full Stack), mostly because I enjoy the control.
+I’ve spent **8+ years** writing code and I still don't know why I do this to myself. I have the attention span of a goldfish and enough caffeine in my system to kill a horse. I build systems that are smarter than me because honestly, that’s not a high bar.
 
-I write code in **Laravel**, **PHP**, and **Python**. I don't argue about frameworks; I just use whatever gives me the most power with the least amount of typing. If you see me staring blankly into the distance, I'm probably debugging a race condition in my head.
-
----
-
-### The Tech I Hoard
-
-- **Languages**: PHP (it pays the bills, quiet down), Python, JavaScript, Dart, C++, SQL.
-- **Frameworks**: Laravel, Filament, React, Vue, Flutter, Qt.
-- **Infrastructure**: Docker, Linux (I trust the terminal more than I trust people).
-- **Security**: Digital Forensics. I know where the logs are buried.
+I write **PHP** and **Laravel** because I hate myself. I do **Cybersecurity** because I like finding out people's secrets. If you see me zoning out, I'm probably thinking about that one bug I wrote in 2018 or wondering if a hotdog is a sandwich.
 
 ---
 
-### The Heavy Artillery
+### stuff i use to pretend i'm working
+
+- **Languages**: PHP (gross, I know), Python (for hacking things), JavaScript (for pain), Dart, C++, SQL.
+- **Frameworks**: Laravel (my toxic trait), Filament, React, Vue, Flutter, Qt.
+- **Infrastructure**: Docker (it works on my machine), Linux (because Windows is for noobs).
+- **Security**: Digital Forensics. I know what you did last summer.
+
+---
+
+### things i made instead of going to therapy
 
 #### [IntraFlow](https://github.com/kisalnelaka)
 **Enterprise SaaS/MSP Platform**
-I built a system that runs telecom companies. It handles everything. Inventory, billing, automation. It never sleeps. Sometimes I worry it's becoming sentient, but for now, it just generates revenue.
+I built this massive thing to run telecom companies. I could probably shut them all down with one button but I need money for chicken nuggets. It manages inventory and billing so I don't have to talk to people.
 
 #### [ASAN (Adaptive Symmetry-Aware Network)](https://github.com/kisalnelaka/ASAN)
 **AI & Deep Learning**
-I taught a neural network to understand 3D molecular chemistry because why not? It predicts properties of molecules. It does math I barely remember learning. It’s smarter than me, and I’m okay with that.
+I got bored and taught a computer to do chemistry. It predicts molecule stuff. I don't even remember how the math works anymore but it looks cool. Science!
 
 #### [Bunny](https://github.com/socialrabbit/bunny)
 **Laravel Framework Architecture**
-Writing boilerplate is boring, so I automated it. Bunny generates the code I don’t want to write. It’s like having an intern that doesn't ask questions and works at the speed of light.
+I hate typing the same code twice so I wrote code that writes code. It generates backends faster than I can make instant noodles. Efficiency is just laziness with extra steps.
 
 #### [Oha Asa](https://github.com/kisalnelaka/oha_asa_app)
 **Cross-Platform Mobile Application**
-A premium Flutter app for Japanese luck tracking. I wanted to know my fortune, so I engineered a high-performance cross-platform application to tell me. It’s very pretty. It’s very smooth. It knows if you’re going to have a bad day.
+A Flutter app that tells me my zodiac luck because I need external validation from the stars. It has widgets. It's premium. It confirms that yes, today is going to be terrible.
 
 #### [BatSignal](https://github.com/kisalnelaka/batsignal)
 **Systems Programming & Linux Integration**
-My Bluetooth headphones died during a song once. I took it personally. Now I have a custom C++ widget in my KDE panel that monitors every battery byte via DBus. The kernel reports to me now.
+My Bluetooth headphones died and I screamed. So I wrote a C++ widget to yell at me when the battery is low. I literally hacked the kernel DBus just so I could listen to music without interruptions.
 
 #### [PhishCatcher](https://github.com/kisalnelaka/phishcatcher)
 **Cybersecurity & Machine Learning**
-I trained an ML model to judge websites. It lives in the browser and sniffs out phishing scams in real-time. It’s paranoid, so you don’t have to be.
+I made an ML model that lives in your browser and judges every website you visit. It blocks phishing scams because y'all will click on anything.
 
 #### [Backpacker](https://github.com/kisalnelaka/backpacker)
 **Automation & Utilities**
-I switch between Windows and Linux constantly and manually moving browser data was annoying. So I wrote a script to do it for me. It takes everything. No data left behind.
+Manually copying files is for peasants. I wrote a Python script to port my browser data because I have commitment issues with operating systems.
 
 ---
 
-### Things I've Written Down
+### random rants i published
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc?source=rss-3dd06b9e0f4------2)

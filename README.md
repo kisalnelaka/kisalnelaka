@@ -26,33 +26,45 @@ If you see me zoning out, I'm probably dissociating or wondering if a hotdog is 
 
 ### things i made instead of going to therapy
 
+#### [TenancyOS](https://github.com/kisalnelaka/TenancyOS)
+**Enterprise Property Management SaaS**
+A production-ready, multi-tenant platform built with **Laravel 11 and React**. It handles automated organization scoping, RBAC, and full audit logging because managing properties manually is for suckers and I like my data organized.
+
+#### [Verdict](https://github.com/kisalnelaka/verdict)
+**Engineering Governance Infrastructure**
+I treated decisions as first-class primitives with immutable accountability. It's rule-based autopsy for when things inevitably catch fire. It's not just task tracking; it's a way to ensure we know exactly who to blame (usually me).
+
 #### [IntraFlow](https://github.com/kisalnelaka)
-**Enterprise SaaS/MSP Platform**
-I built this massive thing to run telecom companies. I could probably shut them all down with one button but I need money for chicken nuggets. It manages inventory and billing so I don't have to talk to people.
+**SaaS/MSP/MSSP Operations Platform**
+A massive thing to run telecom and security companies. I could probably shut them all down with one button but I need money for chicken nuggets. It manages inventory, billing, and security so I don't have to talk to humans.
+
+#### [Bunny](https://github.com/socialrabbit/bunny)
+**Laravel Scaffolding Framework**
+I got tired of boilerplate, so I wrote a production-ready framework that generates fully functional backends faster than I can make instant noodles. It’s now equipped with sophisticated CLI commands to scaffold entire CMS modules. Efficiency is just laziness with extra steps.
 
 #### [ASAN (Adaptive Symmetry-Aware Network)](https://github.com/kisalnelaka/ASAN)
 **AI & Deep Learning**
-I got bored and taught a computer to do chemistry. It predicts molecule stuff. I don't even remember how the math works anymore but it looks cool. Science!
+I taught a computer to do chemistry because biology was too hard. It predicts molecule properties using symmetry-aware networks. I don't remember the math anymore but the loss curves were beautiful. Science!
 
-#### [Bunny](https://github.com/socialrabbit/bunny)
-**Laravel Framework Architecture**
-I hate typing the same code twice so I wrote code that writes code. It generates backends faster than I can make instant noodles. Efficiency is just laziness with extra steps.
-
-#### [Oha Asa](https://github.com/kisalnelaka/oha_asa_app)
-**Cross-Platform Mobile Application**
-A Flutter app that tells me my zodiac luck because I need external validation from the stars. It has widgets. It's premium. It confirms that yes, today is going to be terrible.
+#### [FocusFlow-Hub](https://github.com/kisalnelaka/FocusFlow-Hub)
+**ADHD Management SaaS**
+Built using **TypeScript** because my own brain is a browser with 400 tabs open and I don't know where the music is coming from. It tracks habits, focus, and moods to keep me (and hopefully you) from vibrating into another dimension.
 
 #### [BatSignal](https://github.com/kisalnelaka/batsignal)
 **Systems Programming & Linux Integration**
-My Bluetooth headphones died and I screamed. So I wrote a C++ widget to yell at me when the battery is low. I literally hacked the kernel DBus just so I could listen to music without interruptions.
+My Bluetooth headphones died mid-song and I almost threw them. So I wrote a C++ widget that hacks into DBus to yell at me when the battery is low. Now fully compatible with **KDE Plasma 6** because I refuse to move to Wayland without my battery warnings.
+
+#### [Oha Asa](https://github.com/kisalnelaka/oha_asa_app)
+**Cross-Platform Mobile Application**
+A Flutter app that tells me my zodiac luck because I need external validation from the stars. It confirms that yes, today is going to be terrible, but it does it with premium widgets.
 
 #### [PhishCatcher](https://github.com/kisalnelaka/phishcatcher)
 **Cybersecurity & Machine Learning**
-I made an ML model that lives in your browser and judges every website you visit. It blocks phishing scams because y'all will click on anything.
+An ML model that lives in your browser and judges every website you visit. It blocks phishing scams because humanity’s greatest weakness is a "Win a free iPhone" link.
 
 #### [Backpacker](https://github.com/kisalnelaka/backpacker)
 **Automation & Utilities**
-Manually copying files is for peasants. I wrote a Python script to port my browser data because I have commitment issues with operating systems.
+Manual file migration is a war crime. I wrote a Python script to port my browser data because I have commitment issues with operating systems. (I use Arch btw).
 
 ---
 

@@ -1,5 +1,5 @@
 # Kisal Nelaka
-### Odd Jobs Developer | Mostly powered by sugar and Laravel
+### Architect of Digital Entropy | Engineer of the Inevitable
 
 <div align="center">
   <img height="165" src="https://github-readme-stats-fast.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="Kisal's GitHub Stats" />
@@ -13,48 +13,58 @@
 
 <br />
 
-Look, I didn't want to write a stiff, corporate bio, okay? Writing buzzwords takes up way too much energy, and I have the latest issue of Jump to read.
+Allow me to be perfectly candid. The architecture of modern software is tragically flawed, riddled with inefficiencies, security gaps, and profound human error. I find such chaos... distasteful. I do not merely write code; I engineer systems that are precise, calculated, and absolute.
 
-I've been dealing with code for **8+ years**. I build massive, scalable systems, enterprise SaaS platforms, and AI tools—usually because someone paid me enough to buy more strawberry milk. I’ve got a **Cybersecurity Degree**, which basically means I know how to break your stuff and then complain about having to fix it.
+For over eight years, I have orchestrated enterprise infrastructure, neural knowledge graphs, and decentralized networks. I hold a degree in Cybersecurity, affording me a rather intimate understanding of exactly how systems shatter—and how to forge them so they do not. The design must be immaculate. The execution, flawless. 
 
-I might complain a lot, but when things get serious, I'm the guy who delivers production-ready, secure infrastructure that actually works. The rest of the time, I'm just trying to scrape together enough cash for rent.
+I occasionally observe the frantic struggles of developers wrestling with poorly optimized codebases. It is genuinely fascinating how the industry accepts such mediocrity. Humans are so interesting in their willingness to settle. But when the stakes are absolute, I am the one called upon to impose order. The work requires a certain intellectual endurance—a quiet room, a steady supply of perfectly brewed Earl Grey, and perhaps an apple.
 
----
-
-### Tools I Use When I Actually Want to Work
-
-- **Languages the editors force me to use**: PHP, TypeScript/JavaScript, Python, C++, SQL.
-- **Heavy lifting (Backend & SaaS)**: Laravel, Node.js, System Design, Multi-Tenancy.
-- **Making things look less terrible (Frontend)**: React, Vue.js, Filament, TailwindCSS.
-- **The dark arts (Security & DevOps)**: Docker, Linux, Penetration Testing & Web Security. I secure apps so the bad guys don't ruin my nap time.
+I am building the architecture of a new world. Care to see what I've written?
 
 ---
 
-### Things I Built Instead of Sleeping
+### The Arsenal of Absolute Control
+
+- **Instruments of Logic**: TypeScript, Kotlin, Dart, C#, Python, C++, PHP.
+- **Architectural Foundations**: Laravel 11, Unity, Node.js, Multi-Tenant System Design.
+- **The Aesthetic Facade**: React, Vue.js, Glassmorphic UI, Spatial Interface Design.
+- **The Dark Arts (Security & Operations)**: Docker, Linux, Penetration Testing. I secure networks merely because vulnerabilities offend my sensibilities.
+
+---
+
+### Masterpieces of Engineering
+
+#### [TheNet](https://github.com/kisalnelaka/thenet)
+**Decentralized Mesh Architecture**
+A high-performance, decentralized mesh network dashboard. Engineered for premium local Wi-Fi file management, media streaming, and cross-platform synchronization. A flawless, invisible web of connectivity operating in perfect silence.
+
+#### [Imladris](https://github.com/kisalnelaka/Imladris)
+**Spatial Mind Palace & Neural Graph**
+An ethereal, offline-first Android sanctuary for knowledge. Designed with a neural knowledge graph and glassmorphic gateways. Because one’s intellect should be curated with the utmost architectural rigor.
 
 #### [TenancyOS](https://github.com/kisalnelaka/TenancyOS)
 **Enterprise Property Management SaaS**
-A massive multi-tenant platform built with **Laravel 11 and React**. I added automated organization scoping, strict RBAC, and audit logs because managing properties manually sounds like an absolute pain.
+A production-ready, multi-tenant monolith built with Laravel 11 and React. Features automated organization scoping, strict RBAC, and absolute audit logging. It governs properties seamlessly, so one does not have to endure the tedium of manual oversight.
 
-#### [Verdict](https://github.com/kisalnelaka/verdict)
-**Engineering Governance Infrastructure**
-Treats engineering decisions as immutable primitives. Basically, it’s rule-based tracking and architectural logs so everyone knows exactly whose fault it is when the server catches fire.
+#### [NOOR Elite](https://github.com/kisalnelaka/noor)
+**AI Concierge Architecture**
+An elite, cross-platform AI concierge system forged in Dart and backed by a robust architecture. Designed to anticipate, calculate, and execute without hesitation.
 
-#### [Bunny](https://github.com/socialrabbit/bunny)
-**Laravel Scaffolding Framework**
-Writing boilerplate code is exhausting. So I built an open-source framework and CLI tool to automatically scaffold functional backends and CMS modules for me. True productivity is just weaponized laziness.
+#### [Vendetta 84](#)
+**Commercial-Grade Noir Interactive Experience**
+A Unity architecture blending FPS/TPS mechanics with a meticulously crafted VHS noir aesthetic. The environment is perfectly scripted, the AI ruthlessly deterministic. A flawless simulation of consequence.
 
-#### [MyWitch AI Assistant](https://github.com/kisalnelaka)
-**Local RAG AI Assistant**
-A local AI assistant using LangChain and Ollama. It indexes and reads my research documents so I don't have to.
+#### [Agentic Architect (Claude Code)](https://github.com/kisalnelaka/claude-code-leak)
+**Autonomous Terminal Intelligence**
+An agentic tool that lives within the terminal to execute routine tasks autonomously. After all, why should I sully my hands with mundane tasks when I can engineer an entity to serve me?
 
-#### [PhishCatcher](https://github.com/kisalnelaka/phishcatcher)
-**Cybersecurity & Machine Learning**
-An ML model that lives in your browser and automatically blocks phishing scams. Because saving humanity from clicking "Win a free iPhone" links is just another Tuesday odd job.
+#### [Audio Acquisition Engine](https://github.com/kisalnelaka/youtube-audio-library-downloader-master)
+**Bulk Downloader**
+A JavaScript-based bulk downloader and sorting engine for the YouTube audio library. Precision automation for digital asset acquisition.
 
 ---
 
-### Random Rants I Got Paid For (Articles)
+### Meticulous Observations (Publications)
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc?source=rss-3dd06b9e0f4------2)
@@ -72,4 +82,4 @@ An ML model that lives in your browser and automatically blocks phishing scams. 
 
 [LinkedIn](https://linkedin.com/in/kisalnelaka) | [Medium](https://medium.com/@kisalnelaka6) | [Email](mailto:kisalnelaka6@gmail.com)
 
-*If you're going to email me, keep it brief. Parfaits melt, you know.*
+*If you are going to contact me, make it worth my time. I have a new world to architect.*

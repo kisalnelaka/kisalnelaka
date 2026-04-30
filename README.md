@@ -1,5 +1,5 @@
 # Kisal Nelaka
-### Architect of Digital Entropy | Engineer of the Inevitable
+### Full-Stack Software Engineer & Systems Architect
 
 <div align="center">
   <img height="165" src="https://github-readme-stats-fast.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="Kisal's GitHub Stats" />
@@ -13,58 +13,66 @@
 
 <br />
 
-Allow me to be perfectly candid. The architecture of modern software is tragically flawed, riddled with inefficiencies, security gaps, and profound human error. I find such chaos... distasteful. I do not merely write code; I engineer systems that are precise, calculated, and absolute.
+I specialize in architecting resilient, high-performance systems. My focus is on turning complex business challenges into precise, optimized, and scalable technical solutions. 
 
-For over eight years, I have orchestrated enterprise infrastructure, neural knowledge graphs, and decentralized networks. I hold a degree in Cybersecurity, affording me a rather intimate understanding of exactly how systems shatter—and how to forge them so they do not. The design must be immaculate. The execution, flawless. 
+With over eight years of experience spanning enterprise infrastructure, machine learning integrations, and decentralized networks, I bring a rigorous, security-first mindset to software engineering. My background in Cybersecurity allows me to anticipate system bottlenecks and build robust, secure architectures from the ground up.
 
-I occasionally observe the frantic struggles of developers wrestling with poorly optimized codebases. It is genuinely fascinating how the industry accepts such mediocrity. Humans are so interesting in their willingness to settle. But when the stakes are absolute, I am the one called upon to impose order. The work requires a certain intellectual endurance—a quiet room, a steady supply of perfectly brewed Earl Grey, and perhaps an apple.
+I thrive in environments that require deep technical problem-solving. Whether it's optimizing a legacy codebase, designing a multi-tenant B2B SaaS, or implementing AI-driven workflows, my goal is always to deliver software that is both elegant and exceptionally reliable. 
 
-I am building the architecture of a new world. Care to see what I've written?
-
----
-
-### The Arsenal of Absolute Control
-
-- **Instruments of Logic**: TypeScript, Kotlin, Dart, C#, Python, C++, PHP.
-- **Architectural Foundations**: Laravel 11, Unity, Node.js, Multi-Tenant System Design.
-- **The Aesthetic Facade**: React, Vue.js, Glassmorphic UI, Spatial Interface Design.
-- **The Dark Arts (Security & Operations)**: Docker, Linux, Penetration Testing. I secure networks merely because vulnerabilities offend my sensibilities.
+I am currently open to new engineering opportunities.
 
 ---
 
-### Masterpieces of Engineering
+### Technical Capabilities & Stack
 
-#### [TheNet](https://github.com/kisalnelaka/thenet)
-**Decentralized Mesh Architecture**
-A high-performance, decentralized mesh network dashboard. Engineered for premium local Wi-Fi file management, media streaming, and cross-platform synchronization. A flawless, invisible web of connectivity operating in perfect silence.
+- **Core Languages**: TypeScript, Kotlin, Dart, C#, Python, C++, PHP.
+- **Backend & Architecture**: Laravel 11, Node.js, Multi-Tenant System Design, RESTful & GraphQL APIs.
+- **Frontend & Design Systems**: React, Vue.js, Glassmorphic UI, Spatial Interface Design, TailwindCSS.
+- **DevOps & Security**: Docker, Linux, Penetration Testing, CI/CD pipelines, Secure System Architecture.
 
-#### [Imladris](https://github.com/kisalnelaka/Imladris)
-**Spatial Mind Palace & Neural Graph**
-An ethereal, offline-first Android sanctuary for knowledge. Designed with a neural knowledge graph and glassmorphic gateways. Because one’s intellect should be curated with the utmost architectural rigor.
+---
+
+### Engineering Showcase
 
 #### [TenancyOS](https://github.com/kisalnelaka/TenancyOS)
 **Enterprise Property Management SaaS**
-A production-ready, multi-tenant monolith built with Laravel 11 and React. Features automated organization scoping, strict RBAC, and absolute audit logging. It governs properties seamlessly, so one does not have to endure the tedium of manual oversight.
+* **The Problem:** B2B property management systems suffer from data-leakage risks and complex tenant onboarding.
+* **The Solution:** Engineered a production-ready, multi-tenant monolith featuring automated organization scoping, strict RBAC, and comprehensive audit logging.
+* **Tech Stack:** Laravel 11, React, PostgreSQL.
+
+#### [TheNet](https://github.com/kisalnelaka/thenet)
+**Decentralized Mesh Architecture**
+* **The Problem:** Cross-platform local file sharing and media streaming is often fragmented and relies on external servers.
+* **The Solution:** Built a high-performance, decentralized mesh network dashboard for seamless, secure local Wi-Fi file management and multi-device synchronization.
+* **Tech Stack:** Node.js, WebSockets, React, Glassmorphic UI.
 
 #### [NOOR Elite](https://github.com/kisalnelaka/noor)
 **AI Concierge Architecture**
-An elite, cross-platform AI concierge system forged in Dart and backed by a robust architecture. Designed to anticipate, calculate, and execute without hesitation.
+* **The Problem:** Integrating AI assistants seamlessly into daily, cross-platform workflows with high reliability.
+* **The Solution:** Developed a robust, cross-platform AI concierge system with complex state management, capable of asynchronous task execution and API integration.
+* **Tech Stack:** Dart, Flutter, SQLite/PostgreSQL, Custom LLM integrations.
 
-#### [Vendetta 84](#)
-**Commercial-Grade Noir Interactive Experience**
-A Unity architecture blending FPS/TPS mechanics with a meticulously crafted VHS noir aesthetic. The environment is perfectly scripted, the AI ruthlessly deterministic. A flawless simulation of consequence.
+#### [Imladris](https://github.com/kisalnelaka/Imladris)
+**Spatial Mind Palace & Neural Graph**
+* **The Problem:** Standard note-taking apps lack semantic connection between offline, personal knowledge bases.
+* **The Solution:** Architected an offline-first Android application utilizing a custom neural knowledge graph to interlink notes spatially, wrapped in a highly optimized UI.
+* **Tech Stack:** Kotlin, Android SDK, Local Graph Database.
 
 #### [Agentic Architect (Claude Code)](https://github.com/kisalnelaka/claude-code-leak)
 **Autonomous Terminal Intelligence**
-An agentic tool that lives within the terminal to execute routine tasks autonomously. After all, why should I sully my hands with mundane tasks when I can engineer an entity to serve me?
+* **The Problem:** Developer workflows are bogged down by repetitive scaffolding and maintenance tasks.
+* **The Solution:** Configured an agentic CLI tool capable of autonomously executing routine repository tasks, refactoring, and codebase analysis.
+* **Tech Stack:** Python/Node, LLM Tool Calling, Bash scripting.
 
-#### [Audio Acquisition Engine](https://github.com/kisalnelaka/youtube-audio-library-downloader-master)
-**Bulk Downloader**
-A JavaScript-based bulk downloader and sorting engine for the YouTube audio library. Precision automation for digital asset acquisition.
+#### [Vendetta 84](#)
+**Commercial-Grade Noir Interactive Experience**
+* **The Problem:** Balancing high-fidelity visuals (VHS noir aesthetic) with performant game mechanics on mobile/PC.
+* **The Solution:** Architected a Unity-based hybrid FPS/TPS system, utilizing optimized state machines for AI and precise event scripting for environmental interaction.
+* **Tech Stack:** Unity, C#, SDL2 Input System.
 
 ---
 
-### Meticulous Observations (Publications)
+### Technical Writing & Publications
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc?source=rss-3dd06b9e0f4------2)
@@ -82,4 +90,4 @@ A JavaScript-based bulk downloader and sorting engine for the YouTube audio libr
 
 [LinkedIn](https://linkedin.com/in/kisalnelaka) | [Medium](https://medium.com/@kisalnelaka6) | [Email](mailto:kisalnelaka6@gmail.com)
 
-*If you are going to contact me, make it worth my time. I have a new world to architect.*
+*I am always open to discussing complex technical challenges or new engineering roles. Let's connect.*

@@ -51,11 +51,11 @@ I thrive in environments that require deep technical problem-solving. Whether it
 
 ### Recently Active Repositories
 <!-- RECENT-REPOS:START -->
+- [jeOS](https://github.com/kisalnelaka/jeOS) - just enough
 - [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
 - [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
 - [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
 - [noor](https://github.com/kisalnelaka/noor) - NOOR Elite 
-- [Imladris](https://github.com/kisalnelaka/Imladris) - An ethereal, offline-first Android library app. Navigate your knowledge through a spatial Mind Palace -glassmorphic gateways, a neural knowledge graph, intelligent memory recall, and a distraction-free reader. Inspired by Rivendell.
 <!-- RECENT-REPOS:END -->
 
 ---

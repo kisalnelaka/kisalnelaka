@@ -4,120 +4,93 @@ import os
 import re
 
 def main():
-    # Fetch user's repos to analyze proficiency
-    url = "https://api.github.com/users/kisalnelaka/repos?per_page=100"
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-    
-    try:
-        with urllib.request.urlopen(req) as response:
-            repos = json.loads(response.read().decode())
-    except Exception as e:
-        print(f"Error fetching repos: {e}")
-        return
-
-    # Tech stack requirements from the job description
-    target_tech = {
-        "Frontend": ["React", "Flutter", "Redux"],
-        "Backend": ["Node.js", "Express", "Laravel", "Python"],
-        "API/Data": ["REST APIs", "gRPC", "MongoDB", "Firestore", "Cloud SQL"],
-        "Cloud": ["GCP", "Git"]
+    # Tech stack requirements (Explicitly defined based on your expertise and job needs)
+    tech_categories = {
+        "Frontend Ecosystem": [
+            {"name": "React", "level": "Expert"},
+            {"name": "Flutter", "level": "Expert"},
+            {"name": "Redux", "level": "Expert"},
+            {"name": "TypeScript", "level": "Expert"}
+        ],
+        "Backend Architecture": [
+            {"name": "Node.js", "level": "Expert"},
+            {"name": "Laravel", "level": "Expert"},
+            {"name": "Python", "level": "Advanced"},
+            {"name": "gRPC", "level": "Advanced"}
+        ],
+        "Cloud & Data": [
+            {"name": "GCP", "level": "Expert"},
+            {"name": "PostgreSQL", "level": "Expert"},
+            {"name": "MongoDB", "level": "Advanced"},
+            {"name": "Firestore", "level": "Expert"}
+        ],
+        "Engineering Ops": [
+            {"name": "Docker", "level": "Expert"},
+            {"name": "CI/CD", "level": "Expert"},
+            {"name": "REST APIs", "level": "Expert"},
+            {"name": "Git", "level": "Expert"}
+        ]
     }
 
-    # Analyze repos
-    stats = {tech: 0 for category in target_tech.values() for tech in category}
+    generate_svg(tech_categories)
+    print("Technical Arsenal SVG generated.")
+
+def generate_svg(categories):
+    width = 820
+    height = 360
     
-    for repo in repos:
-        text = (repo.get('name', '') + ' ' + (repo.get('description', '') or '')).lower()
-        lang = (repo.get('language', '') or '').lower()
-        
-        # Mapping languages to tech
-        if lang == 'javascript' or lang == 'typescript':
-            stats["Node.js"] += 1
-        if lang == 'python':
-            stats["Python"] += 1
-        if lang == 'php':
-            stats["Laravel"] += 1
-        if lang == 'dart':
-            stats["Flutter"] += 1
-
-        # Check for keywords in text
-        for category_list in target_tech.values():
-            for tech in category_list:
-                if tech.lower() in text:
-                    stats[tech] += 1
-
-    # Special handling for common stacks
-    if stats["Node.js"] > 0: stats["Express"] = max(stats["Express"], stats["Node.js"] - 1)
-    if stats["React"] == 0 and stats["Node.js"] > 2: stats["React"] = 3 # He has React in showcase
-
-    # Generate SVG
-    generate_svg(stats, target_tech)
-    print("Dashboard SVG generated.")
-
-def generate_svg(stats, target_tech):
-    width = 800
-    height = 420
-    
-    # Dark Theme Colors
-    bg_color = "#0d1117"
-    card_bg = "#161b22"
-    text_color = "#c9d1d9"
-    accent_color = "#58a6ff"
-    success_color = "#3fb950"
+    # Premium Dark Theme
+    bg_color = "#08090a"
+    border_color = "#1f2124"
+    text_main = "#f0f6fc"
+    text_dim = "#8b949e"
+    accent = "#58a6ff"
     
     svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="card_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#161b22;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1" />
+        </linearGradient>
+    </defs>
     <style>
-        .title {{ font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif; fill: {accent_color}; }}
-        .category-title {{ font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: {text_color}; }}
-        .tech-name {{ font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: {text_color}; }}
-        .stat-bar-bg {{ fill: #30363d; rx: 4; }}
-        .stat-bar-fill {{ fill: {success_color}; rx: 4; }}
-        .score-text {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: {success_color}; text-anchor: end; }}
-        .verified-badge {{ font: 600 10px 'Segoe UI', Ubuntu, Sans-Serif; fill: {success_color}; }}
+        .title {{ font: 700 18px 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; fill: {text_main}; }}
+        .cat-label {{ font: 600 13px 'Inter', sans-serif; fill: {accent}; text-transform: uppercase; letter-spacing: 1px; }}
+        .tech-name {{ font: 500 14px 'Inter', sans-serif; fill: {text_main}; }}
+        .tech-level {{ font: 400 11px 'Inter', sans-serif; fill: {text_dim}; }}
+        .indicator {{ fill: {accent}; filter: drop-shadow(0 0 3px {accent}); }}
     </style>
     
-    <rect width="{width}" height="{height}" rx="12" fill="{bg_color}" stroke="#30363d" stroke-width="1"/>
-    <text x="25" y="40" class="title">Full-Stack Job Match Scorecard</text>
-    <text x="25" y="65" font-family="Segoe UI" font-size="12" fill="#8b949e">Real-time repository analysis targeting Full Stack Developer requirements</text>
+    <rect width="{width}" height="{height}" rx="16" fill="{bg_color}" stroke="{border_color}" stroke-width="1"/>
+    
+    <text x="30" y="45" class="title">Technical Arsenal &amp; Ecosystem</text>
+    <circle cx="280" cy="40" r="4" fill="#3fb950" />
+    <text x="290" y="44" font-family="Inter" font-size="11" fill="#3fb950">Active in Production</text>
     '''
     
-    y_offset = 100
-    x_offset = 25
-    column_width = 360
+    x_start = 30
+    y_start = 85
+    card_w = 180
+    card_h = 240
+    gap = 15
     
-    # Render categories in two columns
-    categories = list(target_tech.keys())
-    for i, category in enumerate(categories):
-        col = i % 2
-        row = i // 2
-        current_x = x_offset + (col * column_width)
-        current_y = y_offset + (row * 160)
+    for i, (cat_name, techs) in enumerate(categories.items()):
+        curr_x = x_start + (i * (card_w + gap))
         
-        # Category Card
-        svg += f'<rect x="{current_x}" y="{current_y}" width="{column_width - 20}" height="140" rx="8" fill="{card_bg}" stroke="#30363d"/>'
-        svg += f'<text x="{current_x + 15}" y="{current_y + 25}" class="category-title">{category}</text>'
+        # Category Section
+        svg += f'<rect x="{curr_x}" y="{y_start}" width="{card_w}" height="{card_h}" rx="12" fill="url(#card_grad)" stroke="{border_color}"/>'
+        svg += f'<text x="{curr_x + 15}" y="{y_start + 30}" class="cat-label">{cat_name.split()[0]}</text>'
         
-        # Tech items in category
-        for j, tech in enumerate(target_tech[category]):
-            item_y = current_y + 50 + (j * 28)
-            count = stats.get(tech, 0)
-            # Normalize count for bar (max 10)
-            bar_width = min(150, (count / 8) * 150) if count > 0 else 5
+        for j, tech in enumerate(techs):
+            item_y = y_start + 65 + (j * 42)
             
-            svg += f'<text x="{current_x + 15}" y="{item_y}" class="tech-name">{tech}</text>'
-            svg += f'<rect x="{current_x + 120}" y="{item_y - 10}" width="150" height="8" class="stat-bar-bg"/>'
-            svg += f'<rect x="{current_x + 120}" y="{item_y - 10}" width="{bar_width}" height="8" class="stat-bar-fill"/>'
+            # Tech Item
+            svg += f'<circle cx="{curr_x + 20}" cy="{item_y - 4}" r="3" class="indicator"/>'
+            svg += f'<text x="{curr_x + 35}" y="{item_y}" class="tech-name">{tech["name"]}</text>'
+            svg += f'<text x="{curr_x + 35}" y="{item_y + 16}" class="tech-level">{tech["level"]}</text>'
             
-            status_text = "Verified" if count > 0 else "Ready"
-            svg += f'<text x="{current_x + 330}" y="{item_y}" class="score-text">{status_text}</text>'
-
-    # Summary Footer
-    match_percentage = sum(1 for v in stats.values() if v > 0) / len(stats) * 100
     svg += f'''
-    <line x1="25" y1="{height - 60}" x2="{width - 25}" y2="{height - 60}" stroke="#30363d" />
-    <text x="25" y="{height - 30}" font-family="Segoe UI" font-size="16" font-weight="600" fill="{text_color}">Overall Job Alignment:</text>
-    <text x="200" y="{height - 30}" font-family="Segoe UI" font-size="24" font-weight="800" fill="{success_color}">{int(match_percentage)}%</text>
-    <text x="{width - 25}" y="{height - 30}" font-family="Segoe UI" font-size="12" fill="#8b949e" text-anchor="end">Updated via GitHub Actions</text>
+    <text x="{width - 30}" y="{height - 20}" font-family="Inter" font-size="10" fill="{text_dim}" text-anchor="end">Engineered for Scalability &amp; Performance</text>
     </svg>'''
     
     with open("tech-dashboard.svg", "w", encoding="utf-8") as f:

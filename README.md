@@ -72,6 +72,17 @@ I am currently open to new engineering opportunities.
 
 ---
 
+### Recently Active Repositories
+<!-- RECENT-REPOS:START -->
+- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
+- [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
+- [kisalnelaka.github.io](https://github.com/kisalnelaka/kisalnelaka.github.io) - No description available.
+- [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
+- [noor](https://github.com/kisalnelaka/noor) - NOOR Elite 
+<!-- RECENT-REPOS:END -->
+
+---
+
 ### Technical Writing & Publications
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)

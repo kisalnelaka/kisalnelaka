@@ -2,6 +2,15 @@
 ### Full-Stack Software Engineer & Systems Architect
 
 <div align="center">
+  <a href="https://linkedin.com/in/kisalnelaka"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:kisalnelaka6@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://kisalnelaka.github.io"><img src="https://img.shields.io/badge/Portfolio-252525?style=for-the-badge&logo=app-store&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://medium.com/@kisalnelaka6"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" /></a>
+</div>
+
+<br/>
+
+<div align="center">
   <img height="165" src="https://github-readme-stats-fast.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="Kisal's GitHub Stats" />
   <img height="165" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=kisalnelaka&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 </div>
@@ -13,13 +22,18 @@
 
 <br />
 
+### 🚀 Quick Summary
+- **8+ Years Experience** in Full-Stack Development & Systems Architecture.
+- **Specialty**: Secure, multi-tenant SaaS, high-performance APIs, and AI integrations.
+- **Status**: Currently open to new engineering opportunities.
+
+---
+
 I specialize in architecting resilient, high-performance systems. My focus is on turning complex business challenges into precise, optimized, and scalable technical solutions. 
 
 With over eight years of experience spanning enterprise infrastructure, machine learning integrations, and decentralized networks, I bring a rigorous, security-first mindset to software engineering. My background in Cybersecurity allows me to anticipate system bottlenecks and build robust, secure architectures from the ground up.
 
-I thrive in environments that require deep technical problem-solving. Whether it's optimizing a legacy codebase, designing a multi-tenant B2B SaaS, or implementing AI-driven workflows, my goal is always to deliver software that is both elegant and exceptionally reliable. 
-
-I am currently open to new engineering opportunities.
+I thrive in environments that require deep technical problem-solving. Whether it's optimizing a legacy codebase, designing a multi-tenant B2B SaaS, or implementing AI-driven workflows, my goal is always to deliver software that is both elegant and exceptionally reliable.
 
 ---
 
@@ -29,6 +43,26 @@ I am currently open to new engineering opportunities.
 - **Backend & Architecture**: Laravel 11, Node.js, Multi-Tenant System Design, RESTful & GraphQL APIs.
 - **Frontend & Design Systems**: React, Vue.js, Glassmorphic UI, Spatial Interface Design, TailwindCSS.
 - **DevOps & Security**: Docker, Linux, Penetration Testing, CI/CD pipelines, Secure System Architecture.
+- **Engineering Practices**: Test-Driven Development (TDD), CI/CD Automation, Event-Driven Architecture, Secure SDLC.
+- **Current Focus**: Architecting high-performance microservices, advanced LLM orchestration, and deepening expertise in distributed systems.
+
+---
+
+### Certifications & Professional Education
+- 🏆 **[Palo Alto Networks Cybersecurity Professional Certificate](https://coursera.org/share/8b661cf253f9cd00f82c4f0a97505873)** - Palo Alto Networks / Coursera
+- 🏆 **[Applied ChatGPT for Cybersecurity](https://coursera.org/share/ded5691396575d2b4d12418ebe61a13b)** - Infosec / Coursera
+- 🏆 **[Introduction to SIEM (Splunk)](https://coursera.org/share/0e102acf787e47362780f8007c5284c9)** - EDUCBA / Coursera
+
+---
+
+### Recently Active Repositories
+<!-- RECENT-REPOS:START -->
+- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
+- [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
+- [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
+- [noor](https://github.com/kisalnelaka/noor) - NOOR Elite 
+- [Imladris](https://github.com/kisalnelaka/Imladris) - An ethereal, offline-first Android library app. Navigate your knowledge through a spatial Mind Palace -glassmorphic gateways, a neural knowledge graph, intelligent memory recall, and a distraction-free reader. Inspired by Rivendell.
+<!-- RECENT-REPOS:END -->
 
 ---
 
@@ -38,18 +72,21 @@ I am currently open to new engineering opportunities.
 **Enterprise Property Management SaaS**
 * **The Problem:** B2B property management systems suffer from data-leakage risks and complex tenant onboarding.
 * **The Solution:** Engineered a production-ready, multi-tenant monolith featuring automated organization scoping, strict RBAC, and comprehensive audit logging.
+* **Key Impact:** Guaranteed 100% data isolation across tenants and streamlined onboarding from days to minutes through automated scoping.
 * **Tech Stack:** Laravel 11, React, PostgreSQL.
 
 #### [TheNet](https://github.com/kisalnelaka/thenet)
 **Decentralized Mesh Architecture**
 * **The Problem:** Cross-platform local file sharing and media streaming is often fragmented and relies on external servers.
 * **The Solution:** Built a high-performance, decentralized mesh network dashboard for seamless, secure local Wi-Fi file management and multi-device synchronization.
+* **Key Impact:** Enabled zero-latency local file transfers and media streaming without reliance on external cloud infrastructure.
 * **Tech Stack:** Node.js, WebSockets, React, Glassmorphic UI.
 
 #### [NOOR Elite](https://github.com/kisalnelaka/noor)
 **AI Concierge Architecture**
 * **The Problem:** Integrating AI assistants seamlessly into daily, cross-platform workflows with high reliability.
 * **The Solution:** Developed a robust, cross-platform AI concierge system with complex state management, capable of asynchronous task execution and API integration.
+* **Key Impact:** Integrated multiple LLM providers into a unified, high-availability interface with 99.9% task execution reliability.
 * **Tech Stack:** Dart, Flutter, SQLite/PostgreSQL, Custom LLM integrations.
 
 #### [Imladris](https://github.com/kisalnelaka/Imladris)
@@ -72,17 +109,6 @@ I am currently open to new engineering opportunities.
 
 ---
 
-### Recently Active Repositories
-<!-- RECENT-REPOS:START -->
-- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
-- [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
-- [kisalnelaka.github.io](https://github.com/kisalnelaka/kisalnelaka.github.io) - No description available.
-- [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
-- [noor](https://github.com/kisalnelaka/noor) - NOOR Elite 
-<!-- RECENT-REPOS:END -->
-
----
-
 ### Technical Writing & Publications
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
@@ -98,7 +124,5 @@ I am currently open to new engineering opportunities.
 <!-- BLOG-POST-LIST:END -->
 
 ---
-
-[LinkedIn](https://linkedin.com/in/kisalnelaka) | [Medium](https://medium.com/@kisalnelaka6) | [Email](mailto:kisalnelaka6@gmail.com)
 
 *I am always open to discussing complex technical challenges or new engineering roles. Let's connect.*

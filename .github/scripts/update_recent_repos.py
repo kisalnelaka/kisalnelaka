@@ -4,8 +4,8 @@ import os
 import re
 
 def main():
-    # Fetch 10 to ensure we get 5 even after filtering
-    url = "https://api.github.com/users/kisalnelaka/repos?sort=pushed&per_page=10"
+    # Fetch 20 to ensure we get 5 even after filtering
+    url = "https://api.github.com/users/kisalnelaka/repos?sort=pushed&per_page=20"
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
     
     try:
@@ -20,9 +20,8 @@ def main():
     for repo in data:
         name = repo.get('name')
         
-        # Exclude the profile repository itself to prevent a recursive update loop
-        # where the action pushes to kisalnelaka, making it the most recently pushed repo forever
-        if name == 'kisalnelaka':
+        # Exclude the profile repository itself and the website repository
+        if name in ['kisalnelaka', 'kisalnelaka.github.io']:
             continue
             
         url = repo.get('html_url')

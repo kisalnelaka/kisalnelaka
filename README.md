@@ -11,13 +11,7 @@
 <br/>
 
 <div align="center">
-  <img height="165" src="https://github-readme-stats-fast.vercel.app/api?username=kisalnelaka&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="Kisal's GitHub Stats" />
-  <img height="165" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=kisalnelaka&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&theme=tokyonight&hide_border=true" alt="Kisal's GitHub Streak" />
+  <img src="tech-dashboard.svg" alt="Technical Proficiency Dashboard" />
 </div>
 
 <br />

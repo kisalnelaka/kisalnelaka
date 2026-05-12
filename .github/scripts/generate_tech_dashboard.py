@@ -62,8 +62,8 @@ def get_radar_points(stats, center_x, center_y, max_radius):
 def generate_svg(lang_stats):
     width = 850
     height = 420
-    cx, cy = 250, 220
-    radius = 120
+    cx, cy = 250, 255
+    radius = 100
     
     # Theme Colors (Professional Dark & Vibrant)
     bg_start = "#030712"
@@ -156,10 +156,10 @@ def generate_svg(lang_stats):
     
     # Right Side: Expertise Breakdown
     # We'll use the counts to show some "Power Levels"
-    svg += f'<g transform="translate(500, 140)">'
+    svg += f'<g transform="translate(530, 110)">'
     for i, (name, count) in enumerate(lang_stats):
         bar_y = i * 45
-        bar_w = 250
+        bar_w = 260
         # Calculate percentage based on total repos or just a max
         progress = min(0.95, 0.4 + (count / max([s[1] for s in lang_stats]) * 0.55))
         

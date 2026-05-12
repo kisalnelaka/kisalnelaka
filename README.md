@@ -114,6 +114,7 @@ I solve technical problems. I don't care for corporate buzzwords or 'revolutiona
 
 ### Technical Writing & Publications
 <!-- BLOG-POST-LIST:START -->
+- [AETHER: Building a PHP 8.3 Framework Without the Bloat](https://medium.com/@kisalnelaka6/aether-building-a-php-8-3-framework-without-the-bloat-f0c1a69780ed?source=rss-3dd06b9e0f4------2)
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc?source=rss-3dd06b9e0f4------2)
 - [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57?source=rss-3dd06b9e0f4------2)
@@ -123,7 +124,6 @@ I solve technical problems. I don't care for corporate buzzwords or 'revolutiona
 - [The Lifecycle of a Phishing Attack: How Cybercriminals Bait, Hook, and Exploit](https://medium.com/@kisalnelaka6/the-lifecycle-of-a-phishing-attack-how-cybercriminals-bait-hook-and-exploit-e05cce7e4f5f?source=rss-3dd06b9e0f4------2)
 - [PhishCatcher: Real-Time Phishing Detection with Chrome Extensions and Machine Learning](https://medium.com/@kisalnelaka6/phishcatcher-real-time-phishing-detection-with-chrome-extensions-and-machine-learning-450bf06e78c2?source=rss-3dd06b9e0f4------2)
 - [Building a Blockchain-Powered, Encrypted Chat Application with Python](https://medium.com/@kisalnelaka6/building-a-blockchain-powered-encrypted-chat-application-with-python-103f116fad34?source=rss-3dd06b9e0f4------2)
-- [Demystifying Shellcode Generation: A Guide for Beginners](https://medium.com/@kisalnelaka6/demystifying-shellcode-generation-a-guide-for-beginners-e8b536599296?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 ---

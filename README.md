@@ -50,12 +50,14 @@ I solve technical problems. I don't care for corporate buzzwords or 'revolutiona
 
 ### Recently Active Repositories
 <!-- RECENT-REPOS:START -->
-- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Full-stack enterprise ERP implementation.
-- [path_setter](https://github.com/kisalnelaka/path_setter) - Automating system path configuration.
-- [thenet](https://github.com/kisalnelaka/thenet) - Decentralized local mesh network dashboard.
-- [noor](https://github.com/kisalnelaka/noor) - NOOR Elite concierge system.
-- [Imladris](https://github.com/kisalnelaka/Imladris) - Offline-first spatial knowledge graph.
+- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Multi-tenant ERP architected for high-performance inter-service communication.
+- [path_setter](https://github.com/kisalnelaka/path_setter) - CLI utility for automated system path configuration and environment management.
+- [thenet](https://github.com/kisalnelaka/thenet) - Decentralized mesh network for peer-to-peer file orchestration and media streaming.
+- [noor](https://github.com/kisalnelaka/noor) - Asynchronous AI concierge system with complex state management.
+- [Imladris](https://github.com/kisalnelaka/Imladris) - Offline-first knowledge engine utilizing a semantic neural graph.
 <!-- RECENT-REPOS:END -->
+
+---
 
 ### Engineering Showcase
 

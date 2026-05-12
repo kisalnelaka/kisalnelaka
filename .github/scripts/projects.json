@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Aether",
+        "url": "https://github.com/kisalnelaka/aether",
+        "subtitle": "Persistent Memory PHP Framework",
+        "challenge": "Standard PHP frameworks often suffer from bootstrap overhead and dependency bloat.",
+        "solution": "Built a zero-dependency framework utilizing Radix Tree routing (O(K) complexity) and Fibers for non-blocking I/O.",
+        "impact": "Achieved sub-millisecond boot times by running entirely in persistent memory, eliminating per-request reload overhead."
+    },
+    {
+        "title": "NexusFlow ERP",
+        "url": "https://github.com/kisalnelaka/nexusflow_erp",
+        "subtitle": "Multi-tenant SaaS Infrastructure",
+        "challenge": "Ensuring strict data isolation and high-speed communication in complex multi-tenant environments.",
+        "solution": "Architected a modular ERP system with automated global tenant scoping and high-performance inter-service communication.",
+        "impact": "Guaranteed 100% data isolation while maintaining a seamless user experience across distributed modules."
+    },
+    {
+        "title": "TheNet",
+        "url": "https://github.com/kisalnelaka/thenet",
+        "subtitle": "Decentralized Mesh Architecture",
+        "challenge": "Reducing cloud dependency and latency for local file synchronization.",
+        "solution": "Developed a secure, decentralized mesh network using WebSockets and Node.js for real-time peer-to-peer file orchestration.",
+        "impact": "Enabled zero-latency local synchronization with zero reliance on external cloud providers."
+    }
+]

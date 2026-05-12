@@ -1,4 +1,4 @@
-name: Update Recent Repositories
+name: Update Profile Dynamic Sections
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # Allows manual triggering
 
 jobs:
-  update-readme:
+  update-profile:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,16 +19,17 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Update Recent Repos
-        run: python .github/scripts/update_recent_repos.py
-
-      - name: Generate Tech Dashboard
-        run: python .github/scripts/generate_tech_dashboard.py
+      - name: Run Dynamic Update Scripts
+        run: |
+          python .github/scripts/update_recent_repos.py
+          python .github/scripts/update_blog_posts.py
+          python .github/scripts/update_showcase.py
+          python .github/scripts/generate_tech_dashboard.py
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md tech-dashboard.svg
-          git commit -m "Auto-update recent repositories and tech dashboard" || exit 0
+          git commit -m "Auto-update profile dynamic sections" || exit 0
           git push

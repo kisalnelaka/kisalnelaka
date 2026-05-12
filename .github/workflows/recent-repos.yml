@@ -20,6 +20,8 @@ jobs:
           python-version: '3.x'
 
       - name: Run Dynamic Update Scripts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python .github/scripts/update_recent_repos.py
           python .github/scripts/update_blog_posts.py

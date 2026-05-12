@@ -51,11 +51,11 @@ I thrive in environments that require deep technical problem-solving. Whether it
 
 ### Recently Active Repositories
 <!-- RECENT-REPOS:START -->
+- [aether](https://github.com/kisalnelaka/aether) - A PHP 8.3 framework that doesn't suck.
 - [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
 - [jeOS](https://github.com/kisalnelaka/jeOS) - just enough
 - [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
 - [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
-- [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
 <!-- RECENT-REPOS:END -->
 
 ---

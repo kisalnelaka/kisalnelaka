@@ -1,5 +1,5 @@
 # Kisal Nelaka
-### Full-Stack Software Engineer & Systems Architect
+### Systems Architect & Senior Software Engineer
 
 <div align="center">
   <a href="https://linkedin.com/in/kisalnelaka"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
@@ -11,95 +11,102 @@
 <br/>
 
 <div align="center">
-  <img src="tech-dashboard.svg" alt="Technical Proficiency Dashboard" />
+  <img src="tech-dashboard.svg" alt="Technical Dashboard" />
 </div>
 
 <br />
 
-### 🚀 Quick Summary
-- **8+ Years Experience** in Full-Stack Development & Systems Architecture.
-- **Specialty**: Secure, multi-tenant SaaS, high-performance APIs, and AI integrations.
-- **Status**: Currently open to new engineering opportunities.
+### Technical Profile
+- **8+ Years Experience**: Full-stack engineering, systems architecture, and offensive security.
+- **Specialty**: High-performance APIs, multi-tenant SaaS, and persistent memory frameworks.
+- **Status**: Available for high-impact engineering roles. No fluff.
 
 ---
 
-I specialize in architecting resilient, high-performance systems. My focus is on turning complex business challenges into precise, optimized, and scalable technical solutions. 
+I build systems that work. I don't write bloat. 
 
-With over eight years of experience spanning enterprise infrastructure, machine learning integrations, and decentralized networks, I bring a rigorous, security-first mindset to software engineering. My background in Cybersecurity allows me to anticipate system bottlenecks and build robust, secure architectures from the ground up.
+8+ years across enterprise infrastructure, distributed systems, and security research. My background in cybersecurity means I assume everything is broken until I've audited the code. I build for performance, strict data isolation, and sub-millisecond latency. 
 
-I thrive in environments that require deep technical problem-solving. Whether it's optimizing a legacy codebase, designing a multi-tenant B2B SaaS, or implementing AI-driven workflows, my goal is always to deliver software that is both elegant and exceptionally reliable.
+I solve technical problems. I don't care for corporate buzzwords or 'revolutionary' marketing. If a system is slow, it's poorly architected. I fix that.
 
 ---
 
 ### Technical Capabilities & Stack
 
-- **Core Languages**: TypeScript, Kotlin, Dart, C#, Python, C++, PHP.
-- **Backend & Architecture**: Laravel 11, Node.js, Multi-Tenant System Design, RESTful & GraphQL APIs.
-- **Frontend & Design Systems**: React, Vue.js, Glassmorphic UI, Spatial Interface Design, TailwindCSS.
-- **DevOps & Security**: Docker, Linux, Penetration Testing, CI/CD pipelines, Secure System Architecture.
-- **Engineering Practices**: Test-Driven Development (TDD), CI/CD Automation, Event-Driven Architecture, Secure SDLC.
-- **Current Focus**: Architecting high-performance microservices, advanced LLM orchestration, and deepening expertise in distributed systems.
+- **Core Languages**: PHP (8.3+), TypeScript, Python, C#, Kotlin, C++.
+- **Backend**: Laravel (Core/Internals), Node.js, Persistent Memory Architectures, Radix Tree Routing.
+- **Frontend**: React, Vue, Native JS (No bloat), Tailwind.
+- **Systems & Security**: Docker, Linux Kernel/PCNTL, Pentesting (OSCP-style), CI/CD Automation.
+- **Focus**: Eliminating overhead, AOT compilation, and non-blocking I/O via Fibers.
 
 ---
 
-### Certifications & Professional Education
-- 🏆 **[Palo Alto Networks Cybersecurity Professional Certificate](https://coursera.org/share/8b661cf253f9cd00f82c4f0a97505873)** - Palo Alto Networks / Coursera
-- 🏆 **[Applied ChatGPT for Cybersecurity](https://coursera.org/share/ded5691396575d2b4d12418ebe61a13b)** - Infosec / Coursera
-- 🏆 **[Introduction to SIEM (Splunk)](https://coursera.org/share/0e102acf787e47362780f8007c5284c9)** - EDUCBA / Coursera
+### Certifications
+- **[Palo Alto Networks Cybersecurity Professional Certificate](https://coursera.org/share/8b661cf253f9cd00f82c4f0a97505873)** - Palo Alto Networks
+- **[Applied ChatGPT for Cybersecurity](https://coursera.org/share/ded5691396575d2b4d12418ebe61a13b)** - Infosec
+- **[Introduction to SIEM (Splunk)](https://coursera.org/share/0e102acf787e47362780f8007c5284c9)** - EDUCBA
 
 ---
 
 ### Recently Active Repositories
 <!-- RECENT-REPOS:START -->
-- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
-- [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
-- [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
-- [noor](https://github.com/kisalnelaka/noor) - NOOR Elite 
-- [Imladris](https://github.com/kisalnelaka/Imladris) - An ethereal, offline-first Android library app. Navigate your knowledge through a spatial Mind Palace -glassmorphic gateways, a neural knowledge graph, intelligent memory recall, and a distraction-free reader. Inspired by Rivendell.
+- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Full-stack enterprise ERP implementation.
+- [path_setter](https://github.com/kisalnelaka/path_setter) - Automating system path configuration.
+- [thenet](https://github.com/kisalnelaka/thenet) - Decentralized local mesh network dashboard.
+- [noor](https://github.com/kisalnelaka/noor) - NOOR Elite concierge system.
+- [Imladris](https://github.com/kisalnelaka/Imladris) - Offline-first spatial knowledge graph.
 <!-- RECENT-REPOS:END -->
-
----
 
 ### Engineering Showcase
 
+#### [Aether](https://github.com/kisalnelaka/aether)
+**Persistent Memory PHP Framework**
+* **The Problem:** Modern frameworks are bloated, relying on regex routing and massive dependency trees that kill performance.
+* **The Solution:** A zero-dependency framework built for speed. Uses a Radix Tree router (O(K) matching), Fibers for non-blocking I/O, and AOT attribute compilation.
+* **Key Impact:** Sub-millisecond boot times. Runs in persistent memory (no reload on request). Zero external dependencies.
+* **Tech Stack:** PHP 8.3+, Fibers, Radix Tree, PCNTL.
+
+#### [Bunny](https://github.com/socialrabbit/bunny)
+**Application Scaffolding Engine**
+* **The Problem:** Standard boilerplates are either too generic or too bloated for rapid domain-specific deployment.
+* **The Solution:** An automated scaffolding engine for Laravel that generates domain-specific architectures (E-commerce, LMS, Portfolio) with integrated CMS and RBAC.
+* **Key Impact:** Reduced project initialization time from days to minutes. Clean, standardized code generation without the typical "package bloat."
+* **Tech Stack:** PHP, Laravel, Vue/React, Tailwind.
+
 #### [TenancyOS](https://github.com/kisalnelaka/TenancyOS)
-**Enterprise Property Management SaaS**
-* **The Problem:** B2B property management systems suffer from data-leakage risks and complex tenant onboarding.
-* **The Solution:** Engineered a production-ready, multi-tenant monolith featuring automated organization scoping, strict RBAC, and comprehensive audit logging.
-* **Key Impact:** Guaranteed 100% data isolation across tenants and streamlined onboarding from days to minutes through automated scoping.
-* **Tech Stack:** Laravel 11, React, PostgreSQL.
+**Multi-Tenant Infrastructure**
+* **The Problem:** Most SaaS platforms leak data due to poor tenant scoping or over-complex RBAC.
+* **The Solution:** Engineered a strict multi-tenant monolith with automated global scoping and hardware-level isolation concepts in the application layer.
+* **Key Impact:** 100% data isolation guaranteed. Scalable tenant onboarding through automated provisioning.
+* **Tech Stack:** Laravel, React, PostgreSQL.
 
 #### [TheNet](https://github.com/kisalnelaka/thenet)
 **Decentralized Mesh Architecture**
-* **The Problem:** Cross-platform local file sharing and media streaming is often fragmented and relies on external servers.
-* **The Solution:** Built a high-performance, decentralized mesh network dashboard for seamless, secure local Wi-Fi file management and multi-device synchronization.
-* **Key Impact:** Enabled zero-latency local file transfers and media streaming without reliance on external cloud infrastructure.
-* **Tech Stack:** Node.js, WebSockets, React, Glassmorphic UI.
+* **The Problem:** Cloud-dependency for local file sharing is a security risk and adds unnecessary latency.
+* **The Solution:** Built a decentralized mesh network for secure, zero-latency local file management and media synchronization.
+* **Key Impact:** Zero cloud reliance. High-speed local peer-to-peer transfers.
+* **Tech Stack:** Node.js, WebSockets, React.
 
 #### [NOOR Elite](https://github.com/kisalnelaka/noor)
-**AI Concierge Architecture**
-* **The Problem:** Integrating AI assistants seamlessly into daily, cross-platform workflows with high reliability.
-* **The Solution:** Developed a robust, cross-platform AI concierge system with complex state management, capable of asynchronous task execution and API integration.
-* **Key Impact:** Integrated multiple LLM providers into a unified, high-availability interface with 99.9% task execution reliability.
-* **Tech Stack:** Dart, Flutter, SQLite/PostgreSQL, Custom LLM integrations.
+**Asynchronous AI Orchestration**
+* **The Problem:** Sequential AI processing is too slow for real-world concierge workflows.
+* **The Solution:** Developed a non-blocking AI orchestration layer with complex state management for concurrent task execution across multiple LLM providers.
+* **Key Impact:** 99.9% task reliability. Optimized token usage and response latency.
+* **Tech Stack:** Dart, Flutter, Custom LLM Handlers.
 
 #### [Imladris](https://github.com/kisalnelaka/Imladris)
-**Spatial Mind Palace & Neural Graph**
-* **The Problem:** Standard note-taking apps lack semantic connection between offline, personal knowledge bases.
-* **The Solution:** Architected an offline-first Android application utilizing a custom neural knowledge graph to interlink notes spatially, wrapped in a highly optimized UI.
-* **Tech Stack:** Kotlin, Android SDK, Local Graph Database.
-
-#### [Agentic Architect (Claude Code)](https://github.com/kisalnelaka/claude-code-leak)
-**Autonomous Terminal Intelligence**
-* **The Problem:** Developer workflows are bogged down by repetitive scaffolding and maintenance tasks.
-* **The Solution:** Configured an agentic CLI tool capable of autonomously executing routine repository tasks, refactoring, and codebase analysis.
-* **Tech Stack:** Python/Node, LLM Tool Calling, Bash scripting.
+**Graph-Based Knowledge Engine**
+* **The Problem:** Hierarchical note-taking is primitive; it doesn't represent how humans link information.
+* **The Solution:** Architected a spatial knowledge engine using a custom neural graph to map semantic connections between data points offline.
+* **Key Impact:** High-speed semantic retrieval. 100% offline-first privacy.
+* **Tech Stack:** Kotlin, Android SDK, Graph Theory.
 
 #### [Vendetta 84](#)
-**Commercial-Grade Noir Interactive Experience**
-* **The Problem:** Balancing high-fidelity visuals (VHS noir aesthetic) with performant game mechanics on mobile/PC.
-* **The Solution:** Architected a Unity-based hybrid FPS/TPS system, utilizing optimized state machines for AI and precise event scripting for environmental interaction.
-* **Tech Stack:** Unity, C#, SDL2 Input System.
+**Performance-Optimized Game Engine Implementation**
+* **The Problem:** Visual fidelity usually comes at the cost of high CPU/GPU overhead on mobile.
+* **The Solution:** Custom Unity implementation focused on memory management, optimized AI state machines, and event-driven interaction scripts.
+* **Key Impact:** 60FPS consistent performance on mid-range hardware without compromising the aesthetic.
+* **Tech Stack:** Unity, C#, SDL2.
 
 ---
 
@@ -119,4 +126,4 @@ I thrive in environments that require deep technical problem-solving. Whether it
 
 ---
 
-*I am always open to discussing complex technical challenges or new engineering roles. Let's connect.*
+*If you have a technical problem that needs solving, contact me. If you want to talk about "synergy," don't.*

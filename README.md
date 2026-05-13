@@ -74,10 +74,10 @@ I am driven by technical excellence and the challenge of architecting systems th
 
 ### 📈 Recent Activity
 <!-- RECENT-REPOS:START -->
+- [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
 - [aether](https://github.com/kisalnelaka/aether) - A PHP 8.3 framework that doesn't suck.
 - [aether-crud](https://github.com/kisalnelaka/aether-crud) - AETHER CRUD demo
 - [aether-site](https://github.com/kisalnelaka/aether-site) - aether demo site
-- [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
 - [jeOS](https://github.com/kisalnelaka/jeOS) - just enough
 <!-- RECENT-REPOS:END -->
 

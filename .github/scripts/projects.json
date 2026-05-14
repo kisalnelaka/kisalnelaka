@@ -1,13 +1,5 @@
 [
     {
-        "title": "Aether",
-        "url": "https://github.com/kisalnelaka/aether",
-        "subtitle": "Persistent Memory PHP Framework",
-        "challenge": "Standard PHP frameworks often suffer from bootstrap overhead and dependency bloat.",
-        "solution": "Built a zero-dependency framework utilizing Radix Tree routing (O(K) complexity) and Fibers for non-blocking I/O.",
-        "impact": "Achieved sub-millisecond boot times by running entirely in persistent memory, eliminating per-request reload overhead."
-    },
-    {
         "title": "NexusFlow ERP",
         "url": "https://github.com/kisalnelaka/nexusflow_erp",
         "subtitle": "Multi-tenant SaaS Infrastructure",

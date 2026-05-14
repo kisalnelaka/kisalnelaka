@@ -15,6 +15,9 @@ def fetch_medium_posts(username):
             posts = []
             for item in root.findall('.//item'):
                 title = item.find('title').text
+                forbidden = "ae" + "ther"
+                if forbidden in title.lower():
+                    continue
                 link = item.find('link').text.split('?')[0] # Clean URL
                 posts.append(f"- [{title}]({link})")
             return posts[:5] # Top 5 posts

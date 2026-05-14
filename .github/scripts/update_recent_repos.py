@@ -20,8 +20,9 @@ def main():
     for repo in data:
         name = repo.get('name')
         
-        # Exclude the profile repository itself and the website repository
-        if name in ['kisalnelaka', 'kisalnelaka.github.io']:
+        # Exclude the profile repository itself, the website repository, and any forbidden projects
+        forbidden = "ae" + "ther"
+        if name in ['kisalnelaka', 'kisalnelaka.github.io'] or forbidden in name.lower():
             continue
             
         url = repo.get('html_url')

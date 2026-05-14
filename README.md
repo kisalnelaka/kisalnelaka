@@ -35,11 +35,6 @@ I am driven by technical excellence and the challenge of architecting systems th
 
 ### 🏗️ Featured Engineering Showcase
 <!-- SHOWCASE:START -->
-#### [Aether](https://github.com/kisalnelaka/aether) | *Persistent Memory PHP Framework*
-*   **Challenge:** Standard PHP frameworks often suffer from bootstrap overhead and dependency bloat.
-*   **Solution:** Built a zero-dependency framework utilizing Radix Tree routing (O(K) complexity) and Fibers for non-blocking I/O.
-*   **Impact:** Achieved sub-millisecond boot times by running entirely in persistent memory, eliminating per-request reload overhead.
-
 #### [NexusFlow ERP](https://github.com/kisalnelaka/nexusflow_erp) | *Multi-tenant SaaS Infrastructure*
 *   **Challenge:** Ensuring strict data isolation and high-speed communication in complex multi-tenant environments.
 *   **Solution:** Architected a modular ERP system with automated global tenant scoping and high-performance inter-service communication.
@@ -63,22 +58,22 @@ I am driven by technical excellence and the challenge of architecting systems th
 
 ### ✍️ Technical Writing
 <!-- BLOG-POST-LIST:START -->
-- [AETHER: Building a PHP 8.3 Framework Without the Bloat](https://medium.com/@kisalnelaka6/aether-building-a-php-8-3-framework-without-the-bloat-f0c1a69780ed)
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc)
 - [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57)
 - [JavaScript for Clueless Newbies:Part 1 — Variables, Data Types, & Operators](https://medium.com/@kisalnelaka6/javascript-for-clueless-newbies-part-1-variables-data-types-operators-ae71e4d01ce8)
+- [Part 3: Lure Creation — The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613)
 <!-- BLOG-POST-LIST:END -->
 
 ---
 
 ### 📈 Recent Activity
 <!-- RECENT-REPOS:START -->
-- [aether-site](https://github.com/kisalnelaka/aether-site) - aether demo site
-- [aether](https://github.com/kisalnelaka/aether) - A PHP 8.3 framework that doesn't suck.
 - [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
 - [jeOS](https://github.com/kisalnelaka/jeOS) - just enough
 - [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
+- [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
+- [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
 <!-- RECENT-REPOS:END -->
 
 ---

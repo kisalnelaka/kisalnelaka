@@ -1,15 +1,29 @@
 # Kisal Nelaka
-### Systems Architect & Full-Stack Engineer
-**Specializing in High-Performance Distributed Systems & Secure Architectures**
 
 <div align="center">
-  <a href="https://linkedin.com/in/kisalnelaka"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:kisalnelaka6@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://kisalnelaka.github.io"><img src="https://img.shields.io/badge/Portfolio-252525?style=for-the-badge&logo=app-store&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://medium.com/@kisalnelaka6"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" /></a>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=16&duration=3000&pause=1200&color=38BDF8&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=70&lines=Systems+Architect+%26+Full-Stack+Engineer;I+build+things+that+make+other+engineers+nervous." alt="Typing SVG" />
 </div>
 
-<br/>
+<div align="center">
+
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kisalnelaka)
+  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kisalnelaka6@gmail.com)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-252525?style=for-the-badge&logo=vercel&logoColor=white)](https://kisalnelaka.github.io)
+  [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@kisalnelaka6)
+
+</div>
+
+---
+
+## who i am (against my better judgment)
+
+8+ years deep. Systems architecture, offensive security, full-stack engineering. I specialize in building things that *probably shouldn't work as well as they do* — distributed systems, multi-tenant SaaS platforms, decentralized mesh networks, and the occasional tool that makes security professionals uncomfortable.
+
+My relationship with software is a toxic dependency I can't quit. The code works. I'm fine. Don't ask.
+
+Core obsessions: **eliminating architectural overhead**, **strict data isolation**, **non-blocking I/O**, and making PHP do things PHP was never meant to do.
+
+---
 
 <div align="center">
   <img src="tech-dashboard.svg" alt="Technical Arsenal" />
@@ -17,69 +31,90 @@
 
 ---
 
-### 🚀 Professional Profile
-With over **8 years of experience** in the software industry, I specialize in building scalable, high-performance systems from the ground up. My expertise spans across systems architecture, offensive security, and full-stack development, with a particular focus on eliminating architectural overhead and ensuring robust data isolation.
+## things i actually know
 
-I am driven by technical excellence and the challenge of architecting systems that are not just functional, but performant and secure by design.
-
----
-
-### 🛠️ Technical Arsenal
-
-- **Languages**: PHP (8.3+), TypeScript, Python, C#, Kotlin, C++, Rust.
-- **Backend & Systems**: Laravel Internals, Node.js, Persistent Memory Architectures, Radix Tree Routing, Non-blocking I/O (Fibers).
-- **Frontend**: React, Vue.js, Tailwind CSS, Native JavaScript (Performance-first).
-- **Infrastructure & Security**: Docker, Linux Kernel/PCNTL, CI/CD Automation, Penetration Testing (OSCP-standard).
+```
+Languages       → PHP (8.3+), TypeScript, Python, C#, Kotlin, C++, Rust
+Backend         → Laravel Internals, Node.js, Radix Tree Routing, Fibers/Non-blocking I/O
+                  Persistent Memory Architectures, WebSockets, Custom TCP/UDP stacks
+Frontend        → React, Vue.js, Tailwind CSS, Native JS (performance first, always)
+Infrastructure  → Docker, Linux Kernel/PCNTL, CI/CD Automation
+Security        → Penetration Testing (OSCP-standard), SIEM (Splunk), Palo Alto Networks
+Dark Arts       → Things I've seen in production that I will not document
+```
 
 ---
 
-### 🏗️ Featured Engineering Showcase
+## things i made instead of therapy
 <!-- SHOWCASE:START -->
-#### [NexusFlow ERP](https://github.com/kisalnelaka/nexusflow_erp) | *Multi-tenant SaaS Infrastructure*
-*   **Challenge:** Ensuring strict data isolation and high-speed communication in complex multi-tenant environments.
-*   **Solution:** Architected a modular ERP system with automated global tenant scoping and high-performance inter-service communication.
-*   **Impact:** Guaranteed 100% data isolation while maintaining a seamless user experience across distributed modules.
+#### [NexusFlow ERP](https://github.com/kisalnelaka/nexusflow_erp) — *Multi-tenant SaaS Infrastructure*
 
-#### [TheNet](https://github.com/kisalnelaka/thenet) | *Decentralized Mesh Architecture*
-*   **Challenge:** Reducing cloud dependency and latency for local file synchronization.
-*   **Solution:** Developed a secure, decentralized mesh network using WebSockets and Node.js for real-time peer-to-peer file orchestration.
-*   **Impact:** Enabled zero-latency local synchronization with zero reliance on external cloud providers.
+**Problem:** Strict data isolation in complex multi-tenant environments while keeping inter-service communication fast enough to not embarrass anyone.
+
+**What I did:** Architected a modular ERP system with automated global tenant scoping. The kind of scoping that just *works* — you don't get to think about it, it's handled, move on.
+
+**Result:** 100% data isolation. Zero leakage. Seamless UX across distributed modules. It works suspiciously well.
+
+---
+
+#### [TheNet](https://github.com/kisalnelaka/thenet) — *Decentralized Mesh Architecture*
+
+**Problem:** Cloud dependency is a crutch. Local sync shouldn't need to phone home to AWS.
+
+**What I did:** Built a secure, decentralized mesh network using WebSockets and Node.js. Peer-to-peer file orchestration with zero cloud dependency.
+
+**Result:** Zero-latency local sync. No external providers. The network finds itself.
 
 <!-- SHOWCASE:END -->
 
 ---
 
-### 📜 Certifications
-*   **Palo Alto Networks Cybersecurity Professional**
-*   **Applied ChatGPT for Cybersecurity** (Infosec)
-*   **Introduction to SIEM (Splunk)** (EDUCBA)
-
----
-
-### ✍️ Technical Writing
-<!-- BLOG-POST-LIST:START -->
-- [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124)
-- [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc)
-- [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57)
-- [JavaScript for Clueless Newbies:Part 1 — Variables, Data Types, & Operators](https://medium.com/@kisalnelaka6/javascript-for-clueless-newbies-part-1-variables-data-types-operators-ae71e4d01ce8)
-- [Part 3: Lure Creation — The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613)
-<!-- BLOG-POST-LIST:END -->
-
----
-
-### 📈 Recent Activity
+## recent repos (the ones i'll admit to)
 <!-- RECENT-REPOS:START -->
-- [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
-- [jeOS](https://github.com/kisalnelaka/jeOS) - just enough
-- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
-- [path_setter](https://github.com/kisalnelaka/path_setter) - when youre too lazy to set paths like me
-- [thenet](https://github.com/kisalnelaka/thenet) - TheNet: A high-performance, decentralized mesh network dashboard for premium local Wi-Fi file management, media streaming, and cross-platform synchronization.
+- [resu_me](https://github.com/kisalnelaka/resu_me) — Easy resume modifier
+- [jeOS](https://github.com/kisalnelaka/jeOS) — just enough OS. nothing more.
+- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) — Full-stack ERP. ground up. multi-tenant. it haunts me.
+- [path_setter](https://github.com/kisalnelaka/path_setter) — because I'm too lazy to set PATH variables manually. judge me.
+- [thenet](https://github.com/kisalnelaka/thenet) — decentralized mesh network dashboard. local-first. cloud-free.
 <!-- RECENT-REPOS:END -->
 
 ---
 
+## certifications (the paper trail)
+
+- **Palo Alto Networks Cybersecurity Professional** — they gave me a cert. I already knew this.
+- **Applied ChatGPT for Cybersecurity** — Infosec, because offense needs to understand the tools
+- **Introduction to SIEM (Splunk)** — EDUCBA, logs are just paranoia in structured format
+
+---
+
+## technical writing (for when i have to explain myself)
+<!-- BLOG-POST-LIST:START -->
+- [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124)
+- [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc)
+- [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57)
+- [JavaScript for Clueless Newbies: Part 1 — Variables, Data Types & Operators](https://medium.com/@kisalnelaka6/javascript-for-clueless-newbies-part-1-variables-data-types-operators-ae71e4d01ce8)
+- [Part 3: Lure Creation — The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613)
+<!-- BLOG-POST-LIST:END -->
+
+---
+
 <div align="center">
-  <p><i>Looking for a systems architect or senior engineer to solve complex technical challenges? Let's connect.</i></p>
-  <a href="mailto:kisalnelaka6@gmail.com"><b>Get in Touch</b></a>
+  <img src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=38bdf8&text_color=94a3b8&ring_color=8b5cf6" alt="GitHub Stats" />
+  &nbsp;&nbsp;
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kisalnelaka&theme=github-dark-blue&hide_border=true&background=0d1117&ring=8b5cf6&fire=38bdf8&currStreakLabel=38bdf8" alt="GitHub Streak" />
 </div>
 
+<br/>
+
+<div align="center">
+  <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" width="100%" />
+</div>
+
+---
+
+<div align="center">
+  <sub>need a systems architect who won't sugarcoat things?</sub>
+  <br/>
+  <a href="mailto:kisalnelaka6@gmail.com"><b>kisalnelaka6@gmail.com</b></a>
+</div>

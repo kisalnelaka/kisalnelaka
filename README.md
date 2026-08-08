@@ -1,28 +1,24 @@
 <div align="center">
-  <img src="banner.svg" alt="Imperial Systems Architect" width="100%" />
+  <img src="banner.svg" alt="Senior Software Engineer & Systems Architect" width="100%" />
 </div>
 
 <div align="center" style="margin-top: -10px; margin-bottom: 20px;">
-  <a href="https://linkedin.com/in/kisalnelaka"><img src="https://img.shields.io/badge/LINKEDIN-020205?style=for-the-badge&logo=linkedin&logoColor=00ffff&labelColor=0a0a1a" height="24"/></a>
-  <a href="https://kisalnelaka.github.io"><img src="https://img.shields.io/badge/PORTFOLIO-020205?style=for-the-badge&logo=vercel&logoColor=00ffff&labelColor=0a0a1a" height="24"/></a>
-  <a href="https://medium.com/@kisalnelaka6"><img src="https://img.shields.io/badge/MEDIUM-020205?style=for-the-badge&logo=medium&logoColor=00ffff&labelColor=0a0a1a" height="24"/></a>
-  <a href="mailto:kisalnelaka6@gmail.com"><img src="https://img.shields.io/badge/ENCRYPTED_COMMS-020205?style=for-the-badge&logo=gmail&logoColor=00ffff&labelColor=0a0a1a" height="24"/></a>
+  <a href="https://linkedin.com/in/kisalnelaka"><img src="https://img.shields.io/badge/LinkedIn-0f172a?style=flat-square&logo=linkedin&logoColor=38bdf8&labelColor=020617" height="20"/></a>
+  <a href="https://kisalnelaka.github.io"><img src="https://img.shields.io/badge/Portfolio-0f172a?style=flat-square&logo=vercel&logoColor=38bdf8&labelColor=020617" height="20"/></a>
+  <a href="https://medium.com/@kisalnelaka6"><img src="https://img.shields.io/badge/Medium-0f172a?style=flat-square&logo=medium&logoColor=38bdf8&labelColor=020617" height="20"/></a>
+  <a href="mailto:kisalnelaka6@gmail.com"><img src="https://img.shields.io/badge/Email-0f172a?style=flat-square&logo=gmail&logoColor=38bdf8&labelColor=020617" height="20"/></a>
 </div>
 
 <div align="center">
-  <img src="showcase-card.svg" alt="Architectural Blueprints" width="100%" />
+  <img src="showcase-card.svg" alt="Systems Showcase" width="100%" />
 </div>
 
 <div align="center">
-  <img src="tech-dashboard.svg" alt="Radial HUD" width="100%" />
-</div>
-
-<div align="center">
-  <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="3D Activity Matrix" width="100%" />
+  <img src="tech-dashboard.svg" alt="Core Arsenal" width="100%" />
 </div>
 
 <details align="center">
-  <summary><kbd>INITIATE_SYSTEM_LOGS.exe</kbd></summary>
+  <summary><b>System Logs & Activity</b></summary>
   <br/>
 
 <!-- RECENT-REPOS:START -->
@@ -47,7 +43,7 @@
 
 <br/>
 <div align="center">
-  <img src="https://img.shields.io/badge/PALO_ALTO_NETWORKS-CYBERSECURITY_PROFESSIONAL-020205?style=for-the-badge&labelColor=0a0a1a&color=00ffff" />
-  <img src="https://img.shields.io/badge/INFOSEC-APPLIED_CHATGPT-020205?style=for-the-badge&labelColor=0a0a1a&color=a855f7" />
-  <img src="https://img.shields.io/badge/SPLUNK-SIEM_ANALYST-020205?style=for-the-badge&labelColor=0a0a1a&color=00ff9f" />
+  <img src="https://img.shields.io/badge/Palo_Alto_Networks-Cybersecurity_Professional-0f172a?style=flat-square&labelColor=020617&color=475569" />
+  <img src="https://img.shields.io/badge/Infosec-Applied_ChatGPT-0f172a?style=flat-square&labelColor=020617&color=475569" />
+  <img src="https://img.shields.io/badge/Splunk-SIEM_Analyst-0f172a?style=flat-square&labelColor=020617&color=475569" />
 </div>

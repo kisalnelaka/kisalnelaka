@@ -42,7 +42,7 @@ def fetch_repo(name):
 FEATURED_META = {
     "nexusflow_erp": {
         "subtitle":   "multi-tenant saas infrastructure",
-        "key_facts":  [("100%", "data isolation"), ("<12ms", "inter-service latency"), ("N", "horizontal tenants")],
+        "key_facts":  [("100%", "data isolation"), ("&lt;12ms", "inter-service latency"), ("N+", "horizontal tenants")],
         "stack_line": "Laravel 11 · Filament v3 · MySQL · Redis",
     },
     "thenet": {
@@ -52,12 +52,16 @@ FEATURED_META = {
     },
 }
 
+def xml_escape(s):
+    """Escape characters that are invalid in SVG/XML text nodes."""
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
 def generate_showcase(repos):
     W, H = 860, 210
 
     def render_card(repo, meta, x_offset):
-        title    = repo["name"].replace("_", " ").title()
-        subtitle = meta["subtitle"]
+        title    = xml_escape(repo["name"].replace("_", " ").title())
+        subtitle = xml_escape(meta["subtitle"])
         desc_lines = []
         desc = repo["description"]
         # Word-wrap description into two lines of ~55 chars each
@@ -65,14 +69,14 @@ def generate_showcase(repos):
         line = ""
         for w in words:
             if len(line) + len(w) + 1 > 56:
-                desc_lines.append(line.strip())
+                desc_lines.append(xml_escape(line.strip()))
                 line = w + " "
                 if len(desc_lines) == 2:
                     break
             else:
                 line += w + " "
         if len(desc_lines) < 2 and line.strip():
-            desc_lines.append(line.strip())
+            desc_lines.append(xml_escape(line.strip()))
         while len(desc_lines) < 2:
             desc_lines.append("")
 
@@ -87,7 +91,8 @@ def generate_showcase(repos):
         # Live stats (stars, language, last push)
         live_line = f"updated {repo['updated']}"
         if repo["language"]:
-            live_line = f"{repo['language']}  ·  {live_line}"
+            live_line = f"{repo['language']}  \u00b7  {live_line}"
+        live_line = xml_escape(live_line)
 
         return f'''
   <g transform="translate({x_offset}, 55)">

@@ -46,7 +46,7 @@ def fetch_stats():
     return stats
 
 def generate_banner(stats):
-    W, H = 860, 220
+    W, H = 860, 240
     now = datetime.now(timezone.utc).strftime("%B %Y")
 
     age     = stats["age"]
@@ -125,17 +125,17 @@ def generate_banner(stats):
   <!-- Vertical separator -->
   <line x1="520" y1="40" x2="520" y2="{H - 40}" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
 
-  <!-- Stat 1 -->
-  <text x="564" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{age}</text>
-  <text x="564" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">years building</text>
+  <!-- Stat 1: y=70 value, y=90 label -->
+  <text x="564" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{age}</text>
+  <text x="564" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">years building</text>
 
-  <!-- Stat 2 -->
-  <text x="564" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{commits:,}</text>
-  <text x="564" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">contributions this year</text>
+  <!-- Stat 2: y=130 value, y=148 label -->
+  <text x="564" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{commits:,}</text>
+  <text x="564" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">contributions this year</text>
 
-  <!-- Stat 3 -->
-  <text x="564" y="212" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{repos}</text>
-  <text x="564" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">public repositories</text>
+  <!-- Stat 3: y=194 value, y=212 label -->
+  <text x="564" y="194" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{repos}</text>
+  <text x="564" y="210" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">public repositories</text>
 
   <!-- Date: far right, quiet -->
   <text x="{W - 24}" y="30" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#27272a">{now}</text>

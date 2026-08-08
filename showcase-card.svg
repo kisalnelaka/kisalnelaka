@@ -31,9 +31,9 @@
     <g transform="translate(0, 98)">
       <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">100%</text>
       <text x="0" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">data isolation</text>
-      <text x="110" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7"><12ms</text>
+      <text x="110" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">&lt;12ms</text>
       <text x="110" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">inter-service latency</text>
-      <text x="250" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">N</text>
+      <text x="250" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">N+</text>
       <text x="250" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">horizontal tenants</text>
     </g>
     <text x="0" y="138" font-family="'Courier New',Courier,monospace" font-size="10.5" fill="#374151">Laravel 11 · Filament v3 · MySQL · Redis</text>

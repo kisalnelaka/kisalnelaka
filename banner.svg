@@ -1,12 +1,12 @@
-<svg width="860" height="220" viewBox="0 0 860 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="860" height="240" viewBox="0 0 860 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="220" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="240" gradientUnits="userSpaceOnUse">
       <stop offset="0%"   stop-color="#0c0c0e"/>
       <stop offset="100%" stop-color="#101014"/>
     </linearGradient>
     <!-- The ONE accent: a warm, muted amber/gold -->
     <!-- Used ONLY on the thin left rule and the availability dot -->
-    <linearGradient id="rule-grad" x1="0" y1="0" x2="0" y2="220" gradientUnits="userSpaceOnUse">
+    <linearGradient id="rule-grad" x1="0" y1="0" x2="0" y2="240" gradientUnits="userSpaceOnUse">
       <stop offset="0%"   stop-color="#c9a96e" stop-opacity="0"/>
       <stop offset="35%"  stop-color="#c9a96e" stop-opacity="0.9"/>
       <stop offset="65%"  stop-color="#c9a96e" stop-opacity="0.9"/>
@@ -19,15 +19,15 @@
   </defs>
 
   <!-- Background -->
-  <rect width="860" height="220" fill="url(#bg)"/>
+  <rect width="860" height="240" fill="url(#bg)"/>
   <!-- Grain -->
-  <rect width="860" height="220" filter="url(#noise)" style="pointer-events:none; mix-blend-mode:overlay"/>
+  <rect width="860" height="240" filter="url(#noise)" style="pointer-events:none; mix-blend-mode:overlay"/>
 
   <!-- Outer border: extremely subtle -->
-  <rect x="0.5" y="0.5" width="859" height="219" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+  <rect x="0.5" y="0.5" width="859" height="239" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" fill="none"/>
 
   <!-- The accent rule: one thin vertical bar, left edge -->
-  <rect x="0" y="0" width="2" height="220" fill="url(#rule-grad)"/>
+  <rect x="0" y="0" width="2" height="240" fill="url(#rule-grad)"/>
 
   <!-- =============================== -->
   <!-- LEFT: Identity                  -->
@@ -66,19 +66,19 @@
   <!-- =============================== -->
 
   <!-- Vertical separator -->
-  <line x1="520" y1="40" x2="520" y2="180" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <line x1="520" y1="40" x2="520" y2="200" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
 
-  <!-- Stat 1 -->
-  <text x="564" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">9.3</text>
-  <text x="564" y="106" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">years building</text>
+  <!-- Stat 1: y=70 value, y=90 label -->
+  <text x="564" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">9.3</text>
+  <text x="564" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">years building</text>
 
-  <!-- Stat 2 -->
-  <text x="564" y="150" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">1,149</text>
-  <text x="564" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">contributions this year</text>
+  <!-- Stat 2: y=130 value, y=148 label -->
+  <text x="564" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">1,149</text>
+  <text x="564" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">contributions this year</text>
 
-  <!-- Stat 3 -->
-  <text x="564" y="212" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">71</text>
-  <text x="564" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">public repositories</text>
+  <!-- Stat 3: y=194 value, y=212 label -->
+  <text x="564" y="194" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">71</text>
+  <text x="564" y="210" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">public repositories</text>
 
   <!-- Date: far right, quiet -->
   <text x="836" y="30" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#27272a">August 2026</text>

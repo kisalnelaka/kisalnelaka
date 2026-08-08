@@ -1,126 +1,164 @@
-<svg width="860" height="240" viewBox="0 0 860 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="860" height="200" viewBox="0 0 860 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="200" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
+    <linearGradient id="accent-strip" x1="0" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
     <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
-      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.04 0"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.04 0"/>
     </filter>
   </defs>
 
-  <!-- Base -->
-  <rect width="860" height="240" rx="12" fill="url(#bg-grad)"/>
-  <rect width="860" height="240" rx="12" style="pointer-events:none;" filter="url(#noise)"/>
-  <rect x="0.5" y="0.5" width="859" height="239" rx="11.5" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" fill="none"/>
+  <rect width="860" height="200" fill="url(#bg)"/>
+  <rect width="860" height="200" filter="url(#noise)" style="pointer-events:none;"/>
+  <rect x="0" y="0" width="3" height="200" fill="url(#accent-strip)"/>
+  <rect x="0.5" y="0.5" width="859" height="199" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" fill="none"/>
 
-  <text x="30" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" letter-spacing="1">CORE ARSENAL</text>
-  <line x1="30" y1="45" x2="830" y2="45" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <!-- Header -->
+  <text x="26" y="38" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1.5">STACK PROFICIENCY</text>
+  <line x1="26" y1="50" x2="834" y2="50" stroke="#1e293b" stroke-width="1"/>
+  <text x="834" y="38" text-anchor="end" font-family="'Courier New', monospace" font-size="9" fill="#334155">2026-08-08</text>
+  
+  <!-- Baseline -->
+  <line x1="26" y1="180" x2="834" y2="180" stroke="#1e293b" stroke-width="1"/>
 
   
-    <g transform="translate(143.33333333333334, 110.0)">
-        <!-- Background Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#1e293b" stroke-width="4"/>
-        
-        <!-- Progress Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="4" stroke-dasharray="188.49555921538757" stroke-dashoffset="188.49555921538757" stroke-linecap="round" transform="rotate(-90)">
-            <animate attributeName="stroke-dashoffset" from="188.49555921538757" to="9.424777960769376" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </circle>
-        
-        <!-- Center Text -->
-        <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">95%</text>
-        
-        <!-- Labels -->
-        <text x="45" y="-5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Laravel</text>
-        <text x="45" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">PHP 8.3+</text>
-    </g>
-    
-    <g transform="translate(430.0, 110.0)">
-        <!-- Background Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#1e293b" stroke-width="4"/>
-        
-        <!-- Progress Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="4" stroke-dasharray="188.49555921538757" stroke-dashoffset="188.49555921538757" stroke-linecap="round" transform="rotate(-90)">
-            <animate attributeName="stroke-dashoffset" from="188.49555921538757" to="22.619467105846496" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </circle>
-        
-        <!-- Center Text -->
-        <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">88%</text>
-        
-        <!-- Labels -->
-        <text x="45" y="-5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">React</text>
-        <text x="45" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">TypeScript</text>
-    </g>
-    
-    <g transform="translate(716.6666666666667, 110.0)">
-        <!-- Background Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#1e293b" stroke-width="4"/>
-        
-        <!-- Progress Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="4" stroke-dasharray="188.49555921538757" stroke-dashoffset="188.49555921538757" stroke-linecap="round" transform="rotate(-90)">
-            <animate attributeName="stroke-dashoffset" from="188.49555921538757" to="28.274333882308127" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </circle>
-        
-        <!-- Center Text -->
-        <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">85%</text>
-        
-        <!-- Labels -->
-        <text x="45" y="-5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Node.js</text>
-        <text x="45" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Express/Koa</text>
-    </g>
-    
-    <g transform="translate(143.33333333333334, 210.0)">
-        <!-- Background Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#1e293b" stroke-width="4"/>
-        
-        <!-- Progress Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="4" stroke-dasharray="188.49555921538757" stroke-dashoffset="188.49555921538757" stroke-linecap="round" transform="rotate(-90)">
-            <animate attributeName="stroke-dashoffset" from="188.49555921538757" to="22.619467105846496" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </circle>
-        
-        <!-- Center Text -->
-        <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">88%</text>
-        
-        <!-- Labels -->
-        <text x="45" y="-5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Database</text>
-        <text x="45" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">SQL/Redis</text>
-    </g>
-    
-    <g transform="translate(430.0, 210.0)">
-        <!-- Background Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#1e293b" stroke-width="4"/>
-        
-        <!-- Progress Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="4" stroke-dasharray="188.49555921538757" stroke-dashoffset="188.49555921538757" stroke-linecap="round" transform="rotate(-90)">
-            <animate attributeName="stroke-dashoffset" from="188.49555921538757" to="28.274333882308127" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </circle>
-        
-        <!-- Center Text -->
-        <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">85%</text>
-        
-        <!-- Labels -->
-        <text x="45" y="-5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Security</text>
-        <text x="45" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Pen Testing</text>
-    </g>
-    
-    <g transform="translate(716.6666666666667, 210.0)">
-        <!-- Background Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#1e293b" stroke-width="4"/>
-        
-        <!-- Progress Arc -->
-        <circle cx="0" cy="0" r="30" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="4" stroke-dasharray="188.49555921538757" stroke-dashoffset="188.49555921538757" stroke-linecap="round" transform="rotate(-90)">
-            <animate attributeName="stroke-dashoffset" from="188.49555921538757" to="33.92920065876976" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </circle>
-        
-        <!-- Center Text -->
-        <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">82%</text>
-        
-        <!-- Labels -->
-        <text x="45" y="-5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Docker</text>
-        <text x="45" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">CI/CD</text>
-    </g>
-    
+  <!-- Column 0: Laravel -->
+  <!-- Track -->
+  <rect x="82.7" y="100" width="28" height="80" rx="4" fill="#0f172a"/>
+  
+  <!-- Animated Fill -->
+  <rect x="82.7" y="180" width="28" height="0" rx="4" fill="#ef4444" opacity="0.85">
+    <animate attributeName="height" from="0" to="76.0" dur="0.9s" begin="0.00s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+    <animate attributeName="y" from="180.0" to="104.0" dur="0.9s" begin="0.00s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Top cap glow -->
+  <rect x="82.7" y="104.0" width="28" height="3" rx="1.5" fill="#ef4444" opacity="0.6">
+    <animate attributeName="y" from="180.0" to="104.0" dur="0.9s" begin="0.00s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Pct Label -->
+  <text x="96.7" y="92" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#ef4444">95</text>
+
+  <!-- Name -->
+  <text x="96.7" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Laravel</text>
+  <text x="96.7" y="212" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">PHP 8.3+</text>
+
+  <!-- Column 1: React -->
+  <!-- Track -->
+  <rect x="216.0" y="100" width="28" height="80" rx="4" fill="#0f172a"/>
+  
+  <!-- Animated Fill -->
+  <rect x="216.0" y="180" width="28" height="0" rx="4" fill="#38bdf8" opacity="0.85">
+    <animate attributeName="height" from="0" to="70.4" dur="0.9s" begin="0.10s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+    <animate attributeName="y" from="180.0" to="109.6" dur="0.9s" begin="0.10s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Top cap glow -->
+  <rect x="216.0" y="109.6" width="28" height="3" rx="1.5" fill="#38bdf8" opacity="0.6">
+    <animate attributeName="y" from="180.0" to="109.6" dur="0.9s" begin="0.10s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Pct Label -->
+  <text x="230.0" y="92" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#38bdf8">88</text>
+
+  <!-- Name -->
+  <text x="230.0" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">React</text>
+  <text x="230.0" y="212" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">TypeScript</text>
+
+  <!-- Column 2: Node.js -->
+  <!-- Track -->
+  <rect x="349.3" y="100" width="28" height="80" rx="4" fill="#0f172a"/>
+  
+  <!-- Animated Fill -->
+  <rect x="349.3" y="180" width="28" height="0" rx="4" fill="#22c55e" opacity="0.85">
+    <animate attributeName="height" from="0" to="68.0" dur="0.9s" begin="0.20s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+    <animate attributeName="y" from="180.0" to="112.0" dur="0.9s" begin="0.20s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Top cap glow -->
+  <rect x="349.3" y="112.0" width="28" height="3" rx="1.5" fill="#22c55e" opacity="0.6">
+    <animate attributeName="y" from="180.0" to="112.0" dur="0.9s" begin="0.20s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Pct Label -->
+  <text x="363.3" y="92" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#22c55e">85</text>
+
+  <!-- Name -->
+  <text x="363.3" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Node.js</text>
+  <text x="363.3" y="212" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">Async I/O</text>
+
+  <!-- Column 3: MySQL/Redis -->
+  <!-- Track -->
+  <rect x="482.7" y="100" width="28" height="80" rx="4" fill="#0f172a"/>
+  
+  <!-- Animated Fill -->
+  <rect x="482.7" y="180" width="28" height="0" rx="4" fill="#f59e0b" opacity="0.85">
+    <animate attributeName="height" from="0" to="72.0" dur="0.9s" begin="0.30s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+    <animate attributeName="y" from="180.0" to="108.0" dur="0.9s" begin="0.30s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Top cap glow -->
+  <rect x="482.7" y="108.0" width="28" height="3" rx="1.5" fill="#f59e0b" opacity="0.6">
+    <animate attributeName="y" from="180.0" to="108.0" dur="0.9s" begin="0.30s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Pct Label -->
+  <text x="496.7" y="92" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#f59e0b">90</text>
+
+  <!-- Name -->
+  <text x="496.7" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">MySQL/Redis</text>
+  <text x="496.7" y="212" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">Data Layer</text>
+
+  <!-- Column 4: Security -->
+  <!-- Track -->
+  <rect x="616.0" y="100" width="28" height="80" rx="4" fill="#0f172a"/>
+  
+  <!-- Animated Fill -->
+  <rect x="616.0" y="180" width="28" height="0" rx="4" fill="#a78bfa" opacity="0.85">
+    <animate attributeName="height" from="0" to="68.0" dur="0.9s" begin="0.40s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+    <animate attributeName="y" from="180.0" to="112.0" dur="0.9s" begin="0.40s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Top cap glow -->
+  <rect x="616.0" y="112.0" width="28" height="3" rx="1.5" fill="#a78bfa" opacity="0.6">
+    <animate attributeName="y" from="180.0" to="112.0" dur="0.9s" begin="0.40s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Pct Label -->
+  <text x="630.0" y="92" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#a78bfa">85</text>
+
+  <!-- Name -->
+  <text x="630.0" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Security</text>
+  <text x="630.0" y="212" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">Pen Testing</text>
+
+  <!-- Column 5: Docker -->
+  <!-- Track -->
+  <rect x="749.3" y="100" width="28" height="80" rx="4" fill="#0f172a"/>
+  
+  <!-- Animated Fill -->
+  <rect x="749.3" y="180" width="28" height="0" rx="4" fill="#64748b" opacity="0.85">
+    <animate attributeName="height" from="0" to="65.6" dur="0.9s" begin="0.50s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+    <animate attributeName="y" from="180.0" to="114.4" dur="0.9s" begin="0.50s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Top cap glow -->
+  <rect x="749.3" y="114.4" width="28" height="3" rx="1.5" fill="#64748b" opacity="0.6">
+    <animate attributeName="y" from="180.0" to="114.4" dur="0.9s" begin="0.50s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Pct Label -->
+  <text x="763.3" y="92" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#64748b">82</text>
+
+  <!-- Name -->
+  <text x="763.3" y="198" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Docker</text>
+  <text x="763.3" y="212" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">CI/CD</text>
 
 </svg>

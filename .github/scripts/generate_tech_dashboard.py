@@ -3,91 +3,99 @@ import math
 from datetime import datetime, timezone
 
 def generate_tech_dashboard_svg():
-    W, H = 860, 240
+    W, H = 860, 200
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-    tech_nodes = [
-        {"name": "Laravel", "pct": 95, "desc": "PHP 8.3+"},
-        {"name": "React", "pct": 88, "desc": "TypeScript"},
-        {"name": "Node.js", "pct": 85, "desc": "Express/Koa"},
-        {"name": "Database", "pct": 88, "desc": "SQL/Redis"},
-        {"name": "Security", "pct": 85, "desc": "Pen Testing"},
-        {"name": "Docker", "pct": 82, "desc": "CI/CD"},
+    # Core stack items - two rows
+    stack = [
+        # Row 1
+        {"name": "Laravel",    "sub": "PHP 8.3+",       "pct": 95, "col": "#ef4444"},
+        {"name": "React",      "sub": "TypeScript",     "pct": 88, "col": "#38bdf8"},
+        {"name": "Node.js",    "sub": "Async I/O",      "pct": 85, "col": "#22c55e"},
+        {"name": "MySQL/Redis","sub": "Data Layer",     "pct": 90, "col": "#f59e0b"},
+        {"name": "Security",   "sub": "Pen Testing",    "pct": 85, "col": "#a78bfa"},
+        {"name": "Docker",     "sub": "CI/CD",          "pct": 82, "col": "#64748b"},
     ]
 
-    # Grid layout: 2 rows, 3 cols
-    cols = 3
-    col_w = W / cols
-    row_h = 100
-    start_y = 60
+    col_w = (W - 60) / len(stack)
+    BAR_H = 80   # height of the bar drawing area
+    bar_top = 100
 
-    nodes_svg = ""
-    for i, node in enumerate(tech_nodes):
-        row = i // cols
-        col = i % cols
-        
-        # Center the arc in its cell
-        cx = (col * col_w) + (col_w / 2)
-        cy = start_y + (row * row_h) + (row_h / 2)
-        
-        pct = node['pct']
-        r = 30
-        circumference = 2 * math.pi * r
-        dash_len = (pct / 100) * circumference
-        
-        nodes_svg += f'''
-    <g transform="translate({cx}, {cy})">
-        <!-- Background Arc -->
-        <circle cx="0" cy="0" r="{r}" fill="none" stroke="#1e293b" stroke-width="4"/>
-        
-        <!-- Progress Arc -->
-        <circle cx="0" cy="0" r="{r}" fill="none" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="4" stroke-dasharray="{circumference}" stroke-dashoffset="{circumference}" stroke-linecap="round" transform="rotate(-90)">
-            <animate attributeName="stroke-dashoffset" from="{circumference}" to="{circumference - dash_len}" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </circle>
-        
-        <!-- Center Text -->
-        <text x="0" y="4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">{pct}%</text>
-        
-        <!-- Labels -->
-        <text x="45" y="-5" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">{node['name']}</text>
-        <text x="45" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">{node['desc']}</text>
-    </g>
-    '''
+    bars_svg = ""
+    for i, item in enumerate(stack):
+        x = 30 + i * col_w + col_w / 2
+        pct = item["pct"]
+        col = item["col"]
+        bar_h = BAR_H * (pct / 100)
+        bar_y = bar_top + BAR_H - bar_h
+        delay = i * 0.1
+
+        bars_svg += f'''
+  <!-- Column {i}: {item["name"]} -->
+  <!-- Track -->
+  <rect x="{x - 14:.1f}" y="{bar_top}" width="28" height="{BAR_H}" rx="4" fill="#0f172a"/>
+  
+  <!-- Animated Fill -->
+  <rect x="{x - 14:.1f}" y="{bar_top + BAR_H}" width="28" height="0" rx="4" fill="{col}" opacity="0.85">
+    <animate attributeName="height" from="0" to="{bar_h:.1f}" dur="0.9s" begin="{delay:.2f}s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+    <animate attributeName="y" from="{bar_top + BAR_H:.1f}" to="{bar_y:.1f}" dur="0.9s" begin="{delay:.2f}s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Top cap glow -->
+  <rect x="{x - 14:.1f}" y="{bar_y:.1f}" width="28" height="3" rx="1.5" fill="{col}" opacity="0.6">
+    <animate attributeName="y" from="{bar_top + BAR_H:.1f}" to="{bar_y:.1f}" dur="0.9s" begin="{delay:.2f}s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+
+  <!-- Pct Label -->
+  <text x="{x:.1f}" y="{bar_top - 8}" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="{col}">{pct}</text>
+
+  <!-- Name -->
+  <text x="{x:.1f}" y="{bar_top + BAR_H + 18}" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">{item["name"]}</text>
+  <text x="{x:.1f}" y="{bar_top + BAR_H + 32}" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#475569">{item["sub"]}</text>
+'''
 
     svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0" y1="0" x2="{W}" y2="{H}" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
+    <linearGradient id="accent-strip" x1="0" y1="0" x2="0" y2="{H}" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
     <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
-      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.04 0"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.04 0"/>
     </filter>
   </defs>
 
-  <!-- Base -->
-  <rect width="{W}" height="{H}" rx="12" fill="url(#bg-grad)"/>
-  <rect width="{W}" height="{H}" rx="12" style="pointer-events:none;" filter="url(#noise)"/>
-  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="11.5" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" fill="none"/>
+  <rect width="{W}" height="{H}" fill="url(#bg)"/>
+  <rect width="{W}" height="{H}" filter="url(#noise)" style="pointer-events:none;"/>
+  <rect x="0" y="0" width="3" height="{H}" fill="url(#accent-strip)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" fill="none"/>
 
-  <text x="30" y="35" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" letter-spacing="1">CORE ARSENAL</text>
-  <line x1="30" y1="45" x2="{W-30}" y2="45" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <!-- Header -->
+  <text x="26" y="38" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1.5">STACK PROFICIENCY</text>
+  <line x1="26" y1="50" x2="{W - 26}" y2="50" stroke="#1e293b" stroke-width="1"/>
+  <text x="{W - 26}" y="38" text-anchor="end" font-family="'Courier New', monospace" font-size="9" fill="#334155">{now}</text>
+  
+  <!-- Baseline -->
+  <line x1="26" y1="{bar_top + BAR_H}" x2="{W - 26}" y2="{bar_top + BAR_H}" stroke="#1e293b" stroke-width="1"/>
 
-  {nodes_svg}
-
+  {bars_svg}
 </svg>'''
 
     return svg
 
 def main():
-    print("Generating minimalist tech-dashboard.svg...")
+    print("Generating tech-dashboard.svg...")
     svg = generate_tech_dashboard_svg()
     out = "tech-dashboard.svg"
     with open(out, "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"  Successfully written -> {out}")
+    print(f"  Written -> {out}")
 
 if __name__ == "__main__":
     main()

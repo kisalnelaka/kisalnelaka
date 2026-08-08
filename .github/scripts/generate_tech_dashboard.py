@@ -2,205 +2,224 @@ import os
 import json
 import urllib.request
 import math
-from datetime import datetime
+from datetime import datetime, timezone
 
-# GitHub Config
 USERNAME = "kisalnelaka"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
-def fetch_repos():
-    """Fetch all public repositories for the user."""
-    url = f"https://api.github.com/users/{USERNAME}/repos?per_page=100&sort=pushed"
-    headers = {"User-Agent": "Tech-Dashboard-Generator"}
+# Each language gets its own accent so the chart doesn't look monochrome
+LANG_COLORS = {
+    "TypeScript":  "#38bdf8",  # sky blue
+    "PHP":         "#a78bfa",  # violet
+    "Python":      "#facc15",  # amber
+    "JavaScript":  "#34d399",  # emerald
+    "Rust":        "#fb923c",  # orange
+    "HTML":        "#f472b6",  # pink
+    "Blade":       "#60a5fa",  # blue
+    "CSS":         "#c084fc",  # purple
+    "Kotlin":      "#f97316",  # dark orange
+    "Shell":       "#00ff9f",  # terminal green
+    "C#":          "#a855f7",  # indigo
+    "C++":         "#ef4444",  # red
+    "Go":          "#06b6d4",  # cyan
+    "Java":        "#f59e0b",  # yellow
+    "Ruby":        "#e11d48",  # rose
+    "Swift":       "#ff6b35",  # swift orange
+    "Dart":        "#64b5f6",  # light blue
+}
+DEFAULT_COLOR = "#94a3b8"
+
+
+def gh_request(url):
+    headers = {
+        "User-Agent": "tech-dashboard-generator",
+        "Accept": "application/vnd.github+json",
+    }
     if GITHUB_TOKEN:
-        headers["Authorization"] = f"token {GITHUB_TOKEN}"
-    
+        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     req = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(req) as response:
-            return json.loads(response.read().decode())
+        with urllib.request.urlopen(req, timeout=10) as r:
+            return json.loads(r.read().decode())
     except Exception as e:
-        print(f"Error fetching repos: {e}")
+        print(f"  [warn] {url} → {e}")
+        return None
+
+
+def fetch_lang_stats():
+    repos = gh_request(
+        f"https://api.github.com/users/{USERNAME}/repos?per_page=100&sort=pushed"
+    )
+    if not repos:
         return []
 
-def aggregate_languages(repos):
-    """Aggregate language stats from repositories."""
-    lang_stats = {}
+    lang_counts = {}
+    lang_bytes = {}
+
     for repo in repos:
+        if repo.get("fork"):
+            continue  # skip forks — own work only
         lang = repo.get("language")
         if lang:
-            lang_stats[lang] = lang_stats.get(lang, 0) + 1
-    
-    # Sort by count and take top 6 for the radar chart
-    sorted_langs = sorted(lang_stats.items(), key=lambda x: x[1], reverse=True)
-    return sorted_langs[:6]
+            lang_counts[lang] = lang_counts.get(lang, 0) + 1
 
-def get_radar_points(stats, center_x, center_y, max_radius):
-    """Calculate points for the radar chart polygon."""
-    num_vars = len(stats)
-    if num_vars == 0:
-        return ""
-    
-    angle_step = (2 * math.pi) / num_vars
-    points = []
-    
-    # Normalize values (0 to 1) based on the max value in stats
-    max_val = max([s[1] for s in stats]) if stats else 1
-    
-    for i, (name, val) in enumerate(stats):
-        # Scale value to at least 30% for visibility even if count is low
-        scale = 0.3 + (0.7 * (val / max_val))
-        radius = max_radius * scale
-        angle = i * angle_step - (math.pi / 2) # Start from top
-        
-        x = center_x + radius * math.cos(angle)
-        y = center_y + radius * math.sin(angle)
-        points.append(f"{x},{y}")
-        
-    return " ".join(points)
+        # Also fetch per-repo language bytes for accuracy
+        langs_url = repo.get("languages_url")
+        if langs_url and GITHUB_TOKEN:
+            lang_data = gh_request(langs_url)
+            if lang_data:
+                for l, b in lang_data.items():
+                    lang_bytes[l] = lang_bytes.get(l, 0) + b
+
+    # Prefer byte-based stats if available (more accurate than repo count)
+    if lang_bytes:
+        sorted_langs = sorted(lang_bytes.items(), key=lambda x: x[1], reverse=True)
+        # Convert bytes to percentages
+        total = sum(b for _, b in sorted_langs)
+        result = [(name, round(b / total * 100, 1)) for name, b in sorted_langs[:8]]
+        return result
+
+    # Fallback: repo count
+    sorted_langs = sorted(lang_counts.items(), key=lambda x: x[1], reverse=True)
+    total = sum(c for _, c in sorted_langs)
+    result = [(name, round(c / total * 100, 1)) for name, c in sorted_langs[:8]]
+    return result
+
 
 def generate_svg(lang_stats):
-    width = 850
-    height = 420
-    cx, cy = 250, 255
-    radius = 100
-    
-    # Theme Colors (Professional Dark & Vibrant)
-    bg_start = "#030712"
-    bg_end = "#0f172a"
-    accent_primary = "#38bdf8" # Sky Blue
-    accent_secondary = "#10b981" # Emerald
-    accent_tertiary = "#8b5cf6" # Violet
-    text_main = "#f8fafc"
-    text_dim = "#94a3b8"
-    grid_color = "rgba(148, 163, 184, 0.15)"
-    
-    # Radar Data
-    points = get_radar_points(lang_stats, cx, cy, radius)
-    
-    svg = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
-        .text {{ font-family: 'Inter', system-ui, sans-serif; }}
-        .label {{ font-size: 12px; font-weight: 600; fill: {text_dim}; }}
-        .title {{ font-size: 24px; font-weight: 700; fill: {text_main}; }}
-        .subtitle {{ font-size: 14px; fill: {accent_primary}; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }}
-    </style>
-    
-    <defs>
-        <linearGradient id="bg_grad" x1="0" y1="0" x2="{width}" y2="{height}" gradientUnits="userSpaceOnUse">
-            <stop stop-color="{bg_start}"/>
-            <stop offset="1" stop-color="{bg_end}"/>
-        </linearGradient>
-        <linearGradient id="poly_grad" x1="{cx}" y1="{cy-radius}" x2="{cx}" y2="{cy+radius}" gradientUnits="userSpaceOnUse">
-            <stop stop-color="{accent_primary}" stop-opacity="0.6"/>
-            <stop offset="1" stop-color="{accent_tertiary}" stop-opacity="0.4"/>
-        </linearGradient>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-    </defs>
-    
-    <!-- Background Card -->
-    <rect width="{width}" height="{height}" rx="24" fill="url(#bg_grad)" />
-    <rect x="0.5" y="0.5" width="{width-1}" height="{height-1}" rx="23.5" stroke="rgba(255,255,255,0.05)" />
-    
-    <!-- Header -->
-    <text x="40" y="60" class="text title">Technical Arsenal</text>
-    <text x="40" y="85" class="text subtitle">Dynamic Language Distribution</text>
-    <rect x="40" y="95" width="80" height="4" rx="2" fill="{accent_primary}" />
-    
-    <!-- Status Indicator -->
-    <g transform="translate({width - 180}, 55)">
-        <circle cx="0" cy="0" r="4" fill="{accent_secondary}">
-            <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <text x="15" y="5" class="text label" fill="{accent_secondary}">Live Ecosystem Data</text>
-    </g>
+    W, H = 860, 380
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    <!-- Radar Chart Grid -->
-    <g>
-    '''
-    
-    # Grid circles
-    for r in [0.25, 0.5, 0.75, 1.0]:
-        svg += f'<circle cx="{cx}" cy="{cy}" r="{radius * r}" stroke="{grid_color}" stroke-width="1" fill="none" />'
-    
-    # Grid lines & Labels
-    num_vars = len(lang_stats)
-    if num_vars > 0:
-        angle_step = (2 * math.pi) / num_vars
-        for i, (name, val) in enumerate(lang_stats):
-            angle = i * angle_step - (math.pi / 2)
-            x2 = cx + radius * math.cos(angle)
-            y2 = cy + radius * math.sin(angle)
-            svg += f'<line x1="{cx}" y1="{cy}" x2="{x2}" y2="{y2}" stroke="{grid_color}" stroke-width="1" />'
-            
-            # Label positioning
-            label_dist = radius + 30
-            lx = cx + label_dist * math.cos(angle)
-            ly = cy + label_dist * math.sin(angle)
-            anchor = "middle" if abs(lx - cx) < 10 else "start" if lx > cx else "end"
-            svg += f'<text x="{lx}" y="{ly + 5}" class="text label" text-anchor="{anchor}">{name}</text>'
+    max_pct = lang_stats[0][1] if lang_stats else 100
+    bar_area_w = 500
+    row_h = 36
+    start_y = 90
+    label_x = 40
+    bar_x = 200
+    pct_x = bar_x + bar_area_w + 10
 
-    # Radar Polygon
-    if points:
-        svg += f'''
-        <polygon points="{points}" fill="url(#poly_grad)" stroke="{accent_primary}" stroke-width="2" filter="url(#glow)">
-            <animate attributeName="opacity" values="0.7;0.9;0.7" dur="4s" repeatCount="indefinite" />
-        </polygon>
-        '''
-    
-    svg += '</g>'
-    
-    # Right Side: Expertise Breakdown
-    # We'll use the counts to show some "Power Levels"
-    svg += f'<g transform="translate(530, 110)">'
-    for i, (name, count) in enumerate(lang_stats):
-        bar_y = i * 45
-        bar_w = 260
-        # Calculate percentage based on total repos or just a max
-        progress = min(0.95, 0.4 + (count / max([s[1] for s in lang_stats]) * 0.55))
-        
-        svg += f'''
-        <g transform="translate(0, {bar_y})">
-            <text x="0" y="0" class="text label" fill="{text_main}">{name}</text>
-            <text x="{bar_w}" y="0" class="text label" text-anchor="end" fill="{text_dim}">{count} Projects</text>
-            <rect x="0" y="10" width="{bar_w}" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-            <rect x="0" y="10" width="{bar_w * progress}" height="6" rx="3" fill="{accent_primary}">
-                <animate attributeName="width" from="0" to="{bar_w * progress}" dur="1s" fill="freeze" />
-            </rect>
-        </g>
-        '''
-    svg += '</g>'
-    
-    # Footer
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-    svg += f'''
-    <text x="{width - 40}" y="{height - 30}" class="text label" text-anchor="end" fill="{text_dim}">Last Updated: {timestamp} • Powered by GitHub API</text>
-    </svg>'''
-    
+    rows_svg = ""
+    for i, (lang, pct) in enumerate(lang_stats):
+        y = start_y + i * row_h
+        color = LANG_COLORS.get(lang, DEFAULT_COLOR)
+        bar_w = round(bar_area_w * (pct / max_pct), 2)
+        delay = i * 0.08
+
+        # Row background
+        bg_opacity = "0.04" if i % 2 == 0 else "0.02"
+        rows_svg += f'''
+  <rect x="20" y="{y - 20}" width="{W - 40}" height="{row_h}" rx="4"
+        fill="#00ff9f" fill-opacity="{bg_opacity}"/>'''
+
+        # Language name
+        rows_svg += f'''
+  <text x="{label_x}" y="{y}"
+        font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold"
+        fill="{color}">{lang}</text>'''
+
+        # Bar track
+        rows_svg += f'''
+  <rect x="{bar_x}" y="{y - 12}" width="{bar_area_w}" height="8" rx="4"
+        fill="#00ff9f" fill-opacity="0.06"/>'''
+
+        # Filled bar
+        rows_svg += f'''
+  <rect x="{bar_x}" y="{y - 12}" width="0" height="8" rx="4" fill="{color}" opacity="0.85">
+    <animate attributeName="width" from="0" to="{bar_w}" dur="0.8s"
+             begin="{delay:.2f}s" fill="freeze" calcMode="spline"
+             keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>'''
+
+        # Percentage
+        rows_svg += f'''
+  <text x="{pct_x}" y="{y}"
+        font-family="'Courier New',Courier,monospace" font-size="11"
+        fill="{color}" opacity="0.7">{pct}%</text>'''
+
+    svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}"
+     fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="{W}" y2="{H}" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020c02"/>
+      <stop offset="1" stop-color="#041a04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="{W}" height="{H}" rx="14" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="13.5"
+        stroke="#00ff9f" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="{W}" height="40" rx="14" fill="#00ff9f" fill-opacity="0.04"/>
+  <rect x="0" y="39" width="{W}" height="1" fill="#00ff9f" fill-opacity="0.15"/>
+
+  <!-- Window dots -->
+  <circle cx="22" cy="20" r="5" fill="#ff5f57" fill-opacity="0.7"/>
+  <circle cx="38" cy="20" r="5" fill="#ffbd2e" fill-opacity="0.7"/>
+  <circle cx="54" cy="20" r="5" fill="#28c840" fill-opacity="0.7"/>
+
+  <!-- Header label -->
+  <text x="72" y="25"
+        font-family="'Courier New',Courier,monospace" font-size="11"
+        fill="#00ff9f" opacity="0.5">sys/lang-profile --user {USERNAME} --sort bytes</text>
+
+  <!-- Status ping -->
+  <circle cx="{W - 34}" cy="20" r="4" fill="#00ff9f">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="{W - 24}" y="24"
+        font-family="'Courier New',Courier,monospace" font-size="9"
+        fill="#00ff9f" opacity="0.5">LIVE</text>
+
+  <!-- Section title -->
+  <text x="40" y="65"
+        font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold"
+        fill="#00ff9f">LANGUAGE DISTRIBUTION</text>
+  <text x="40" y="80"
+        font-family="'Courier New',Courier,monospace" font-size="9"
+        fill="#00ff9f" opacity="0.4">ranked by byte volume across non-forked repositories</text>
+
+  <!-- Column headers -->
+  <text x="{label_x}" y="{start_y - 25}"
+        font-family="'Courier New',Courier,monospace" font-size="9"
+        fill="#00ff9f" opacity="0.3">LANGUAGE</text>
+  <text x="{bar_x}" y="{start_y - 25}"
+        font-family="'Courier New',Courier,monospace" font-size="9"
+        fill="#00ff9f" opacity="0.3">VOLUME</text>
+  <text x="{pct_x}" y="{start_y - 25}"
+        font-family="'Courier New',Courier,monospace" font-size="9"
+        fill="#00ff9f" opacity="0.3">PCT</text>
+
+  {rows_svg}
+
+  <!-- Footer -->
+  <rect x="20" y="{H - 28}" width="{W - 40}" height="1" fill="#00ff9f" fill-opacity="0.1"/>
+  <text x="40" y="{H - 12}"
+        font-family="'Courier New',Courier,monospace" font-size="9"
+        fill="#00ff9f" opacity="0.3">updated {now} · github.com/{USERNAME}</text>
+</svg>'''
+
     return svg
 
+
 def main():
-    print("Fetching repository data...")
-    repos = fetch_repos()
-    if not repos:
-        print("No repos found or error occurred.")
+    print("Fetching language stats...")
+    lang_stats = fetch_lang_stats()
+
+    if not lang_stats:
+        print("  No data. Aborting.")
         return
-        
-    print(f"Analyzing {len(repos)} repositories...")
-    lang_stats = aggregate_languages(repos)
-    
-    print("Generating Dynamic SVG...")
-    svg_content = generate_svg(lang_stats)
-    
-    output_path = "tech-dashboard.svg"
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-        
-    print(f"Successfully generated {output_path}")
+
+    print(f"  Top langs: {[n for n, _ in lang_stats[:4]]}")
+    print("Generating tech-dashboard.svg...")
+    svg = generate_svg(lang_stats)
+
+    out = "tech-dashboard.svg"
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(svg)
+    print(f"  Written -> {out}")
+
 
 if __name__ == "__main__":
     main()

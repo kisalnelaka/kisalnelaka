@@ -1,121 +1,136 @@
 import os
-import json
+import math
 from datetime import datetime, timezone
 
 def generate_tech_dashboard_svg():
-    W, H = 860, 360
+    W, H = 860, 400
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-    # Left Column: Core Web Engineering Stack
-    web_stack = [
-        ("Laravel 11 / PHP 8.3", 95, "Primary Framework · Core SaaS Engine", "#ff2d20"),
-        ("React.js & Frontend",   88, "Interactive UI · SPA Architecture", "#61dafb"),
-        ("Node.js & Async I/O",  85, "Microservices · Event Loop Ops", "#68a063"),
-        ("TypeScript",           82, "Strict Static Typing · Full Stack", "#38bdf8"),
-        ("Database Architecture", 88, "PostgreSQL · MySQL · Redis Scoping", "#f59e0b"),
-        ("Tailwind CSS",         90, "Custom Design Systems & Styling", "#38bdf8"),
+    # Define the core technologies for the radial HUD
+    tech_nodes = [
+        {"name": "LARAVEL", "pct": 95, "col": "#ff2d20", "desc": "SaaS Engine", "angle": 0},
+        {"name": "REACT", "pct": 88, "col": "#61dafb", "desc": "UI Core", "angle": 60},
+        {"name": "NODE.JS", "pct": 85, "col": "#68a063", "desc": "Mesh Sync", "angle": 120},
+        {"name": "SEC / OSCP", "pct": 85, "col": "#ef4444", "desc": "Offensive", "angle": 180},
+        {"name": "DB ARCH", "pct": 88, "col": "#f59e0b", "desc": "Isolation", "angle": 240},
+        {"name": "TYPESCRIPT", "pct": 82, "col": "#3178c6", "desc": "Strict Auth", "angle": 300},
     ]
 
-    # Right Column: Systems, Security & DevOps
-    systems_stack = [
-        ("Multi-Tenant Isolation", 96, "Automated Tenant Scoping & Auth", "#00ff9f"),
-        ("Decentralized P2P Mesh", 90, "WebSockets · Cloud-Free Sync", "#a855f7"),
-        ("Offensive Security",    85, "OSCP-Standard Pen Testing", "#ef4444"),
-        ("SIEM & Log Analytics",   80, "Splunk · Threat Detection", "#f97316"),
-        ("Docker & Infra Automation", 85, "CI/CD · Container Orchestration", "#2496ed"),
-        ("Non-Blocking Fibers",   82, "High-Concurrency Async PHP", "#c084fc"),
-    ]
+    center_x, center_y = W / 2, H / 2
+    radius = 130 # Distance of satellite nodes from center
 
-    def render_column(items, x_offset):
-        rows = ""
-        bar_w = 200
-        for i, (name, pct, note, col) in enumerate(items):
-            y = 110 + i * 39
-            fill_w = round(bar_w * (pct / 100), 1)
-            delay = i * 0.06
-
-            rows += f'''
-      <!-- Item {i} -->
-      <g transform="translate({x_offset}, {y})">
-        <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#f8fafc">{name}</text>
-        <text x="380" y="0" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="{col}">{pct}%</text>
+    # Generate connection lines
+    connection_lines = ""
+    for node in tech_nodes:
+        rad = math.radians(node["angle"])
+        nx = center_x + radius * math.cos(rad)
+        ny = center_y + radius * math.sin(rad)
         
-        <!-- Track Background -->
-        <rect x="0" y="8" width="380" height="6" rx="3" fill="#1e293b" fill-opacity="0.6"/>
-        <!-- Active Bar -->
-        <rect x="0" y="8" width="0" height="6" rx="3" fill="{col}">
-          <animate attributeName="width" from="0" to="{fill_w * 1.9}" dur="0.8s" begin="{delay}s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
-        </rect>
-        <text x="0" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">{note}</text>
-      </g>'''
-        return rows
+        connection_lines += f'''
+    <line x1="{center_x}" y1="{center_y}" x2="{nx}" y2="{ny}" stroke="{node['col']}" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="4 4">
+        <animate attributeName="stroke-dashoffset" from="8" to="0" dur="2s" repeatCount="indefinite" />
+    </line>
+    '''
 
-    left_rows = render_column(web_stack, 30)
-    right_rows = render_column(systems_stack, 450)
+    # Generate satellite nodes
+    nodes_svg = ""
+    for i, node in enumerate(tech_nodes):
+        rad = math.radians(node["angle"])
+        nx = center_x + radius * math.cos(rad)
+        ny = center_y + radius * math.sin(rad)
+        
+        col = node['col']
+        pct = node['pct']
+        
+        # Calculate SVG stroke-dasharray for circular progress
+        circumference = 2 * math.pi * 35
+        dash_len = (pct / 100) * circumference
+        
+        nodes_svg += f'''
+    <g transform="translate({nx}, {ny})">
+        <!-- Outer Glow Ring -->
+        <circle cx="0" cy="0" r="40" fill="none" stroke="{col}" stroke-width="1" opacity="0.1"/>
+        
+        <!-- Background Track -->
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#1a1a2e" stroke-width="4"/>
+        
+        <!-- Animated Progress Ring -->
+        <circle cx="0" cy="0" r="35" fill="none" stroke="{col}" stroke-width="4" stroke-dasharray="{circumference}" stroke-dashoffset="{circumference}" stroke-linecap="round" transform="rotate(-90)">
+            <animate attributeName="stroke-dashoffset" from="{circumference}" to="{circumference - dash_len}" dur="1.5s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+        </circle>
+        
+        <!-- Center Dot -->
+        <circle cx="0" cy="0" r="3" fill="{col}" opacity="0.8"/>
+        
+        <!-- Labels -->
+        <text x="0" y="4" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">{pct}%</text>
+        <text x="0" y="55" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="{col}">{node['name']}</text>
+        <text x="0" y="68" text-anchor="middle" font-family="monospace" font-size="8" fill="#888888">{node['desc']}</text>
+    </g>
+    '''
 
     svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="dash-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080d1a"/>
-      <stop offset="100%" stop-color="#030712"/>
-    </linearGradient>
-
-    <!-- Border Gradient -->
-    <linearGradient id="dash-border" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#00ff9f" stop-opacity="0.6"/>
-    </linearGradient>
-
-    <radialGradient id="glow-ambient" cx="50%" cy="0%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="transparent"/>
+    <!-- Dark Tech Background -->
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a0f18"/>
+      <stop offset="100%" stop-color="#02040a"/>
     </radialGradient>
+    
+    <filter id="core-glow">
+        <feGaussianBlur stdDeviation="8" result="blur" />
+        <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+    </filter>
   </defs>
 
-  <!-- Container Base -->
-  <rect width="{W}" height="{H}" rx="18" fill="url(#dash-bg)"/>
-  <rect width="{W}" height="{H}" rx="18" fill="url(#glow-ambient)"/>
-  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="17.5" stroke="url(#dash-border)" stroke-width="1.2" fill="none"/>
+  <rect width="{W}" height="{H}" fill="url(#bg)"/>
+  
+  <!-- Subtle Grid -->
+  <pattern id="hex-bg" width="60" height="103.923" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)">
+     <path d="M30 0L60 17.32V51.96L30 69.28L0 51.96V17.32Z" fill="none" stroke="#333344" stroke-width="1" stroke-opacity="0.3"/>
+     <path d="M30 103.92L60 86.6V51.96L30 69.28L0 51.96V86.6Z" fill="none" stroke="#333344" stroke-width="1" stroke-opacity="0.3"/>
+  </pattern>
+  <rect width="{W}" height="{H}" fill="url(#hex-bg)"/>
 
-  <!-- Top Glass Bar -->
-  <rect x="1" y="1" width="{W-2}" height="42" rx="17" fill="#ffffff" fill-opacity="0.02"/>
-  <line x1="1" y1="43" x2="{W-1}" y2="43" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+  {connection_lines}
 
-  <!-- Window OS Dots -->
-  <circle cx="24" cy="22" r="5" fill="#ff5f57"/>
-  <circle cx="40" cy="22" r="5" fill="#febc2e"/>
-  <circle cx="56" cy="22" r="5" fill="#28c840"/>
+  <!-- Central Hub -->
+  <g transform="translate({center_x}, {center_y})">
+      <!-- Pulsing Core -->
+      <circle cx="0" cy="0" r="50" fill="#0a0f18" stroke="#00f0ff" stroke-width="2" filter="url(#core-glow)">
+         <animate attributeName="r" values="48;52;48" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Inner Ring -->
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="10 5">
+          <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      
+      <text x="0" y="-5" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#00f0ff">SYSTEM</text>
+      <text x="0" y="10" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#a855f7">CORE</text>
+  </g>
 
-  <text x="76" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#00f0ff" letter-spacing="1">TECHNICAL ARSENAL</text>
-  <text x="235" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#64748b">// Verified Production Competencies &amp; System Mastery</text>
+  {nodes_svg}
 
-  <rect x="730" y="13" width="110" height="18" rx="9" fill="#00ff9f" fill-opacity="0.12"/>
-  <circle cx="742" cy="22" r="3" fill="#00ff9f"/>
-  <text x="750" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#00ff9f">SYSTEM VERIFIED</text>
+  <!-- Corner Brackets -->
+  <path d="M 10 30 L 10 10 L 30 10" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.5"/>
+  <path d="M {W-30} 10 L {W-10} 10 L {W-10} 30" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.5"/>
+  <path d="M 10 {H-30} L 10 {H-10} L 30 {H-10}" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.5"/>
+  <path d="M {W-30} {H-10} L {W-10} {H-10} L {W-10} {H-30}" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.5"/>
 
-  <!-- Column Headers -->
-  <text x="30" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#38bdf8" letter-spacing="1.2">01 / CORE WEB STACK</text>
-  <line x1="30" y1="86" x2="410" y2="86" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
+  <!-- Footer Info -->
+  <text x="20" y="{H-20}" font-family="monospace" font-size="10" fill="#666666">RADIAL.HUD.V2 // IMPERIAL SYSTEMS</text>
+  <text x="{W-20}" y="{H-20}" text-anchor="end" font-family="monospace" font-size="10" fill="#666666">SYNC_TIME: {now}</text>
 
-  <text x="450" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#00ff9f" letter-spacing="1.2">02 / ARCHITECTURE &amp; SECURITY</text>
-  <line x1="450" y1="86" x2="830" y2="86" stroke="#00ff9f" stroke-opacity="0.2" stroke-width="1"/>
-
-  <!-- Render Columns -->
-  {left_rows}
-  {right_rows}
-
-  <!-- Footer -->
-  <line x1="30" y1="332" x2="{W-30}" y2="332" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
-  <text x="30" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#64748b">Verified Stack Benchmark · Updated {now}</text>
-  <text x="{W-30}" y="348" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#00f0ff">Kisal Nelaka Engineering Hub</text>
 </svg>'''
 
     return svg
 
 def main():
-    print("Generating updated high-end tech-dashboard.svg...")
+    print("Generating God-Tier tech-dashboard.svg...")
     svg = generate_tech_dashboard_svg()
     out = "tech-dashboard.svg"
     with open(out, "w", encoding="utf-8") as f:

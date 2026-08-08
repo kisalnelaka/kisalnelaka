@@ -1,6 +1,7 @@
 import os
 import json
 import urllib.request
+import math
 from datetime import datetime, timezone
 
 USERNAME = "kisalnelaka"
@@ -88,7 +89,7 @@ def fetch_stats():
     return stats
 
 def generate_banner_svg(stats):
-    W, H = 860, 250
+    W, H = 860, 320
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     repos     = stats.get("repos", 71)
@@ -97,146 +98,153 @@ def generate_banner_svg(stats):
     age       = stats.get("account_age_years", 9.3)
     contribs  = stats.get("total_contributions", 1149)
 
-    metrics = [
-        ("EXPERIENCE", f"{age} Yrs", "Systems & Full-Stack", "#00f0ff"),
-        ("CONTRIBUTIONS", f"{contribs:,}", "Verified Commits", "#00ff9f"),
-        ("REPOSITORIES", f"{repos}", "Public Architectures", "#a855f7"),
-        ("COMMUNITY", f"{followers} Devs", "Network Followers", "#38bdf8"),
-    ]
-
-    metric_boxes = ""
-    box_w = 180
-    gap = 15
-    start_x = 40
-
-    for i, (label, val, sub, col) in enumerate(metrics):
-        x = start_x + i * (box_w + gap)
-        metric_boxes += f'''
-    <!-- Metric Card {i+1} -->
-    <g transform="translate({x}, 145)">
-      <rect width="{box_w}" height="75" rx="12" fill="#0d1527" fill-opacity="0.7" stroke="{col}" stroke-opacity="0.3" stroke-width="1"/>
-      <rect width="{box_w}" height="75" rx="12" fill="url(#card-glow-{i})" opacity="0.15"/>
-      <text x="16" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="{col}" letter-spacing="1.2">{label}</text>
-      <text x="16" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">{val}</text>
-      <text x="16" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">{sub}</text>
-    </g>'''
-
     svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070c18"/>
-      <stop offset="50%" stop-color="#030712"/>
-      <stop offset="100%" stop-color="#0b1120"/>
-    </linearGradient>
-
-    <!-- Neon Border Gradient -->
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#00ff9f" stop-opacity="0.8"/>
-    </linearGradient>
-
-    <!-- Ambient Glows -->
-    <radialGradient id="glow-cyan" cx="10%" cy="10%" r="60%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glow-purple" cx="90%" cy="80%" r="60%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    <!-- Void Background -->
+    <radialGradient id="void-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="60%" stop-color="#020205"/>
+      <stop offset="100%" stop-color="#000000"/>
     </radialGradient>
 
-    <!-- Card Inner Glows -->
-    <radialGradient id="card-glow-0" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-    <radialGradient id="card-glow-1" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#00ff9f"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-    <radialGradient id="card-glow-2" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-    <radialGradient id="card-glow-3" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+    <!-- Holographic Glows -->
+    <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#8a2be2" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0.2"/>
+    </linearGradient>
 
-    <!-- Filter Drop Shadows -->
-    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <!-- Displacement for Glitch -->
+    <filter id="hologram">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.95" numOctaves="1" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-heavy">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <!-- Container Box -->
-  <rect width="{W}" height="{H}" rx="18" fill="url(#bg-grad)"/>
-  <rect width="{W}" height="{H}" rx="18" fill="url(#glow-cyan)"/>
-  <rect width="{W}" height="{H}" rx="18" fill="url(#glow-purple)"/>
+  <!-- Base -->
+  <rect width="{W}" height="{H}" fill="url(#void-bg)"/>
+  
+  <!-- Ambient Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.03"/>
+  </pattern>
+  <rect width="{W}" height="{H}" fill="url(#grid)"/>
 
-  <!-- Glassmorphism Outline -->
-  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="17" stroke="url(#border-grad)" stroke-width="1.5" fill="none"/>
+  <!-- Center Core Glow -->
+  <circle cx="{W/2}" cy="{H/2}" r="150" fill="url(#core-glow)"/>
 
-  <!-- Top Glass Header Bar -->
-  <rect x="1" y="1" width="{W-2}" height="42" rx="17" fill="#ffffff" fill-opacity="0.02"/>
-  <line x1="1" y1="43" x2="{W-1}" y2="43" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
-
-  <!-- OS Dots -->
-  <circle cx="24" cy="22" r="5" fill="#ff5f57"/>
-  <circle cx="40" cy="22" r="5" fill="#febc2e"/>
-  <circle cx="56" cy="22" r="5" fill="#28c840"/>
-
-  <!-- Status Indicator -->
-  <g transform="translate(76, 22)">
-    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">
-      SYSTEM STATUS: <tspan fill="#00ff9f">ONLINE</tspan>
-    </text>
+  <!-- Rotating Rings (Center) -->
+  <g transform="translate({W/2}, {H/2})">
+    <!-- Outer Ring -->
+    <circle cx="0" cy="0" r="120" stroke="#00ffff" stroke-width="1" stroke-opacity="0.3" fill="none" stroke-dasharray="4 12">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Middle Ring -->
+    <circle cx="0" cy="0" r="100" stroke="#8a2be2" stroke-width="2" stroke-opacity="0.5" fill="none" stroke-dasharray="40 20 5 10">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Inner Ring -->
+    <circle cx="0" cy="0" r="80" stroke="#00ffff" stroke-width="1" stroke-opacity="0.8" fill="none" stroke-dasharray="2 4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Central Data Node -->
+    <polygon points="0,-15 13,8 -13,8" fill="#00ffff" opacity="0.8" filter="url(#glow-heavy)">
+       <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+    </polygon>
   </g>
 
-  <!-- Live Pulse Dot -->
-  <circle cx="710" cy="22" r="4" fill="#00ff9f">
-    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="722" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#00ff9f" letter-spacing="1">LIVE HUD</text>
-  <text x="{W - 24}" y="25" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">{now}</text>
+  <!-- High-Tech Brackets -->
+  <path d="M 40 60 L 20 60 L 20 {H-60} L 40 {H-60}" fill="none" stroke="#00ffff" stroke-width="2" stroke-opacity="0.5"/>
+  <path d="M {W-40} 60 L {W-20} 60 L {W-20} {H-60} L {W-40} {H-60}" fill="none" stroke="#00ffff" stroke-width="2" stroke-opacity="0.5"/>
 
-  <!-- Main Hero Title -->
-  <text x="40" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="900" fill="#f8fafc" letter-spacing="-0.5">
-    KISAL NELAKA
-  </text>
-  <text x="245" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#00f0ff" filter="url(#neon-glow)">
-    // SYSTEMS ARCHITECT &amp; FULL-STACK ENGINEER
-  </text>
-
-  <!-- Sub-header Stack Tags -->
-  <g transform="translate(40, 102)">
-    <!-- Pill 1 -->
-    <rect x="0" y="0" width="100" height="22" rx="6" fill="#ff2d20" fill-opacity="0.15" stroke="#ff2d20" stroke-opacity="0.4"/>
-    <text x="50" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#ff4d40">Laravel 11</text>
-
-    <!-- Pill 2 -->
-    <rect x="108" y="0" width="80" height="22" rx="6" fill="#61dafb" fill-opacity="0.15" stroke="#61dafb" stroke-opacity="0.4"/>
-    <text x="148" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#61dafb">React.js</text>
-
-    <!-- Pill 3 -->
-    <rect x="196" y="0" width="80" height="22" rx="6" fill="#68a063" fill-opacity="0.15" stroke="#68a063" stroke-opacity="0.4"/>
-    <text x="236" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#68a063">Node.js</text>
-
-    <!-- Pill 4 -->
-    <rect x="284" y="0" width="100" height="22" rx="6" fill="#3178c6" fill-opacity="0.15" stroke="#3178c6" stroke-opacity="0.4"/>
-    <text x="334" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#38bdf8">TypeScript</text>
-
-    <!-- Pill 5 -->
-    <rect x="392" y="0" width="130" height="22" rx="6" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-opacity="0.4"/>
-    <text x="457" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#c084fc">Offensive Security</text>
-
-    <!-- Pill 6 -->
-    <rect x="530" y="0" width="140" height="22" rx="6" fill="#00ff9f" fill-opacity="0.15" stroke="#00ff9f" stroke-opacity="0.4"/>
-    <text x="600" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#00ff9f">Multi-Tenant SaaS</text>
+  <!-- HUD Data Lines (Left) -->
+  <g transform="translate(40, 90)" font-family="monospace" font-size="10" fill="#00ffff" opacity="0.7">
+    <text y="0">SYS.INIT.SEQ // 0x4F2A</text>
+    <text y="20">AURA.LINK // ACTIVE</text>
+    <text y="40">LATENCY // 12ms</text>
+    <text y="60">TENANT.ISO // SECURE</text>
+    <line x1="0" y1="70" x2="100" y2="70" stroke="#00ffff" stroke-width="1" stroke-opacity="0.4"/>
   </g>
 
-  <!-- Metric Cards Row -->
-  {metric_boxes}
+  <!-- HUD Data Lines (Right) -->
+  <g transform="translate({W-160}, 90)" font-family="monospace" font-size="10" fill="#8a2be2" opacity="0.7" text-anchor="end">
+    <text x="120" y="0">NODE.JS // v20.x</text>
+    <text x="120" y="20">LARAVEL // v11.x</text>
+    <text x="120" y="40">REACT // v18.x</text>
+    <text x="120" y="60">OSCP // VERIFIED</text>
+    <line x1="20" y1="70" x2="120" y2="70" stroke="#8a2be2" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Main Identity (Holographic Text) -->
+  <g transform="translate({W/2}, 70)" text-anchor="middle" filter="url(#hologram)">
+    <text font-family="'Courier New', Courier, monospace" font-size="48" font-weight="900" fill="#ffffff" letter-spacing="8">KISAL NELAKA</text>
+    <text y="30" font-family="'Courier New', Courier, monospace" font-size="14" font-weight="700" fill="#00ffff" letter-spacing="4">IMPERIAL SYSTEMS ARCHITECT</text>
+  </g>
+
+  <!-- Floating Stats Modules -->
+  <!-- Stat 1 -->
+  <g transform="translate(80, {H-90})">
+    <rect x="0" y="0" width="120" height="40" fill="#00ffff" fill-opacity="0.05" stroke="#00ffff" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ffff">COMBAT EXPERIENCE</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">{age} YRS</text>
+  </g>
+
+  <!-- Stat 2 -->
+  <g transform="translate(240, {H-90})">
+    <rect x="0" y="0" width="120" height="40" fill="#8a2be2" fill-opacity="0.05" stroke="#8a2be2" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#8a2be2">VERIFIED COMMITS</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">{contribs:,}</text>
+  </g>
+  
+  <!-- Stat 3 -->
+  <g transform="translate(400, {H-90})">
+    <rect x="0" y="0" width="120" height="40" fill="#00ffff" fill-opacity="0.05" stroke="#00ffff" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ffff">ARCHITECTURES</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">{repos}</text>
+  </g>
+
+  <!-- Stat 4 -->
+  <g transform="translate(560, {H-90})">
+    <rect x="0" y="0" width="120" height="40" fill="#8a2be2" fill-opacity="0.05" stroke="#8a2be2" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#8a2be2">NETWORK FOLLOWERS</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">{followers}</text>
+  </g>
+
+  <!-- System Status Footer -->
+  <text x="{W/2}" y="{H-20}" text-anchor="middle" font-family="monospace" font-size="10" fill="#555555" letter-spacing="2">SYS.UPDATE :: {now} // ALL SYSTEMS NOMINAL</text>
+
+  <!-- Glitch overlay animation -->
+  <rect width="{W}" height="{H}" fill="none">
+    <animate attributeName="opacity" values="0;0;0.1;0;0" keyTimes="0;0.9;0.92;0.94;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
 </svg>'''
 
     return svg
 
 def main():
-    print("Generating high-end banner.svg...")
+    print("Generating God-Tier banner.svg...")
     stats = fetch_stats()
     svg = generate_banner_svg(stats)
-
     out = "banner.svg"
     with open(out, "w", encoding="utf-8") as f:
         f.write(svg)

@@ -1,100 +1,140 @@
-<svg width="860" height="200" viewBox="0 0 860 200"
-     fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="860" height="320" viewBox="0 0 860 320" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="200" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0b0f19"/>
-      <stop offset="1" stop-color="#030712"/>
+    <!-- Void Background -->
+    <radialGradient id="void-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="60%" stop-color="#020205"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <!-- Holographic Glows -->
+    <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#8a2be2" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0.2"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+
+    <!-- Displacement for Glitch -->
+    <filter id="hologram">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.95" numOctaves="1" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-heavy">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <rect width="860" height="200" rx="16" fill="url(#bg)"/>
-  <rect x="0.5" y="0.5" width="859" height="199" rx="15.5"
-        stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
+  <!-- Base -->
+  <rect width="860" height="320" fill="url(#void-bg)"/>
+  
+  <!-- Ambient Grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.03"/>
+  </pattern>
+  <rect width="860" height="320" fill="url(#grid)"/>
 
-  <rect x="0" y="0" width="860" height="40" rx="16" fill="#38bdf8" fill-opacity="0.03"/>
-  <rect x="0" y="39" width="860" height="1" fill="#38bdf8" fill-opacity="0.15"/>
+  <!-- Center Core Glow -->
+  <circle cx="430.0" cy="160.0" r="150" fill="url(#core-glow)"/>
 
-  <circle cx="22" cy="20" r="5" fill="#ef4444" fill-opacity="0.8"/>
-  <circle cx="38" cy="20" r="5" fill="#f59e0b" fill-opacity="0.8"/>
-  <circle cx="54" cy="20" r="5" fill="#10b981" fill-opacity="0.8"/>
+  <!-- Rotating Rings (Center) -->
+  <g transform="translate(430.0, 160.0)">
+    <!-- Outer Ring -->
+    <circle cx="0" cy="0" r="120" stroke="#00ffff" stroke-width="1" stroke-opacity="0.3" fill="none" stroke-dasharray="4 12">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Middle Ring -->
+    <circle cx="0" cy="0" r="100" stroke="#8a2be2" stroke-width="2" stroke-opacity="0.5" fill="none" stroke-dasharray="40 20 5 10">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Inner Ring -->
+    <circle cx="0" cy="0" r="80" stroke="#00ffff" stroke-width="1" stroke-opacity="0.8" fill="none" stroke-dasharray="2 4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Central Data Node -->
+    <polygon points="0,-15 13,8 -13,8" fill="#00ffff" opacity="0.8" filter="url(#glow-heavy)">
+       <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
 
-  <text x="72" y="24"
-        font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500"
-        fill="#94a3b8">kisalnelaka / system summary</text>
+  <!-- High-Tech Brackets -->
+  <path d="M 40 60 L 20 60 L 20 260 L 40 260" fill="none" stroke="#00ffff" stroke-width="2" stroke-opacity="0.5"/>
+  <path d="M 820 60 L 840 60 L 840 260 L 820 260" fill="none" stroke="#00ffff" stroke-width="2" stroke-opacity="0.5"/>
 
-  <text x="840" y="24" text-anchor="end"
-        font-family="system-ui, -apple-system, sans-serif" font-size="10"
-        fill="#64748b">updated 2026-08-08 00:38 UTC</text>
+  <!-- HUD Data Lines (Left) -->
+  <g transform="translate(40, 90)" font-family="monospace" font-size="10" fill="#00ffff" opacity="0.7">
+    <text y="0">SYS.INIT.SEQ // 0x4F2A</text>
+    <text y="20">AURA.LINK // ACTIVE</text>
+    <text y="40">LATENCY // 12ms</text>
+    <text y="60">TENANT.ISO // SECURE</text>
+    <line x1="0" y1="70" x2="100" y2="70" stroke="#00ffff" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
 
-  <text x="40" y="78"
-        font-family="system-ui, -apple-system, sans-serif" font-size="26"
-        font-weight="800" fill="#38bdf8" filter="url(#glow)">KISAL NELAKA</text>
+  <!-- HUD Data Lines (Right) -->
+  <g transform="translate(700, 90)" font-family="monospace" font-size="10" fill="#8a2be2" opacity="0.7" text-anchor="end">
+    <text x="120" y="0">NODE.JS // v20.x</text>
+    <text x="120" y="20">LARAVEL // v11.x</text>
+    <text x="120" y="40">REACT // v18.x</text>
+    <text x="120" y="60">OSCP // VERIFIED</text>
+    <line x1="20" y1="70" x2="120" y2="70" stroke="#8a2be2" stroke-width="1" stroke-opacity="0.4"/>
+  </g>
 
-  <text x="40" y="96"
-        font-family="system-ui, -apple-system, sans-serif" font-size="12"
-        fill="#94a3b8" font-weight="500">Systems Architect · Full-Stack Engineer (Laravel / React / Node) · Security</text>
+  <!-- Main Identity (Holographic Text) -->
+  <g transform="translate(430.0, 70)" text-anchor="middle" filter="url(#hologram)">
+    <text font-family="'Courier New', Courier, monospace" font-size="48" font-weight="900" fill="#ffffff" letter-spacing="8">KISAL NELAKA</text>
+    <text y="30" font-family="'Courier New', Courier, monospace" font-size="14" font-weight="700" fill="#00ffff" letter-spacing="4">IMPERIAL SYSTEMS ARCHITECT</text>
+  </g>
 
-  <rect x="40" y="104" width="780" height="1" fill="#38bdf8" fill-opacity="0.15"/>
+  <!-- Floating Stats Modules -->
+  <!-- Stat 1 -->
+  <g transform="translate(80, 230)">
+    <rect x="0" y="0" width="120" height="40" fill="#00ffff" fill-opacity="0.05" stroke="#00ffff" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ffff">COMBAT EXPERIENCE</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">9.3 YRS</text>
+  </g>
 
-  <line x1="169.0" y1="105" x2="169.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
-    <text x="105.0" y="126" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
-          fill="#38bdf8" opacity="0.6" letter-spacing="1">ACTIVE</text>
-    <text x="105.0" y="152" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="16"
-          font-weight="700" fill="#f8fafc">9.3y</text>
-    <text x="105.0" y="170" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9"
-          fill="#94a3b8" opacity="0.7">years building</text><line x1="299.0" y1="105" x2="299.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
-    <text x="235.0" y="126" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
-          fill="#38bdf8" opacity="0.6" letter-spacing="1">COMMITS</text>
-    <text x="235.0" y="152" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="16"
-          font-weight="700" fill="#f8fafc">654</text>
-    <text x="235.0" y="170" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9"
-          fill="#94a3b8" opacity="0.7">total contributions</text><line x1="429.0" y1="105" x2="429.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
-    <text x="365.0" y="126" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
-          fill="#38bdf8" opacity="0.6" letter-spacing="1">REPOSITORIES</text>
-    <text x="365.0" y="152" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="16"
-          font-weight="700" fill="#f8fafc">71</text>
-    <text x="365.0" y="170" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9"
-          fill="#94a3b8" opacity="0.7">public repos</text><line x1="559.0" y1="105" x2="559.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
-    <text x="495.0" y="126" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
-          fill="#38bdf8" opacity="0.6" letter-spacing="1">STARS</text>
-    <text x="495.0" y="152" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="16"
-          font-weight="700" fill="#f8fafc">5</text>
-    <text x="495.0" y="170" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9"
-          fill="#94a3b8" opacity="0.7">stars earned</text><line x1="689.0" y1="105" x2="689.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
-    <text x="625.0" y="126" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
-          fill="#38bdf8" opacity="0.6" letter-spacing="1">FOLLOWERS</text>
-    <text x="625.0" y="152" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="16"
-          font-weight="700" fill="#f8fafc">10</text>
-    <text x="625.0" y="170" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9"
-          fill="#94a3b8" opacity="0.7">community</text>
-    <text x="755.0" y="126" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
-          fill="#38bdf8" opacity="0.6" letter-spacing="1">FOCUS</text>
-    <text x="755.0" y="152" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="16"
-          font-weight="700" fill="#f8fafc">PHP / React / Node</text>
-    <text x="755.0" y="170" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9"
-          fill="#94a3b8" opacity="0.7">primary stack</text>
+  <!-- Stat 2 -->
+  <g transform="translate(240, 230)">
+    <rect x="0" y="0" width="120" height="40" fill="#8a2be2" fill-opacity="0.05" stroke="#8a2be2" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#8a2be2">VERIFIED COMMITS</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">1,149</text>
+  </g>
+  
+  <!-- Stat 3 -->
+  <g transform="translate(400, 230)">
+    <rect x="0" y="0" width="120" height="40" fill="#00ffff" fill-opacity="0.05" stroke="#00ffff" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ffff">ARCHITECTURES</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">71</text>
+  </g>
 
-  <rect x="40" y="186" width="780" height="1" fill="#38bdf8" fill-opacity="0.1"/>
+  <!-- Stat 4 -->
+  <g transform="translate(560, 230)">
+    <rect x="0" y="0" width="120" height="40" fill="#8a2be2" fill-opacity="0.05" stroke="#8a2be2" stroke-opacity="0.3"/>
+    <text x="60" y="15" text-anchor="middle" font-family="monospace" font-size="9" fill="#8a2be2">NETWORK FOLLOWERS</text>
+    <text x="60" y="32" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">10</text>
+  </g>
+
+  <!-- System Status Footer -->
+  <text x="430.0" y="300" text-anchor="middle" font-family="monospace" font-size="10" fill="#555555" letter-spacing="2">SYS.UPDATE :: 2026-08-08 00:44 UTC // ALL SYSTEMS NOMINAL</text>
+
+  <!-- Glitch overlay animation -->
+  <rect width="860" height="320" fill="none">
+    <animate attributeName="opacity" values="0;0;0.1;0;0" keyTimes="0;0.9;0.92;0.94;1" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
 </svg>

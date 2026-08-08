@@ -21,11 +21,11 @@ Security       Penetration Testing (OSCP-standard) · SIEM (Splunk) · InfoSec
 <!-- SHOWCASE:START -->
 #### [NexusFlow ERP](https://github.com/kisalnelaka/nexusflow_erp) | *Multi-tenant SaaS Infrastructure*
 
-Modular ERP built with automated tenant scoping. Features 100% data isolation and low-latency inter-service communication across distributed modules.
+Built a modular ERP with automated global tenant scoping. The kind that just works without you having to think about it. 100% data isolation, zero leakage, seamless UX across distributed modules.
 
 #### [TheNet](https://github.com/kisalnelaka/thenet) | *Decentralized Mesh Architecture*
 
-Decentralized mesh network powered by WebSockets and Node.js. Peer-to-peer synchronization with zero cloud dependency and real-time file orchestration.
+Cloud dependency is a crutch. Built a secure, decentralized mesh network over WebSockets and Node.js. Peer-to-peer file orchestration, zero cloud involvement, zero-latency local sync.
 
 <!-- SHOWCASE:END -->
 
@@ -42,11 +42,11 @@ Decentralized mesh network powered by WebSockets and Node.js. Peer-to-peer synch
 ## Recent Projects
 
 <!-- RECENT-REPOS:START -->
-- [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - Production-ready multi-tenant property management SaaS with Laravel 11, React, RBAC, and automated scoping.
-- [al-sharq-assesment](https://github.com/kisalnelaka/al-sharq-assesment) - Production-focused content management application.
-- [resu_me](https://github.com/kisalnelaka/resu_me) - Streamlined resume customization tool.
-- [jeOS](https://github.com/kisalnelaka/jeOS) - Lightweight OS kernel environment.
-- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Full-stack multi-tenant ERP platform.
+- [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - A production-ready, multi-tenant Property Management SaaS (TenancyOS) built with Laravel 11 and React. Features automated organization scoping, RBAC, and full audit logging.
+- [al-sharq-assesment](https://github.com/kisalnelaka/al-sharq-assesment) - small but production-minded content-management application
+- [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
+- [jeOS](https://github.com/kisalnelaka/jeOS) - just enough
+- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
 <!-- RECENT-REPOS:END -->
 
 ---
@@ -54,12 +54,11 @@ Decentralized mesh network powered by WebSockets and Node.js. Peer-to-peer synch
 ## Technical Articles
 
 <!-- BLOG-POST-LIST:START -->
-- [AETHER: Building a PHP 8.3 Framework Without the Bloat](https://medium.com/@kisalnelaka6/aether-building-a-php-8-3-framework-without-the-bloat-f0c1a69780ed?source=rss-3dd06b9e0f4------2)
-- [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124?source=rss-3dd06b9e0f4------2)
-- [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc?source=rss-3dd06b9e0f4------2)
-- [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57?source=rss-3dd06b9e0f4------2)
-- [JavaScript for Clueless Newbies: Part 1 - Variables, Data Types & Operators](https://medium.com/@kisalnelaka6/javascript-for-clueless-newbies-part-1-variables-data-types-operators-ae71e4d01ce8?source=rss-3dd06b9e0f4------2)
-- [Part 3: Lure Creation - The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613?source=rss-3dd06b9e0f4------2)
+- [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124)
+- [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc)
+- [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57)
+- [JavaScript for Clueless Newbies:Part 1 — Variables, Data Types, & Operators](https://medium.com/@kisalnelaka6/javascript-for-clueless-newbies-part-1-variables-data-types-operators-ae71e4d01ce8)
+- [Part 3: Lure Creation — The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613)
 <!-- BLOG-POST-LIST:END -->
 
 ---

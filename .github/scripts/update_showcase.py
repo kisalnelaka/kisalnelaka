@@ -13,10 +13,8 @@ def update_readme():
 
     markdown = ""
     for project in projects:
-        markdown += f"#### [{project['title']}]({project['url']}) | *{project['subtitle']}*\n"
-        markdown += f"*   **Challenge:** {project['challenge']}\n"
-        markdown += f"*   **Solution:** {project['solution']}\n"
-        markdown += f"*   **Impact:** {project['impact']}\n\n"
+        markdown += f"#### [{project['title']}]({project['url']}) | *{project['subtitle']}*\n\n"
+        markdown += f"{project['description']}\n\n"
 
     readme_path = "README.md"
     with open(readme_path, "r", encoding="utf-8") as f:

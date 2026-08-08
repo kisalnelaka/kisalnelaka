@@ -3,16 +3,12 @@
         "title": "NexusFlow ERP",
         "url": "https://github.com/kisalnelaka/nexusflow_erp",
         "subtitle": "Multi-tenant SaaS Infrastructure",
-        "challenge": "Ensuring strict data isolation and high-speed communication in complex multi-tenant environments.",
-        "solution": "Architected a modular ERP system with automated global tenant scoping and high-performance inter-service communication.",
-        "impact": "Guaranteed 100% data isolation while maintaining a seamless user experience across distributed modules."
+        "description": "Built a modular ERP with automated global tenant scoping. The kind that just works without you having to think about it. 100% data isolation, zero leakage, seamless UX across distributed modules."
     },
     {
         "title": "TheNet",
         "url": "https://github.com/kisalnelaka/thenet",
         "subtitle": "Decentralized Mesh Architecture",
-        "challenge": "Reducing cloud dependency and latency for local file synchronization.",
-        "solution": "Developed a secure, decentralized mesh network using WebSockets and Node.js for real-time peer-to-peer file orchestration.",
-        "impact": "Enabled zero-latency local synchronization with zero reliance on external cloud providers."
+        "description": "Cloud dependency is a crutch. Built a secure, decentralized mesh network over WebSockets and Node.js. Peer-to-peer file orchestration, zero cloud involvement, zero-latency local sync."
     }
 ]

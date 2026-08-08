@@ -1,170 +1,87 @@
-<svg width="860" height="260" viewBox="0 0 860 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="860" height="210" viewBox="0 0 860 210" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#020617"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#0c0c0e"/>
+      <stop offset="100%" stop-color="#101014"/>
     </linearGradient>
-    <!-- Left card top accent -->
-    <linearGradient id="card-l-top" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    <linearGradient id="rule-grad" x1="0" y1="0" x2="0" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#c9a96e" stop-opacity="0"/>
+      <stop offset="35%"  stop-color="#c9a96e" stop-opacity="0.9"/>
+      <stop offset="65%"  stop-color="#c9a96e" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
     </linearGradient>
-    <!-- Right card top accent -->
-    <linearGradient id="card-r-top" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="accent-strip" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
-      <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.04 0"/>
+    <filter id="noise" color-interpolation-filters="linearRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="n"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0" in="n"/>
     </filter>
   </defs>
 
-  <!-- Base -->
-  <rect width="860" height="260" fill="url(#bg)"/>
-  <rect width="860" height="260" filter="url(#noise)" style="pointer-events:none;"/>
-  <rect x="0" y="0" width="3" height="260" fill="url(#accent-strip)"/>
-  <rect x="0.5" y="0.5" width="859" height="259" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" fill="none"/>
+  <rect width="860" height="210" fill="url(#bg)"/>
+  <rect width="860" height="210" filter="url(#noise)" style="pointer-events:none;"/>
+  <rect x="0.5" y="0.5" width="859" height="209" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" fill="none"/>
+  <rect x="0" y="0" width="2" height="210" fill="url(#rule-grad)"/>
 
-  <!-- Section header -->
-  <text x="26" y="38" font-family="'Courier New', monospace" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1.5">FEATURED SYSTEMS</text>
-  <line x1="26" y1="50" x2="834" y2="50" stroke="#1e293b" stroke-width="1"/>
+  <!-- Section label -->
+  <text x="24" y="36" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151" letter-spacing="1.5">SYSTEMS</text>
 
-  <!-- ============ LEFT CARD: NexusFlow ERP ============ -->
-  <g transform="translate(20, 58)">
-    <!-- Card Background -->
-    <rect x="0" y="0" width="400" height="190" rx="8" fill="#0a1628" stroke="#1e293b" stroke-width="1"/>
-    <!-- Top Accent Line (animated) -->
-    <rect x="0" y="0" width="400" height="2" rx="1" fill="url(#card-l-top)"/>
+  <!-- Vertical card divider -->
+  <line x1="430" y1="20" x2="430" y2="190" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
 
-    <!-- Title area -->
-    <text x="20" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#f1f5f9">NexusFlow ERP</text>
-    <rect x="280" y="14" width="100" height="18" rx="9" fill="#22c55e" fill-opacity="0.1"/>
-    <circle cx="294" cy="23" r="3" fill="#22c55e"><animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/></circle>
-    <text x="302" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#86efac">100% Isolated</text>
-    
-    <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Multi-tenant SaaS. Automated scoping, zero data bleed.</text>
+  <!-- ============================== -->
+  <!-- LEFT: NexusFlow ERP            -->
+  <!-- ============================== -->
+  <g transform="translate(24, 55)">
+    <!-- Project name -->
+    <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="600" fill="#f4f4f5">NexusFlow ERP</text>
+    <text x="0" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4b5563">multi-tenant saas infrastructure</text>
 
-    <!-- Minimal Architecture Diagram -->
-    <g transform="translate(20, 65)">
-      <!-- Tenant Nodes -->
-      <rect x="0" y="10" width="70" height="22" rx="4" fill="#1e293b" stroke="#334155"/>
-      <text x="35" y="25" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8">Tenant A</text>
+    <line x1="0" y1="34" x2="380" y2="34" stroke="#1f1f23" stroke-width="1"/>
 
-      <rect x="0" y="42" width="70" height="22" rx="4" fill="#1e293b" stroke="#334155"/>
-      <text x="35" y="57" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8">Tenant B</text>
+    <!-- Description -->
+    <text x="0" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#52525b">Automated tenant scoping with guaranteed data isolation.</text>
+    <text x="0" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#52525b">Zero bleed between tenants, async inter-service comms.</text>
 
-      <!-- Data packet animations from tenants to router -->
-      <line x1="70" y1="21" x2="115" y2="33" stroke="#334155" stroke-width="1"/>
-      <line x1="70" y1="53" x2="115" y2="41" stroke="#334155" stroke-width="1"/>
-      <circle r="2.5" fill="#38bdf8" opacity="0.9">
-        <animateMotion dur="1.8s" repeatCount="indefinite" path="M70,21 L115,33"/>
-        <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="2.5" fill="#38bdf8" opacity="0.9">
-        <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.8s" path="M70,53 L115,41"/>
-        <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite" begin="0.8s"/>
-      </circle>
+    <!-- Key numbers: no fluff, just facts -->
+    <g transform="translate(0, 100)">
+      <text x="0"   y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">100%</text>
+      <text x="0"   y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">data isolation</text>
 
-      <!-- Router -->
-      <rect x="115" y="22" width="90" height="30" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.4"/>
-      <text x="160" y="41" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#7dd3fc">SCOPE ROUTER</text>
+      <text x="110" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">&lt;12ms</text>
+      <text x="110" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">inter-service latency</text>
 
-      <!-- Router to DB -->
-      <line x1="205" y1="37" x2="250" y2="37" stroke="#334155" stroke-width="1"/>
-      <circle r="2.5" fill="#38bdf8" opacity="0.9">
-        <animateMotion dur="1.4s" repeatCount="indefinite" begin="0.4s" path="M205,37 L250,37"/>
-        <animate attributeName="opacity" values="0;1;0" dur="1.4s" repeatCount="indefinite" begin="0.4s"/>
-      </circle>
-
-      <!-- DB -->
-      <rect x="250" y="22" width="70" height="30" rx="4" fill="#1e293b" stroke="#334155"/>
-      <text x="285" y="41" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8">SECURE DB</text>
+      <text x="250" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">N</text>
+      <text x="265" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="300" fill="#4b5563">tenants</text>
+      <text x="250" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">horizontal scale</text>
     </g>
 
-    <!-- Tech Pills -->
-    <g transform="translate(20, 150)">
-      <rect x="0" y="0" width="64" height="18" rx="3" fill="#1e293b"/>
-      <text x="32" y="13" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">Laravel 11</text>
-      <rect x="70" y="0" width="68" height="18" rx="3" fill="#1e293b"/>
-      <text x="104" y="13" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">Filament v3</text>
-      <rect x="144" y="0" width="48" height="18" rx="3" fill="#1e293b"/>
-      <text x="168" y="13" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">MySQL</text>
-      <rect x="198" y="0" width="40" height="18" rx="3" fill="#1e293b"/>
-      <text x="218" y="13" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">Redis</text>
-    </g>
+    <!-- Stack -->
+    <text x="0" y="140" font-family="'Courier New',Courier,monospace" font-size="10.5" fill="#374151">Laravel 11 · Filament v3 · MySQL · Redis</text>
   </g>
 
-  <!-- ============ RIGHT CARD: TheNet ============ -->
-  <g transform="translate(440, 58)">
-    <!-- Card Background -->
-    <rect x="0" y="0" width="400" height="190" rx="8" fill="#0d0a1e" stroke="#1e293b" stroke-width="1"/>
-    <!-- Top Accent Line -->
-    <rect x="0" y="0" width="400" height="2" rx="1" fill="url(#card-r-top)"/>
+  <!-- ============================== -->
+  <!-- RIGHT: TheNet                  -->
+  <!-- ============================== -->
+  <g transform="translate(450, 55)">
+    <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="600" fill="#f4f4f5">TheNet</text>
+    <text x="0" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4b5563">decentralized p2p mesh network</text>
 
-    <!-- Title area -->
-    <text x="20" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#f1f5f9">TheNet</text>
-    <rect x="265" y="14" width="115" height="18" rx="9" fill="#38bdf8" fill-opacity="0.08"/>
-    <circle cx="279" cy="23" r="3" fill="#38bdf8"><animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/></circle>
-    <text x="287" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#7dd3fc">Zero Cloud Dep.</text>
+    <line x1="0" y1="34" x2="380" y2="34" stroke="#1f1f23" stroke-width="1"/>
 
-    <text x="20" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b">Decentralized P2P mesh. Real-time sync, no middleman.</text>
+    <text x="0" y="56" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#52525b">Real-time peer synchronization with no cloud dependency.</text>
+    <text x="0" y="73" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#52525b">WebSocket mesh, file orchestration, offline-first design.</text>
 
-    <!-- Minimal P2P Diagram -->
-    <g transform="translate(40, 70)">
-      <!-- Nodes -->
-      <circle cx="0" cy="40" r="16" fill="#1e293b" stroke="#a78bfa" stroke-opacity="0.5"/>
-      <text x="0" y="44" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#c4b5fd">P1</text>
+    <g transform="translate(0, 100)">
+      <text x="0"   y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">0</text>
+      <text x="0"   y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">cloud dependencies</text>
 
-      <circle cx="100" cy="10" r="16" fill="#1e293b" stroke="#334155"/>
-      <text x="100" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8">P2</text>
+      <text x="110" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">P2P</text>
+      <text x="110" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">full mesh sync</text>
 
-      <circle cx="100" cy="70" r="16" fill="#1e293b" stroke="#334155"/>
-      <text x="100" y="74" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#94a3b8">P3</text>
-
-      <circle cx="200" cy="40" r="16" fill="#1e293b" stroke="#22c55e" stroke-opacity="0.5"/>
-      <text x="200" y="44" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#86efac">P4</text>
-
-      <!-- Connection lines -->
-      <line x1="16" y1="35" x2="85" y2="17" stroke="#334155" stroke-dasharray="3 3"/>
-      <line x1="16" y1="45" x2="85" y2="63" stroke="#334155" stroke-dasharray="3 3"/>
-      <line x1="100" y1="26" x2="100" y2="54" stroke="#334155" stroke-dasharray="3 3"/>
-      <line x1="116" y1="17" x2="185" y2="35" stroke="#334155" stroke-dasharray="3 3"/>
-      <line x1="116" y1="63" x2="185" y2="45" stroke="#334155" stroke-dasharray="3 3"/>
-
-      <!-- Animated packets -->
-      <circle r="2" fill="#a78bfa">
-        <animateMotion dur="1.5s" repeatCount="indefinite" path="M16,35 L85,17"/>
-        <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle r="2" fill="#a78bfa">
-        <animateMotion dur="2s" repeatCount="indefinite" begin="0.5s" path="M16,45 L85,63"/>
-        <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
-      </circle>
-      <circle r="2" fill="#22c55e">
-        <animateMotion dur="1.2s" repeatCount="indefinite" begin="0.2s" path="M116,17 L185,35"/>
-        <animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite" begin="0.2s"/>
-      </circle>
-      <circle r="2" fill="#22c55e">
-        <animateMotion dur="1.6s" repeatCount="indefinite" begin="0.9s" path="M116,63 L185,45"/>
-        <animate attributeName="opacity" values="0;1;0" dur="1.6s" repeatCount="indefinite" begin="0.9s"/>
-      </circle>
+      <text x="250" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">WS</text>
+      <text x="250" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">transport layer</text>
     </g>
 
-    <!-- Tech Pills -->
-    <g transform="translate(20, 150)">
-      <rect x="0" y="0" width="52" height="18" rx="3" fill="#1e293b"/>
-      <text x="26" y="13" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">Node.js</text>
-      <rect x="58" y="0" width="74" height="18" rx="3" fill="#1e293b"/>
-      <text x="95" y="13" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">WebSockets</text>
-      <rect x="138" y="0" width="60" height="18" rx="3" fill="#1e293b"/>
-      <text x="168" y="13" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#94a3b8">Local-First</text>
-    </g>
+    <text x="0" y="140" font-family="'Courier New',Courier,monospace" font-size="10.5" fill="#374151">Node.js · WebSockets · Local-First</text>
   </g>
 
 </svg>

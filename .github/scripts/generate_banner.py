@@ -1,7 +1,6 @@
 import os
 import json
 import urllib.request
-import urllib.error
 from datetime import datetime, timezone
 
 USERNAME = "kisalnelaka"
@@ -24,18 +23,17 @@ def gh_request(url):
 
 def fetch_stats():
     stats = {
-        "repos": 0,
-        "stars": 0,
-        "followers": 0,
-        "account_age_years": 0,
-        "stack_summary": "PHP / React / Node",
+        "repos": 71,
+        "stars": 5,
+        "followers": 10,
+        "account_age_years": 9.3,
         "total_contributions": 1149
     }
 
     user = gh_request(f"https://api.github.com/users/{USERNAME}")
     if user:
-        stats["repos"] = user.get("public_repos", 0)
-        stats["followers"] = user.get("followers", 0)
+        stats["repos"] = user.get("public_repos", stats["repos"])
+        stats["followers"] = user.get("followers", stats["followers"])
         created = user.get("created_at", "")
         if created:
             created_dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
@@ -89,104 +87,160 @@ def fetch_stats():
 
     return stats
 
-def generate_banner(stats):
-    W, H = 860, 200
+def generate_banner_svg(stats):
+    W, H = 860, 250
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-    repos     = stats.get("repos", 0)
-    stars     = stats.get("stars", 0)
-    followers = stats.get("followers", 0)
-    age       = stats.get("account_age_years", 0)
-    stack_sum = stats.get("stack_summary", "PHP / React / Node")
+    repos     = stats.get("repos", 71)
+    stars     = stats.get("stars", 5)
+    followers = stats.get("followers", 10)
+    age       = stats.get("account_age_years", 9.3)
     contribs  = stats.get("total_contributions", 1149)
 
     metrics = [
-        ("ACTIVE",       f"{age}y",       "years building"),
-        ("COMMITS",      f"{contribs:,}", "total contributions"),
-        ("REPOSITORIES", str(repos),      "public repos"),
-        ("STARS",        str(stars),      "stars earned"),
-        ("FOLLOWERS",    str(followers),  "community"),
-        ("FOCUS",        stack_sum,       "primary stack"),
+        ("EXPERIENCE", f"{age} Yrs", "Systems & Full-Stack", "#00f0ff"),
+        ("CONTRIBUTIONS", f"{contribs:,}", "Verified Commits", "#00ff9f"),
+        ("REPOSITORIES", f"{repos}", "Public Architectures", "#a855f7"),
+        ("COMMUNITY", f"{followers} Devs", "Network Followers", "#38bdf8"),
     ]
 
-    cell_w = (W - 80) / len(metrics)
+    metric_boxes = ""
+    box_w = 180
+    gap = 15
+    start_x = 40
 
-    cells_svg = ""
-    for i, (key, val, desc) in enumerate(metrics):
-        x = 40 + i * cell_w
-        sep_x = x + cell_w - 1
-        if i < len(metrics) - 1:
-            cells_svg += f'<line x1="{sep_x:.1f}" y1="105" x2="{sep_x:.1f}" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>'
+    for i, (label, val, sub, col) in enumerate(metrics):
+        x = start_x + i * (box_w + gap)
+        metric_boxes += f'''
+    <!-- Metric Card {i+1} -->
+    <g transform="translate({x}, 145)">
+      <rect width="{box_w}" height="75" rx="12" fill="#0d1527" fill-opacity="0.7" stroke="{col}" stroke-opacity="0.3" stroke-width="1"/>
+      <rect width="{box_w}" height="75" rx="12" fill="url(#card-glow-{i})" opacity="0.15"/>
+      <text x="16" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="{col}" letter-spacing="1.2">{label}</text>
+      <text x="16" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">{val}</text>
+      <text x="16" y="64" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">{sub}</text>
+    </g>'''
 
-        cells_svg += f'''
-    <text x="{x + cell_w/2:.1f}" y="126" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
-          fill="#38bdf8" opacity="0.6" letter-spacing="1">{key}</text>
-    <text x="{x + cell_w/2:.1f}" y="152" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="16"
-          font-weight="700" fill="#f8fafc">{val}</text>
-    <text x="{x + cell_w/2:.1f}" y="170" text-anchor="middle"
-          font-family="system-ui, -apple-system, sans-serif" font-size="9"
-          fill="#94a3b8" opacity="0.7">{desc}</text>'''
-
-    svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}"
-     fill="none" xmlns="http://www.w3.org/2000/svg">
+    svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="{W}" y2="{H}" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0b0f19"/>
-      <stop offset="1" stop-color="#030712"/>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c18"/>
+      <stop offset="50%" stop-color="#030712"/>
+      <stop offset="100%" stop-color="#0b1120"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+
+    <!-- Neon Border Gradient -->
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00ff9f" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Ambient Glows -->
+    <radialGradient id="glow-cyan" cx="10%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-purple" cx="90%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Card Inner Glows -->
+    <radialGradient id="card-glow-0" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+    <radialGradient id="card-glow-1" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#00ff9f"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+    <radialGradient id="card-glow-2" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+    <radialGradient id="card-glow-3" cx="0%" cy="0%" r="100%"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+
+    <!-- Filter Drop Shadows -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <rect width="{W}" height="{H}" rx="16" fill="url(#bg)"/>
-  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="15.5"
-        stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
+  <!-- Container Box -->
+  <rect width="{W}" height="{H}" rx="18" fill="url(#bg-grad)"/>
+  <rect width="{W}" height="{H}" rx="18" fill="url(#glow-cyan)"/>
+  <rect width="{W}" height="{H}" rx="18" fill="url(#glow-purple)"/>
 
-  <rect x="0" y="0" width="{W}" height="40" rx="16" fill="#38bdf8" fill-opacity="0.03"/>
-  <rect x="0" y="39" width="{W}" height="1" fill="#38bdf8" fill-opacity="0.15"/>
+  <!-- Glassmorphism Outline -->
+  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="17" stroke="url(#border-grad)" stroke-width="1.5" fill="none"/>
 
-  <circle cx="22" cy="20" r="5" fill="#ef4444" fill-opacity="0.8"/>
-  <circle cx="38" cy="20" r="5" fill="#f59e0b" fill-opacity="0.8"/>
-  <circle cx="54" cy="20" r="5" fill="#10b981" fill-opacity="0.8"/>
+  <!-- Top Glass Header Bar -->
+  <rect x="1" y="1" width="{W-2}" height="42" rx="17" fill="#ffffff" fill-opacity="0.02"/>
+  <line x1="1" y1="43" x2="{W-1}" y2="43" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
 
-  <text x="72" y="24"
-        font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500"
-        fill="#94a3b8">kisalnelaka / system summary</text>
+  <!-- OS Dots -->
+  <circle cx="24" cy="22" r="5" fill="#ff5f57"/>
+  <circle cx="40" cy="22" r="5" fill="#febc2e"/>
+  <circle cx="56" cy="22" r="5" fill="#28c840"/>
 
-  <text x="{W - 20}" y="24" text-anchor="end"
-        font-family="system-ui, -apple-system, sans-serif" font-size="10"
-        fill="#64748b">updated {now}</text>
+  <!-- Status Indicator -->
+  <g transform="translate(76, 22)">
+    <text font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">
+      SYSTEM STATUS: <tspan fill="#00ff9f">ONLINE</tspan>
+    </text>
+  </g>
 
-  <text x="40" y="78"
-        font-family="system-ui, -apple-system, sans-serif" font-size="26"
-        font-weight="800" fill="#38bdf8" filter="url(#glow)">KISAL NELAKA</text>
+  <!-- Live Pulse Dot -->
+  <circle cx="710" cy="22" r="4" fill="#00ff9f">
+    <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="722" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#00ff9f" letter-spacing="1">LIVE HUD</text>
+  <text x="{W - 24}" y="25" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b">{now}</text>
 
-  <text x="40" y="96"
-        font-family="system-ui, -apple-system, sans-serif" font-size="12"
-        fill="#94a3b8" font-weight="500">Systems Architect · Full-Stack Engineer (Laravel / React / Node) · Security</text>
+  <!-- Main Hero Title -->
+  <text x="40" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="900" fill="#f8fafc" letter-spacing="-0.5">
+    KISAL NELAKA
+  </text>
+  <text x="245" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#00f0ff" filter="url(#neon-glow)">
+    // SYSTEMS ARCHITECT &amp; FULL-STACK ENGINEER
+  </text>
 
-  <rect x="40" y="104" width="{W - 80}" height="1" fill="#38bdf8" fill-opacity="0.15"/>
+  <!-- Sub-header Stack Tags -->
+  <g transform="translate(40, 102)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="100" height="22" rx="6" fill="#ff2d20" fill-opacity="0.15" stroke="#ff2d20" stroke-opacity="0.4"/>
+    <text x="50" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#ff4d40">Laravel 11</text>
 
-  {cells_svg}
+    <!-- Pill 2 -->
+    <rect x="108" y="0" width="80" height="22" rx="6" fill="#61dafb" fill-opacity="0.15" stroke="#61dafb" stroke-opacity="0.4"/>
+    <text x="148" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#61dafb">React.js</text>
 
-  <rect x="40" y="186" width="{W - 80}" height="1" fill="#38bdf8" fill-opacity="0.1"/>
+    <!-- Pill 3 -->
+    <rect x="196" y="0" width="80" height="22" rx="6" fill="#68a063" fill-opacity="0.15" stroke="#68a063" stroke-opacity="0.4"/>
+    <text x="236" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#68a063">Node.js</text>
+
+    <!-- Pill 4 -->
+    <rect x="284" y="0" width="100" height="22" rx="6" fill="#3178c6" fill-opacity="0.15" stroke="#3178c6" stroke-opacity="0.4"/>
+    <text x="334" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#38bdf8">TypeScript</text>
+
+    <!-- Pill 5 -->
+    <rect x="392" y="0" width="130" height="22" rx="6" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-opacity="0.4"/>
+    <text x="457" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#c084fc">Offensive Security</text>
+
+    <!-- Pill 6 -->
+    <rect x="530" y="0" width="140" height="22" rx="6" fill="#00ff9f" fill-opacity="0.15" stroke="#00ff9f" stroke-opacity="0.4"/>
+    <text x="600" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#00ff9f">Multi-Tenant SaaS</text>
+  </g>
+
+  <!-- Metric Cards Row -->
+  {metric_boxes}
 </svg>'''
 
     return svg
 
 def main():
-    print("Fetching GitHub stats...")
+    print("Generating high-end banner.svg...")
     stats = fetch_stats()
-    svg = generate_banner(stats)
+    svg = generate_banner_svg(stats)
 
     out = "banner.svg"
     with open(out, "w", encoding="utf-8") as f:
         f.write(svg)
-    print(f"  Written -> {out}")
+    print(f"  Successfully written -> {out}")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,183 @@
+import os
+
+def generate_showcase_svg():
+    W, H = 860, 290
+
+    svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090e1a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <!-- Card 1 Neon Cyan Glow -->
+    <linearGradient id="card1-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="card1-glow" cx="0%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+
+    <!-- Card 2 Neon Violet Glow -->
+    <linearGradient id="card2-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="card2-glow" cx="0%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+
+    <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="{W}" height="{H}" rx="18" fill="url(#bg-grad)"/>
+
+  <!-- ==================== LEFT CARD: NEXUSFLOW ERP ==================== -->
+  <g transform="translate(15, 15)">
+    <!-- Base Card -->
+    <rect width="405" height="260" rx="14" fill="#0d1527" fill-opacity="0.8"/>
+    <rect width="405" height="260" rx="14" fill="url(#card1-glow)"/>
+    <rect x="0.5" y="0.5" width="404" height="259" rx="13.5" stroke="url(#card1-border)" stroke-width="1.2" fill="none"/>
+
+    <!-- Header Badge -->
+    <rect x="18" y="18" width="90" height="20" rx="6" fill="#00f0ff" fill-opacity="0.15" stroke="#00f0ff" stroke-opacity="0.4"/>
+    <text x="63" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#00f0ff" letter-spacing="1">SAAS ENGINE</text>
+
+    <!-- Isolation Tag -->
+    <rect x="290" y="18" width="96" height="20" rx="10" fill="#00ff9f" fill-opacity="0.15"/>
+    <circle cx="302" cy="28" r="3" fill="#00ff9f"/>
+    <text x="312" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#00ff9f">100% Isolated</text>
+
+    <!-- Title -->
+    <text x="18" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">NexusFlow ERP</text>
+    <text x="18" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#38bdf8">Multi-Tenant SaaS Infrastructure</text>
+
+    <!-- Description -->
+    <text x="18" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8" width="370">
+      Architected modular ERP with automated global
+    </text>
+    <text x="18" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+      tenant scoping. Guaranteed zero data leakage with
+    </text>
+    <text x="18" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+      high-speed inter-service communications.
+    </text>
+
+    <!-- Visual Architecture Node Graphic -->
+    <g transform="translate(18, 158)">
+      <rect width="369" height="42" rx="8" fill="#070d19" stroke="#1e293b"/>
+      <circle cx="30" cy="21" r="8" fill="#ff2d20" fill-opacity="0.8"/>
+      <text x="44" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#f8fafc">Tenant A</text>
+      
+      <line x1="95" y1="21" x2="135" y2="21" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="3 3">
+        <animate attributeName="stroke-dashoffset" values="6;0" dur="1s" repeatCount="indefinite"/>
+      </line>
+
+      <rect x="140" y="9" width="88" height="24" rx="6" fill="#00f0ff" fill-opacity="0.2" stroke="#00f0ff"/>
+      <text x="184" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#00f0ff">SCOPED ROUTER</text>
+
+      <line x1="233" y1="21" x2="273" y2="21" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="3 3">
+        <animate attributeName="stroke-dashoffset" values="6;0" dur="1s" repeatCount="indefinite"/>
+      </line>
+
+      <circle cx="288" cy="21" r="8" fill="#a855f7" fill-opacity="0.8"/>
+      <text x="302" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#f8fafc">Tenant B</text>
+    </g>
+
+    <!-- Tech Pills -->
+    <g transform="translate(18, 215)">
+      <rect x="0" y="0" width="70" height="20" rx="5" fill="#1e293b"/><text x="35" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#cbd5e1">Laravel 11</text>
+      <rect x="76" y="0" width="70" height="20" rx="5" fill="#1e293b"/><text x="111" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#cbd5e1">Filament v3</text>
+      <rect x="152" y="0" width="60" height="20" rx="5" fill="#1e293b"/><text x="182" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#cbd5e1">MySQL</text>
+      <rect x="218" y="0" width="55" height="20" rx="5" fill="#1e293b"/><text x="245" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#cbd5e1">Redis</text>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT CARD: THENET MESH ==================== -->
+  <g transform="translate(440, 15)">
+    <!-- Base Card -->
+    <rect width="405" height="260" rx="14" fill="#120c1f" fill-opacity="0.8"/>
+    <rect width="405" height="260" rx="14" fill="url(#card2-glow)"/>
+    <rect x="0.5" y="0.5" width="404" height="259" rx="13.5" stroke="url(#card2-border)" stroke-width="1.2" fill="none"/>
+
+    <!-- Header Badge -->
+    <rect x="18" y="18" width="95" height="20" rx="6" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-opacity="0.4"/>
+    <text x="65" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="800" fill="#a855f7" letter-spacing="1">MESH NETWORK</text>
+
+    <!-- Cloud Free Tag -->
+    <rect x="290" y="18" width="96" height="20" rx="10" fill="#38bdf8" fill-opacity="0.15"/>
+    <circle cx="302" cy="28" r="3" fill="#38bdf8"/>
+    <text x="312" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#38bdf8">Zero Cloud</text>
+
+    <!-- Title -->
+    <text x="18" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#f8fafc">TheNet</text>
+    <text x="18" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#c084fc">Decentralized Mesh Architecture</text>
+
+    <!-- Description -->
+    <text x="18" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+      Built secure peer-to-peer mesh networking using
+    </text>
+    <text x="18" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+      WebSockets and Node.js. Enables zero-latency local
+    </text>
+    <text x="18" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#94a3b8">
+      sync without cloud dependency.
+    </text>
+
+    <!-- P2P Node Graphic -->
+    <g transform="translate(18, 158)">
+      <rect width="369" height="42" rx="8" fill="#0f071a" stroke="#2e1065"/>
+      
+      <!-- Node A -->
+      <circle cx="35" cy="21" r="9" fill="#a855f7"/>
+      <text x="35" y="24" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="900" fill="#ffffff">P1</text>
+
+      <!-- Connection Lines -->
+      <path d="M 44 21 Q 100 5, 185 21" stroke="#a855f7" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
+        <animate attributeName="stroke-dashoffset" values="8;0" dur="1.2s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Node B (Center Sync) -->
+      <circle cx="185" cy="21" r="10" fill="#00ff9f" filter="url(#glow-effect)"/>
+      <text x="185" y="24" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="900" fill="#030712">SYNC</text>
+
+      <!-- Connection Lines -->
+      <path d="M 185 21 Q 270 37, 335 21" stroke="#00f0ff" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
+        <animate attributeName="stroke-dashoffset" values="8;0" dur="1.2s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Node C -->
+      <circle cx="335" cy="21" r="9" fill="#00f0ff"/>
+      <text x="335" y="24" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="900" fill="#030712">P2</text>
+    </g>
+
+    <!-- Tech Pills -->
+    <g transform="translate(18, 215)">
+      <rect x="0" y="0" width="60" height="20" rx="5" fill="#2e1065"/><text x="30" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#e9d5ff">Node.js</text>
+      <rect x="66" y="0" width="75" height="20" rx="5" fill="#2e1065"/><text x="103" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#e9d5ff">WebSockets</text>
+      <rect x="147" y="0" width="65" height="20" rx="5" fill="#2e1065"/><text x="179" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#e9d5ff">P2P Mesh</text>
+      <rect x="218" y="0" width="75" height="20" rx="5" fill="#2e1065"/><text x="255" y="14" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#e9d5ff">Local-First</text>
+    </g>
+  </g>
+</svg>'''
+
+    return svg
+
+def main():
+    print("Generating showcase-card.svg...")
+    svg = generate_showcase_svg()
+    out = "showcase-card.svg"
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(svg)
+    print(f"  Successfully written -> {out}")
+
+if __name__ == "__main__":
+    main()

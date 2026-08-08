@@ -1,22 +1,39 @@
 <div align="center">
-  <img src="banner.svg" alt="Kisal Nelaka - Systems Architect" width="100%" />
+  <img src="banner.svg" alt="Kisal Nelaka - Systems Architect & Full-Stack Engineer" width="100%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <a href="https://linkedin.com/in/kisalnelaka"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" height="28"/></a>
+  <a href="https://kisalnelaka.github.io"><img src="https://img.shields.io/badge/Portfolio-00f0ff?style=for-the-badge&logo=vercel&logoColor=black" height="28"/></a>
+  <a href="https://medium.com/@kisalnelaka6"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" height="28"/></a>
+  <a href="mailto:kisalnelaka6@gmail.com"><img src="https://img.shields.io/badge/Email-00ff9f?style=for-the-badge&logo=gmail&logoColor=black" height="28"/></a>
 </div>
 
 <br/>
 
 ### Systems Architect & Full-Stack Engineer
 
-I specialize in high-concurrency web applications, multi-tenant SaaS architectures, and distributed systems. Driven by minimal overhead, clean data boundaries, and non-blocking performance.
+I build high-concurrency web applications, multi-tenant SaaS platforms, and distributed systems. Focused on minimal architectural overhead, strict tenant data isolation, and high-throughput non-blocking performance.
 
 ```
-Core Focus     Laravel (PHP 8.3+) · React · Node.js · TypeScript
-Architecture   Multi-tenant SaaS · Scoped Isolation · Distributed Mesh
-Security       Penetration Testing (OSCP-standard) · SIEM (Splunk) · InfoSec
+Primary Stack      Laravel 11 (PHP 8.3+) · React.js · Node.js · TypeScript
+Architecture       Multi-Tenant SaaS · Tenant Scoping · Decentralized Mesh Network
+Cyber Security     Penetration Testing (OSCP-Standard) · SIEM (Splunk) · Threat Analysis
 ```
 
 ---
 
-## Active Systems
+## Active Systems Showcase
+
+<div align="center">
+  <img src="showcase-card.svg" alt="Featured Systems Architecture - NexusFlow ERP & TheNet" width="100%" />
+</div>
+
+<details>
+  <summary><b>CLICK TO EXPAND TECHNICAL ARCHITECTURE BREAKDOWN</b></summary>
+  <br/>
 
 <!-- SHOWCASE:START -->
 #### [NexusFlow ERP](https://github.com/kisalnelaka/nexusflow_erp) | *Multi-tenant SaaS Infrastructure*
@@ -28,18 +45,27 @@ Built a modular ERP with automated global tenant scoping. The kind that just wor
 Cloud dependency is a crutch. Built a secure, decentralized mesh network over WebSockets and Node.js. Peer-to-peer file orchestration, zero cloud involvement, zero-latency local sync.
 
 <!-- SHOWCASE:END -->
+</details>
 
 ---
 
-## Stack Proficiency
+## Stack Proficiency & Arsenal
 
 <div align="center">
-  <img src="tech-dashboard.svg" alt="Technical Arsenal" width="100%" />
+  <img src="tech-dashboard.svg" alt="Technical Arsenal & Stack Mastery" width="100%" />
 </div>
 
 ---
 
-## Recent Projects
+## 3D Contribution Matrix
+
+<div align="center">
+  <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="3D Isometric Contribution Matrix" width="100%" />
+</div>
+
+---
+
+## Recent Repositories
 
 <!-- RECENT-REPOS:START -->
 - [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - A production-ready, multi-tenant Property Management SaaS (TenancyOS) built with Laravel 11 and React. Features automated organization scoping, RBAC, and full audit logging.
@@ -51,7 +77,7 @@ Cloud dependency is a crutch. Built a secure, decentralized mesh network over We
 
 ---
 
-## Technical Articles
+## Technical Publications
 
 <!-- BLOG-POST-LIST:START -->
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124)
@@ -63,18 +89,17 @@ Cloud dependency is a crutch. Built a secure, decentralized mesh network over We
 
 ---
 
-## Activity Matrix
+## Certifications & Paper Trail
 
-<div align="center">
-  <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" width="100%" />
-</div>
+```
+Palo Alto Networks Cybersecurity Professional   Palo Alto Networks
+Applied ChatGPT for Cybersecurity               Infosec Institute
+Introduction to SIEM (Splunk)                   EDUCBA Log Analytics
+```
 
 ---
 
-## Certifications & Contact
-
-* **Palo Alto Networks Cybersecurity Professional**
-* **Applied ChatGPT for Cybersecurity (Infosec)**
-* **Introduction to SIEM (Splunk)**
-
-**Email:** kisalnelaka6@gmail.com | **LinkedIn:** [linkedin.com/in/kisalnelaka](https://linkedin.com/in/kisalnelaka) | **Medium:** [medium.com/@kisalnelaka6](https://medium.com/@kisalnelaka6)
+<div align="center">
+  <sub>Looking for a Systems Architect &amp; Senior Full-Stack Engineer?</sub><br/>
+  <a href="mailto:kisalnelaka6@gmail.com"><b>kisalnelaka6@gmail.com</b></a> | <a href="https://linkedin.com/in/kisalnelaka"><b>LinkedIn</b></a> | <a href="https://kisalnelaka.github.io"><b>Portfolio</b></a>
+</div>

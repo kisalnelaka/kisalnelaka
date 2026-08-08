@@ -2,122 +2,99 @@
      fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="860" y2="200" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#020c02"/>
-      <stop offset="1" stop-color="#041a04"/>
+      <stop stop-color="#0b0f19"/>
+      <stop offset="1" stop-color="#030712"/>
     </linearGradient>
-    <filter id="scan">
-      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="noise"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0" result="noiseAlpha"/>
-      <feComposite in="SourceGraphic" in2="noiseAlpha" operator="over"/>
-    </filter>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="860" height="200" rx="14" fill="url(#bg)"/>
-  <rect x="0.5" y="0.5" width="859" height="199" rx="13.5"
-        stroke="#00ff9f" stroke-opacity="0.18" stroke-width="1"/>
+  <rect width="860" height="200" rx="16" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="859" height="199" rx="15.5"
+        stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
 
-  <!-- Scan lines overlay -->
-  <rect width="860" height="200" rx="14" fill="transparent" filter="url(#scan)"/>
+  <rect x="0" y="0" width="860" height="40" rx="16" fill="#38bdf8" fill-opacity="0.03"/>
+  <rect x="0" y="39" width="860" height="1" fill="#38bdf8" fill-opacity="0.15"/>
 
-  <!-- Top bar -->
-  <rect x="0" y="0" width="860" height="40" rx="14" fill="#00ff9f" fill-opacity="0.04"/>
-  <rect x="0" y="39" width="860" height="1" fill="#00ff9f" fill-opacity="0.2"/>
+  <circle cx="22" cy="20" r="5" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="38" cy="20" r="5" fill="#f59e0b" fill-opacity="0.8"/>
+  <circle cx="54" cy="20" r="5" fill="#10b981" fill-opacity="0.8"/>
 
-  <!-- Window dots -->
-  <circle cx="22" cy="20" r="5" fill="#ff5f57" fill-opacity="0.8"/>
-  <circle cx="38" cy="20" r="5" fill="#ffbd2e" fill-opacity="0.8"/>
-  <circle cx="54" cy="20" r="5" fill="#28c840" fill-opacity="0.8"/>
+  <text x="72" y="24"
+        font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500"
+        fill="#94a3b8">kisalnelaka / system summary</text>
 
-  <!-- Terminal path -->
-  <text x="72" y="25"
-        font-family="'Courier New',Courier,monospace" font-size="11"
-        fill="#00ff9f" opacity="0.5">~/kisalnelaka/profile</text>
+  <text x="840" y="24" text-anchor="end"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#64748b">updated 2026-08-08 00:34 UTC</text>
 
-  <!-- Timestamp right -->
-  <text x="840" y="25" text-anchor="end"
-        font-family="'Courier New',Courier,monospace" font-size="10"
-        fill="#00ff9f" opacity="0.35">updated 2026-08-08T00:16:52Z</text>
-
-  <!-- Name -->
   <text x="40" y="78"
-        font-family="'Courier New',Courier,monospace" font-size="28"
-        font-weight="bold" fill="#00ff9f" filter="url(#glow)">KISAL NELAKA</text>
+        font-family="system-ui, -apple-system, sans-serif" font-size="26"
+        font-weight="800" fill="#38bdf8" filter="url(#glow)">KISAL NELAKA</text>
 
-  <!-- Blinking cursor -->
-  <rect x="238" y="58" width="16" height="24" rx="2" fill="#00ff9f" opacity="0.8">
-    <animate attributeName="opacity" values="0.8;0;0.8" dur="1.1s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- Role tag -->
   <text x="40" y="96"
-        font-family="'Courier New',Courier,monospace" font-size="11"
-        fill="#00ff9f" opacity="0.55">// systems architect · full-stack engineer · offensive security</text>
+        font-family="system-ui, -apple-system, sans-serif" font-size="12"
+        fill="#94a3b8" font-weight="500">Systems Architect · Full-Stack Engineer (Laravel / React / Node) · Security</text>
 
-  <!-- Divider -->
-  <rect x="40" y="102" width="780" height="1" fill="#00ff9f" fill-opacity="0.15"/>
+  <rect x="40" y="104" width="780" height="1" fill="#38bdf8" fill-opacity="0.15"/>
 
-  <!-- Metric cells -->
-  <line x1="169.0" y1="105" x2="169.0" y2="175" stroke="#00ff9f" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="169.0" y1="105" x2="169.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
     <text x="105.0" y="126" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.5" letter-spacing="1">UPTIME</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
+          fill="#38bdf8" opacity="0.6" letter-spacing="1">ACTIVE</text>
     <text x="105.0" y="152" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="20"
-          font-weight="bold" fill="#00ff9f">9.3y</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="16"
+          font-weight="700" fill="#f8fafc">9.3y</text>
     <text x="105.0" y="170" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.4">years active</text><line x1="299.0" y1="105" x2="299.0" y2="175" stroke="#00ff9f" stroke-opacity="0.15" stroke-width="1"/>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9"
+          fill="#94a3b8" opacity="0.7">years building</text><line x1="299.0" y1="105" x2="299.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
     <text x="235.0" y="126" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.5" letter-spacing="1">COMMITS_TOT</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
+          fill="#38bdf8" opacity="0.6" letter-spacing="1">COMMITS</text>
     <text x="235.0" y="152" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="20"
-          font-weight="bold" fill="#00ff9f">1,149</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="16"
+          font-weight="700" fill="#f8fafc">1,149</text>
     <text x="235.0" y="170" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.4">total contributions</text><line x1="429.0" y1="105" x2="429.0" y2="175" stroke="#00ff9f" stroke-opacity="0.15" stroke-width="1"/>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9"
+          fill="#94a3b8" opacity="0.7">total contributions</text><line x1="429.0" y1="105" x2="429.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
     <text x="365.0" y="126" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.5" letter-spacing="1">PUBLIC_REPOS</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
+          fill="#38bdf8" opacity="0.6" letter-spacing="1">REPOSITORIES</text>
     <text x="365.0" y="152" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="20"
-          font-weight="bold" fill="#00ff9f">71</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="16"
+          font-weight="700" fill="#f8fafc">71</text>
     <text x="365.0" y="170" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.4">public repos</text><line x1="559.0" y1="105" x2="559.0" y2="175" stroke="#00ff9f" stroke-opacity="0.15" stroke-width="1"/>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9"
+          fill="#94a3b8" opacity="0.7">public repos</text><line x1="559.0" y1="105" x2="559.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
     <text x="495.0" y="126" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.5" letter-spacing="1">STARS</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
+          fill="#38bdf8" opacity="0.6" letter-spacing="1">STARS</text>
     <text x="495.0" y="152" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="20"
-          font-weight="bold" fill="#00ff9f">5</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="16"
+          font-weight="700" fill="#f8fafc">5</text>
     <text x="495.0" y="170" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.4">stars earned</text><line x1="689.0" y1="105" x2="689.0" y2="175" stroke="#00ff9f" stroke-opacity="0.15" stroke-width="1"/>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9"
+          fill="#94a3b8" opacity="0.7">stars earned</text><line x1="689.0" y1="105" x2="689.0" y2="175" stroke="#38bdf8" stroke-opacity="0.15" stroke-width="1"/>
     <text x="625.0" y="126" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.5" letter-spacing="1">FOLLOWERS</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
+          fill="#38bdf8" opacity="0.6" letter-spacing="1">FOLLOWERS</text>
     <text x="625.0" y="152" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="20"
-          font-weight="bold" fill="#00ff9f">10</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="16"
+          font-weight="700" fill="#f8fafc">10</text>
     <text x="625.0" y="170" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.4">followers</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9"
+          fill="#94a3b8" opacity="0.7">community</text>
     <text x="755.0" y="126" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.5" letter-spacing="1">CORE_LANG</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600"
+          fill="#38bdf8" opacity="0.6" letter-spacing="1">FOCUS</text>
     <text x="755.0" y="152" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="20"
-          font-weight="bold" fill="#00ff9f">Python</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="16"
+          font-weight="700" fill="#f8fafc">PHP / React / Node</text>
     <text x="755.0" y="170" text-anchor="middle"
-          font-family="'Courier New',Courier,monospace" font-size="9"
-          fill="#00ff9f" opacity="0.4">primary language</text>
+          font-family="system-ui, -apple-system, sans-serif" font-size="9"
+          fill="#94a3b8" opacity="0.7">primary stack</text>
 
-  <!-- Bottom border -->
-  <rect x="40" y="186" width="780" height="1" fill="#00ff9f" fill-opacity="0.1"/>
+  <rect x="40" y="186" width="780" height="1" fill="#38bdf8" fill-opacity="0.1"/>
 </svg>

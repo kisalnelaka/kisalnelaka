@@ -1,0 +1,18 @@
+{
+    "languages": [
+        {"name": "PHP",        "pct": 90, "note": "primary"},
+        {"name": "TypeScript", "pct": 85, "note": "daily"},
+        {"name": "JavaScript", "pct": 80, "note": "daily"},
+        {"name": "Python",     "pct": 65, "note": "scripting"},
+        {"name": "SQL",        "pct": 62, "note": "always"},
+        {"name": "HTML/CSS",   "pct": 55, "note": "frontend"}
+    ],
+    "frameworks": [
+        {"name": "Laravel",    "pct": 95, "note": "home base"},
+        {"name": "React",      "pct": 85, "note": "frontend"},
+        {"name": "Node.js",    "pct": 80, "note": "backend"},
+        {"name": "Tailwind",   "pct": 75, "note": "CSS"},
+        {"name": "Docker",     "pct": 70, "note": "infra"},
+        {"name": "Vue.js",     "pct": 58, "note": "alt"}
+    ]
+}

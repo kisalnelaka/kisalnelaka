@@ -4,68 +4,54 @@
 
 <br/>
 
+### Systems Architect & Full-Stack Engineer
+
+I specialize in high-concurrency web applications, multi-tenant SaaS architectures, and distributed systems. Driven by minimal overhead, clean data boundaries, and non-blocking performance.
+
 ```
-$ whoami
-kisal nelaka. systems architect, full-stack engineer, security researcher.
-8+ years deep. still not bored. that's probably a problem.
-
-$ cat /etc/philosophy
-eliminate overhead. enforce isolation. never block the main thread.
-build things that work suspiciously well and require no explanation.
-
-$ ls -la interests/
-distributed systems        multi-tenant SaaS          mesh networking
-offensive security         PHP internals (don't ask)  non-blocking I/O
-persistent memory arch     custom TCP/UDP stacks       dark arts
+Core Focus     Laravel (PHP 8.3+) · React · Node.js · TypeScript
+Architecture   Multi-tenant SaaS · Scoped Isolation · Distributed Mesh
+Security       Penetration Testing (OSCP-standard) · SIEM (Splunk) · InfoSec
 ```
 
 ---
 
-## `[01] active systems`
+## Active Systems
+
 <!-- SHOWCASE:START -->
 #### [NexusFlow ERP](https://github.com/kisalnelaka/nexusflow_erp) | *Multi-tenant SaaS Infrastructure*
 
-Built a modular ERP with automated global tenant scoping. The kind that just works without you having to think about it. 100% data isolation, zero leakage, seamless UX across distributed modules.
+Modular ERP built with automated tenant scoping. Features 100% data isolation and low-latency inter-service communication across distributed modules.
 
 #### [TheNet](https://github.com/kisalnelaka/thenet) | *Decentralized Mesh Architecture*
 
-Cloud dependency is a crutch. Built a secure, decentralized mesh network over WebSockets and Node.js. Peer-to-peer file orchestration, zero cloud involvement, zero-latency local sync.
+Decentralized mesh network powered by WebSockets and Node.js. Peer-to-peer synchronization with zero cloud dependency and real-time file orchestration.
 
 <!-- SHOWCASE:END -->
 
 ---
 
-## `[02] recent repos`
+## Stack Proficiency
+
+<div align="center">
+  <img src="tech-dashboard.svg" alt="Technical Arsenal" width="100%" />
+</div>
+
+---
+
+## Recent Projects
 
 <!-- RECENT-REPOS:START -->
-- [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - production-ready multi-tenant property management SaaS. Laravel 11, React, RBAC, full audit logging.
-- [al-sharq-assesment](https://github.com/kisalnelaka/al-sharq-assesment) - small but production-minded content management app
-- [resu_me](https://github.com/kisalnelaka/resu_me) - easy resume modifier
-- [jeOS](https://github.com/kisalnelaka/jeOS) - just enough OS. nothing more.
-- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - full-stack ERP built from scratch. multi-tenant. it haunts me.
+- [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - Production-ready multi-tenant property management SaaS with Laravel 11, React, RBAC, and automated scoping.
+- [al-sharq-assesment](https://github.com/kisalnelaka/al-sharq-assesment) - Production-focused content management application.
+- [resu_me](https://github.com/kisalnelaka/resu_me) - Streamlined resume customization tool.
+- [jeOS](https://github.com/kisalnelaka/jeOS) - Lightweight OS kernel environment.
+- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Full-stack multi-tenant ERP platform.
 <!-- RECENT-REPOS:END -->
 
 ---
 
-## `[03] stack`
-
-<div align="center">
-  <img src="tech-dashboard.svg" alt="Language Distribution" width="100%" />
-</div>
-
-```
-Languages     PHP 8.3+  TypeScript  Python  C#  Kotlin  C++  Rust
-Backend       Laravel internals · Node.js · Radix tree routing
-              Fibers / non-blocking I/O · WebSockets · custom TCP/UDP
-Frontend      React · Vue.js · Tailwind · Native JS (perf first, always)
-Infra         Docker · Linux kernel / PCNTL · CI/CD automation
-Security      Penetration testing (OSCP-standard) · SIEM (Splunk)
-              Palo Alto Networks · things I've seen in prod that I won't document
-```
-
----
-
-## `[04] writing`
+## Technical Articles
 
 <!-- BLOG-POST-LIST:START -->
 - [AETHER: Building a PHP 8.3 Framework Without the Bloat](https://medium.com/@kisalnelaka6/aether-building-a-php-8-3-framework-without-the-bloat-f0c1a69780ed?source=rss-3dd06b9e0f4------2)
@@ -74,28 +60,22 @@ Security      Penetration testing (OSCP-standard) · SIEM (Splunk)
 - [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57?source=rss-3dd06b9e0f4------2)
 - [JavaScript for Clueless Newbies: Part 1 - Variables, Data Types & Operators](https://medium.com/@kisalnelaka6/javascript-for-clueless-newbies-part-1-variables-data-types-operators-ae71e4d01ce8?source=rss-3dd06b9e0f4------2)
 - [Part 3: Lure Creation - The Art of Deception in Phishing Attacks](https://medium.com/@kisalnelaka6/part-3-lure-creation-the-art-of-deception-in-phishing-attacks-1f677e4eb613?source=rss-3dd06b9e0f4------2)
-- [Part 2: The Reconnaissance Phase - Uncovering the Secrets of Phishing Preparation](https://medium.com/@kisalnelaka6/part-2-the-reconnaissance-phase-uncovering-the-secrets-of-phishing-preparation-05f34de00b7b?source=rss-3dd06b9e0f4------2)
-- [The Lifecycle of a Phishing Attack: How Cybercriminals Bait, Hook, and Exploit](https://medium.com/@kisalnelaka6/the-lifecycle-of-a-phishing-attack-how-cybercriminals-bait-hook-and-exploit-e05cce7e4f5f?source=rss-3dd06b9e0f4------2)
-- [PhishCatcher: Real-Time Phishing Detection with Chrome Extensions and Machine Learning](https://medium.com/@kisalnelaka6/phishcatcher-real-time-phishing-detection-with-chrome-extensions-and-machine-learning-450bf06e78c2?source=rss-3dd06b9e0f4------2)
-- [Building a Blockchain-Powered, Encrypted Chat Application with Python](https://medium.com/@kisalnelaka6/building-a-blockchain-powered-encrypted-chat-application-with-python-103f116fad34?source=rss-3dd06b9e0f4------2)
 <!-- BLOG-POST-LIST:END -->
 
 ---
 
-## `[05] paper trail`
+## Activity Matrix
 
-```
-Palo Alto Networks Cybersecurity Professional   they gave me a cert. I already knew this.
-Applied ChatGPT for Cybersecurity               Infosec, because offense needs the tools
-Introduction to SIEM (Splunk)                   logs are just paranoia in structured format
-```
+<div align="center">
+  <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" width="100%" />
+</div>
 
 ---
 
-```
-$ ping kisalnelaka
-need a systems architect who won't sugarcoat things?
-  kisalnelaka6@gmail.com
-  linkedin.com/in/kisalnelaka
-  medium.com/@kisalnelaka6
-```
+## Certifications & Contact
+
+* **Palo Alto Networks Cybersecurity Professional**
+* **Applied ChatGPT for Cybersecurity (Infosec)**
+* **Introduction to SIEM (Splunk)**
+
+**Email:** kisalnelaka6@gmail.com | **LinkedIn:** [linkedin.com/in/kisalnelaka](https://linkedin.com/in/kisalnelaka) | **Medium:** [medium.com/@kisalnelaka6](https://medium.com/@kisalnelaka6)

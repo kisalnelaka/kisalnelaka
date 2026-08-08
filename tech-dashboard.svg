@@ -1,104 +1,160 @@
-<svg width="850" height="420" viewBox="0 0 850 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
-        .text { font-family: 'Inter', system-ui, sans-serif; }
-        .label { font-size: 12px; font-weight: 600; fill: #94a3b8; }
-        .title { font-size: 24px; font-weight: 700; fill: #f8fafc; }
-        .subtitle { font-size: 14px; fill: #38bdf8; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
-    </style>
-    
-    <defs>
-        <linearGradient id="bg_grad" x1="0" y1="0" x2="850" y2="420" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#030712"/>
-            <stop offset="1" stop-color="#0f172a"/>
-        </linearGradient>
-        <linearGradient id="poly_grad" x1="250" y1="155" x2="250" y2="355" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#38bdf8" stop-opacity="0.6"/>
-            <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.4"/>
-        </linearGradient>
-        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
-    </defs>
-    
-    <!-- Background Card -->
-    <rect width="850" height="420" rx="24" fill="url(#bg_grad)" />
-    <rect x="0.5" y="0.5" width="849" height="419" rx="23.5" stroke="rgba(255,255,255,0.05)" />
-    
-    <!-- Header -->
-    <text x="40" y="60" class="text title">Technical Arsenal</text>
-    <text x="40" y="85" class="text subtitle">Dynamic Language Distribution</text>
-    <rect x="40" y="95" width="80" height="4" rx="2" fill="#38bdf8" />
-    
-    <!-- Status Indicator -->
-    <g transform="translate(670, 55)">
-        <circle cx="0" cy="0" r="4" fill="#10b981">
-            <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <text x="15" y="5" class="text label" fill="#10b981">Live Ecosystem Data</text>
-    </g>
+<svg width="860" height="360" viewBox="0 0 860 360"
+     fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="860" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b0f19"/>
+      <stop offset="1" stop-color="#030712"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
 
-    <!-- Radar Chart Grid -->
-    <g>
-    <circle cx="250" cy="255" r="25.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" fill="none" /><circle cx="250" cy="255" r="50.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" fill="none" /><circle cx="250" cy="255" r="75.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" fill="none" /><circle cx="250" cy="255" r="100.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" fill="none" /><line x1="250" y1="255" x2="250.0" y2="155.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" /><text x="250.0" y="130.0" class="text label" text-anchor="middle">Python</text><line x1="250" y1="255" x2="336.60254037844385" y2="205.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" /><text x="362.583302491977" y="195.0" class="text label" text-anchor="start">PHP</text><line x1="250" y1="255" x2="336.6025403784439" y2="305.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" /><text x="362.58330249197707" y="325.0" class="text label" text-anchor="start">TypeScript</text><line x1="250" y1="255" x2="250.0" y2="355.0" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" /><text x="250.0" y="390.0" class="text label" text-anchor="middle">JavaScript</text><line x1="250" y1="255" x2="163.39745962155615" y2="305.00000000000006" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" /><text x="137.416697508023" y="325.00000000000006" class="text label" text-anchor="end">Blade</text><line x1="250" y1="255" x2="163.3974596215561" y2="205.00000000000006" stroke="rgba(148, 163, 184, 0.15)" stroke-width="1" /><text x="137.41669750802293" y="195.00000000000009" class="text label" text-anchor="end">HTML</text>
-        <polygon points="250.0,155.0 325.2359569537731,211.5625 298.71392896287466,283.125 250.0,311.25 208.86379332023918,278.75 212.65265446179606,233.43750000000003" fill="url(#poly_grad)" stroke="#38bdf8" stroke-width="2" filter="url(#glow)">
-            <animate attributeName="opacity" values="0.7;0.9;0.7" dur="4s" repeatCount="indefinite" />
-        </polygon>
-        </g><g transform="translate(530, 110)">
-        <g transform="translate(0, 0)">
-            <text x="0" y="0" class="text label" fill="#f8fafc">Python</text>
-            <text x="260" y="0" class="text label" text-anchor="end" fill="#94a3b8">16 Projects</text>
-            <rect x="0" y="10" width="260" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-            <rect x="0" y="10" width="247.0" height="6" rx="3" fill="#38bdf8">
-                <animate attributeName="width" from="0" to="247.0" dur="1s" fill="freeze" />
-            </rect>
-        </g>
-        
-        <g transform="translate(0, 45)">
-            <text x="0" y="0" class="text label" fill="#f8fafc">PHP</text>
-            <text x="260" y="0" class="text label" text-anchor="end" fill="#94a3b8">13 Projects</text>
-            <rect x="0" y="10" width="260" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-            <rect x="0" y="10" width="220.1875" height="6" rx="3" fill="#38bdf8">
-                <animate attributeName="width" from="0" to="220.1875" dur="1s" fill="freeze" />
-            </rect>
-        </g>
-        
-        <g transform="translate(0, 90)">
-            <text x="0" y="0" class="text label" fill="#f8fafc">TypeScript</text>
-            <text x="260" y="0" class="text label" text-anchor="end" fill="#94a3b8">6 Projects</text>
-            <rect x="0" y="10" width="260" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-            <rect x="0" y="10" width="157.62500000000003" height="6" rx="3" fill="#38bdf8">
-                <animate attributeName="width" from="0" to="157.62500000000003" dur="1s" fill="freeze" />
-            </rect>
-        </g>
-        
-        <g transform="translate(0, 135)">
-            <text x="0" y="0" class="text label" fill="#f8fafc">JavaScript</text>
-            <text x="260" y="0" class="text label" text-anchor="end" fill="#94a3b8">6 Projects</text>
-            <rect x="0" y="10" width="260" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-            <rect x="0" y="10" width="157.62500000000003" height="6" rx="3" fill="#38bdf8">
-                <animate attributeName="width" from="0" to="157.62500000000003" dur="1s" fill="freeze" />
-            </rect>
-        </g>
-        
-        <g transform="translate(0, 180)">
-            <text x="0" y="0" class="text label" fill="#f8fafc">Blade</text>
-            <text x="260" y="0" class="text label" text-anchor="end" fill="#94a3b8">4 Projects</text>
-            <rect x="0" y="10" width="260" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-            <rect x="0" y="10" width="139.75000000000003" height="6" rx="3" fill="#38bdf8">
-                <animate attributeName="width" from="0" to="139.75000000000003" dur="1s" fill="freeze" />
-            </rect>
-        </g>
-        
-        <g transform="translate(0, 225)">
-            <text x="0" y="0" class="text label" fill="#f8fafc">HTML</text>
-            <text x="260" y="0" class="text label" text-anchor="end" fill="#94a3b8">3 Projects</text>
-            <rect x="0" y="10" width="260" height="6" rx="3" fill="rgba(255,255,255,0.05)" />
-            <rect x="0" y="10" width="130.8125" height="6" rx="3" fill="#38bdf8">
-                <animate attributeName="width" from="0" to="130.8125" dur="1s" fill="freeze" />
-            </rect>
-        </g>
-        </g>
-    <text x="810" y="390" class="text label" text-anchor="end" fill="#94a3b8">Last Updated: 2026-08-07 23:21 • Powered by GitHub API</text>
-    </svg>
+  <rect width="860" height="360" rx="16" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="859" height="359" rx="15.5"
+        stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
+
+  <rect x="0" y="0" width="860" height="42" rx="16" fill="#38bdf8" fill-opacity="0.03"/>
+  <rect x="0" y="41" width="860" height="1" fill="#38bdf8" fill-opacity="0.15"/>
+
+  <circle cx="22" cy="21" r="5" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="38" cy="21" r="5" fill="#f59e0b" fill-opacity="0.8"/>
+  <circle cx="54" cy="21" r="5" fill="#10b981" fill-opacity="0.8"/>
+
+  <text x="72" y="25"
+        font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600"
+        fill="#38bdf8">TECHNICAL ARSENAL</text>
+  <text x="210" y="25"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.7">· Core Stack Proficiency &amp; Focus Areas</text>
+
+  <circle cx="790" cy="21" r="4" fill="#10b981">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="800" y="24"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600"
+        fill="#10b981">VERIFIED</text>
+
+  <text x="40" y="72"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700"
+        fill="#64748b" letter-spacing="1">TECHNOLOGY</text>
+  <text x="220" y="72"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700"
+        fill="#64748b" letter-spacing="1">PROFICIENCY / MASTERY</text>
+
+  
+  <rect x="20" y="73" width="820" height="34" rx="6"
+        fill="#38bdf8" fill-opacity="0.03"/>
+  <text x="40" y="95"
+        font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+        fill="#38bdf8">PHP</text>
+  <rect x="220" y="83" width="460" height="8" rx="4"
+        fill="#1e293b" fill-opacity="0.6"/>
+  <rect x="220" y="83" width="0" height="8" rx="4" fill="#38bdf8" opacity="0.9">
+    <animate attributeName="width" from="0" to="414.0" dur="0.8s"
+             begin="0.00s" fill="freeze" calcMode="spline"
+             keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+  <text x="695" y="95"
+        font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+        fill="#f8fafc">90%</text>
+  <text x="740" y="95"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.6">primary</text>
+  <rect x="20" y="111" width="820" height="34" rx="6"
+        fill="#38bdf8" fill-opacity="0.015"/>
+  <text x="40" y="133"
+        font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+        fill="#3178c6">TypeScript</text>
+  <rect x="220" y="121" width="460" height="8" rx="4"
+        fill="#1e293b" fill-opacity="0.6"/>
+  <rect x="220" y="121" width="0" height="8" rx="4" fill="#3178c6" opacity="0.9">
+    <animate attributeName="width" from="0" to="391.0" dur="0.8s"
+             begin="0.08s" fill="freeze" calcMode="spline"
+             keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+  <text x="695" y="133"
+        font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+        fill="#f8fafc">85%</text>
+  <text x="740" y="133"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.6">daily</text>
+  <rect x="20" y="149" width="820" height="34" rx="6"
+        fill="#38bdf8" fill-opacity="0.03"/>
+  <text x="40" y="171"
+        font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+        fill="#38bdf8">JavaScript</text>
+  <rect x="220" y="159" width="460" height="8" rx="4"
+        fill="#1e293b" fill-opacity="0.6"/>
+  <rect x="220" y="159" width="0" height="8" rx="4" fill="#38bdf8" opacity="0.9">
+    <animate attributeName="width" from="0" to="368.0" dur="0.8s"
+             begin="0.16s" fill="freeze" calcMode="spline"
+             keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+  <text x="695" y="171"
+        font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+        fill="#f8fafc">80%</text>
+  <text x="740" y="171"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.6">daily</text>
+  <rect x="20" y="187" width="820" height="34" rx="6"
+        fill="#38bdf8" fill-opacity="0.015"/>
+  <text x="40" y="209"
+        font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+        fill="#facc15">Python</text>
+  <rect x="220" y="197" width="460" height="8" rx="4"
+        fill="#1e293b" fill-opacity="0.6"/>
+  <rect x="220" y="197" width="0" height="8" rx="4" fill="#facc15" opacity="0.9">
+    <animate attributeName="width" from="0" to="299.0" dur="0.8s"
+             begin="0.24s" fill="freeze" calcMode="spline"
+             keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+  <text x="695" y="209"
+        font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+        fill="#f8fafc">65%</text>
+  <text x="740" y="209"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.6">scripting</text>
+  <rect x="20" y="225" width="820" height="34" rx="6"
+        fill="#38bdf8" fill-opacity="0.03"/>
+  <text x="40" y="247"
+        font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+        fill="#38bdf8">SQL</text>
+  <rect x="220" y="235" width="460" height="8" rx="4"
+        fill="#1e293b" fill-opacity="0.6"/>
+  <rect x="220" y="235" width="0" height="8" rx="4" fill="#38bdf8" opacity="0.9">
+    <animate attributeName="width" from="0" to="285.2" dur="0.8s"
+             begin="0.32s" fill="freeze" calcMode="spline"
+             keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+  <text x="695" y="247"
+        font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+        fill="#f8fafc">62%</text>
+  <text x="740" y="247"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.6">always</text>
+  <rect x="20" y="263" width="820" height="34" rx="6"
+        fill="#38bdf8" fill-opacity="0.015"/>
+  <text x="40" y="285"
+        font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+        fill="#38bdf8">HTML/CSS</text>
+  <rect x="220" y="273" width="460" height="8" rx="4"
+        fill="#1e293b" fill-opacity="0.6"/>
+  <rect x="220" y="273" width="0" height="8" rx="4" fill="#38bdf8" opacity="0.9">
+    <animate attributeName="width" from="0" to="253.0" dur="0.8s"
+             begin="0.40s" fill="freeze" calcMode="spline"
+             keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
+  </rect>
+  <text x="695" y="285"
+        font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+        fill="#f8fafc">55%</text>
+  <text x="740" y="285"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.6">frontend</text>
+
+  <rect x="20" y="330" width="820" height="1" fill="#38bdf8" fill-opacity="0.1"/>
+  <text x="40" y="348"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#64748b">Updated 2026-08-08 00:34 UTC · Kisal Nelaka Stack Profile</text>
+</svg>

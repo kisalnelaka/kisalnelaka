@@ -1,225 +1,153 @@
 import os
 import json
-import urllib.request
-import math
 from datetime import datetime, timezone
 
 USERNAME = "kisalnelaka"
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
-# Each language gets its own accent so the chart doesn't look monochrome
 LANG_COLORS = {
-    "TypeScript":  "#38bdf8",  # sky blue
-    "PHP":         "#a78bfa",  # violet
-    "Python":      "#facc15",  # amber
-    "JavaScript":  "#34d399",  # emerald
-    "Rust":        "#fb923c",  # orange
-    "HTML":        "#f472b6",  # pink
-    "Blade":       "#60a5fa",  # blue
-    "CSS":         "#c084fc",  # purple
-    "Kotlin":      "#f97316",  # dark orange
-    "Shell":       "#00ff9f",  # terminal green
-    "C#":          "#a855f7",  # indigo
-    "C++":         "#ef4444",  # red
-    "Go":          "#06b6d4",  # cyan
-    "Java":        "#f59e0b",  # yellow
-    "Ruby":        "#e11d48",  # rose
-    "Swift":       "#ff6b35",  # swift orange
-    "Dart":        "#64b5f6",  # light blue
+    "Laravel / PHP": "#ff2d20",
+    "React":         "#61dafb",
+    "Node.js":       "#68a063",
+    "TypeScript":    "#3178c6",
+    "Python":        "#facc15",
+    "SQL / DB":      "#008780",
+    "Tailwind CSS":  "#38bdf8",
+    "Docker / Infra": "#2496ed"
 }
-DEFAULT_COLOR = "#94a3b8"
+DEFAULT_COLOR = "#38bdf8"
 
-
-def gh_request(url):
-    headers = {
-        "User-Agent": "tech-dashboard-generator",
-        "Accept": "application/vnd.github+json",
+def load_stack_config():
+    config_path = os.path.join(".github", "scripts", "stack-config.json")
+    if os.path.exists(config_path):
+        with open(config_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {
+        "languages": [
+            {"name": "Laravel / PHP", "pct": 95, "note": "primary stack"},
+            {"name": "React", "pct": 88, "note": "frontend core"},
+            {"name": "Node.js", "pct": 82, "note": "async services"},
+            {"name": "TypeScript", "pct": 78, "note": "type safety"},
+            {"name": "Python", "pct": 65, "note": "scripting & tooling"},
+            {"name": "SQL / DB", "pct": 75, "note": "architectural scoping"}
+        ]
     }
-    if GITHUB_TOKEN:
-        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
-    req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=10) as r:
-            return json.loads(r.read().decode())
-    except Exception as e:
-        print(f"  [warn] {url} → {e}")
-        return None
 
+def generate_svg(stack_data):
+    W, H = 860, 360
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-def fetch_lang_stats():
-    repos = gh_request(
-        f"https://api.github.com/users/{USERNAME}/repos?per_page=100&sort=pushed"
-    )
-    if not repos:
-        return []
-
-    lang_counts = {}
-    lang_bytes = {}
-
-    for repo in repos:
-        if repo.get("fork"):
-            continue  # skip forks — own work only
-        lang = repo.get("language")
-        if lang:
-            lang_counts[lang] = lang_counts.get(lang, 0) + 1
-
-        # Also fetch per-repo language bytes for accuracy
-        langs_url = repo.get("languages_url")
-        if langs_url and GITHUB_TOKEN:
-            lang_data = gh_request(langs_url)
-            if lang_data:
-                for l, b in lang_data.items():
-                    lang_bytes[l] = lang_bytes.get(l, 0) + b
-
-    # Prefer byte-based stats if available (more accurate than repo count)
-    if lang_bytes:
-        sorted_langs = sorted(lang_bytes.items(), key=lambda x: x[1], reverse=True)
-        # Convert bytes to percentages
-        total = sum(b for _, b in sorted_langs)
-        result = [(name, round(b / total * 100, 1)) for name, b in sorted_langs[:8]]
-        return result
-
-    # Fallback: repo count
-    sorted_langs = sorted(lang_counts.items(), key=lambda x: x[1], reverse=True)
-    total = sum(c for _, c in sorted_langs)
-    result = [(name, round(c / total * 100, 1)) for name, c in sorted_langs[:8]]
-    return result
-
-
-def generate_svg(lang_stats):
-    W, H = 860, 380
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-    max_pct = lang_stats[0][1] if lang_stats else 100
-    bar_area_w = 500
-    row_h = 36
-    start_y = 90
+    items = stack_data.get("languages", [])
+    max_pct = 100
+    bar_area_w = 460
+    row_h = 38
+    start_y = 95
     label_x = 40
-    bar_x = 200
-    pct_x = bar_x + bar_area_w + 10
+    bar_x = 220
+    pct_x = bar_x + bar_area_w + 15
 
     rows_svg = ""
-    for i, (lang, pct) in enumerate(lang_stats):
+    for i, item in enumerate(items):
+        name = item["name"]
+        pct = item["pct"]
+        note = item.get("note", "")
         y = start_y + i * row_h
-        color = LANG_COLORS.get(lang, DEFAULT_COLOR)
+        color = LANG_COLORS.get(name, DEFAULT_COLOR)
         bar_w = round(bar_area_w * (pct / max_pct), 2)
         delay = i * 0.08
 
-        # Row background
-        bg_opacity = "0.04" if i % 2 == 0 else "0.02"
+        bg_opacity = "0.03" if i % 2 == 0 else "0.015"
         rows_svg += f'''
-  <rect x="20" y="{y - 20}" width="{W - 40}" height="{row_h}" rx="4"
-        fill="#00ff9f" fill-opacity="{bg_opacity}"/>'''
+  <rect x="20" y="{y - 22}" width="{W - 40}" height="{row_h - 4}" rx="6"
+        fill="#38bdf8" fill-opacity="{bg_opacity}"/>'''
 
-        # Language name
         rows_svg += f'''
   <text x="{label_x}" y="{y}"
-        font-family="'Courier New',Courier,monospace" font-size="12" font-weight="bold"
-        fill="{color}">{lang}</text>'''
+        font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700"
+        fill="{color}">{name}</text>'''
 
-        # Bar track
         rows_svg += f'''
   <rect x="{bar_x}" y="{y - 12}" width="{bar_area_w}" height="8" rx="4"
-        fill="#00ff9f" fill-opacity="0.06"/>'''
+        fill="#1e293b" fill-opacity="0.6"/>'''
 
-        # Filled bar
         rows_svg += f'''
-  <rect x="{bar_x}" y="{y - 12}" width="0" height="8" rx="4" fill="{color}" opacity="0.85">
+  <rect x="{bar_x}" y="{y - 12}" width="0" height="8" rx="4" fill="{color}" opacity="0.9">
     <animate attributeName="width" from="0" to="{bar_w}" dur="0.8s"
              begin="{delay:.2f}s" fill="freeze" calcMode="spline"
              keySplines="0.4 0 0.2 1" keyTimes="0;1"/>
   </rect>'''
 
-        # Percentage
         rows_svg += f'''
   <text x="{pct_x}" y="{y}"
-        font-family="'Courier New',Courier,monospace" font-size="11"
-        fill="{color}" opacity="0.7">{pct}%</text>'''
+        font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600"
+        fill="#f8fafc">{pct}%</text>
+  <text x="{pct_x + 45}" y="{y}"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.6">{note}</text>'''
 
     svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}"
      fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="{W}" y2="{H}" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#020c02"/>
-      <stop offset="1" stop-color="#041a04"/>
+      <stop stop-color="#0b0f19"/>
+      <stop offset="1" stop-color="#030712"/>
     </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="{W}" height="{H}" rx="14" fill="url(#bg)"/>
-  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="13.5"
-        stroke="#00ff9f" stroke-opacity="0.15" stroke-width="1"/>
+  <rect width="{W}" height="{H}" rx="16" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="15.5"
+        stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1"/>
 
-  <!-- Top bar -->
-  <rect x="0" y="0" width="{W}" height="40" rx="14" fill="#00ff9f" fill-opacity="0.04"/>
-  <rect x="0" y="39" width="{W}" height="1" fill="#00ff9f" fill-opacity="0.15"/>
+  <rect x="0" y="0" width="{W}" height="42" rx="16" fill="#38bdf8" fill-opacity="0.03"/>
+  <rect x="0" y="41" width="{W}" height="1" fill="#38bdf8" fill-opacity="0.15"/>
 
-  <!-- Window dots -->
-  <circle cx="22" cy="20" r="5" fill="#ff5f57" fill-opacity="0.7"/>
-  <circle cx="38" cy="20" r="5" fill="#ffbd2e" fill-opacity="0.7"/>
-  <circle cx="54" cy="20" r="5" fill="#28c840" fill-opacity="0.7"/>
+  <circle cx="22" cy="21" r="5" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="38" cy="21" r="5" fill="#f59e0b" fill-opacity="0.8"/>
+  <circle cx="54" cy="21" r="5" fill="#10b981" fill-opacity="0.8"/>
 
-  <!-- Header label -->
   <text x="72" y="25"
-        font-family="'Courier New',Courier,monospace" font-size="11"
-        fill="#00ff9f" opacity="0.5">sys/lang-profile --user {USERNAME} --sort bytes</text>
+        font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600"
+        fill="#38bdf8">TECHNICAL ARSENAL</text>
+  <text x="210" y="25"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#94a3b8" opacity="0.7">· Core Stack Proficiency &amp; Focus Areas</text>
 
-  <!-- Status ping -->
-  <circle cx="{W - 34}" cy="20" r="4" fill="#00ff9f">
+  <circle cx="{W - 70}" cy="21" r="4" fill="#10b981">
     <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
   </circle>
-  <text x="{W - 24}" y="24"
-        font-family="'Courier New',Courier,monospace" font-size="9"
-        fill="#00ff9f" opacity="0.5">LIVE</text>
+  <text x="{W - 60}" y="24"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600"
+        fill="#10b981">VERIFIED</text>
 
-  <!-- Section title -->
-  <text x="40" y="65"
-        font-family="'Courier New',Courier,monospace" font-size="14" font-weight="bold"
-        fill="#00ff9f">LANGUAGE DISTRIBUTION</text>
-  <text x="40" y="80"
-        font-family="'Courier New',Courier,monospace" font-size="9"
-        fill="#00ff9f" opacity="0.4">ranked by byte volume across non-forked repositories</text>
-
-  <!-- Column headers -->
-  <text x="{label_x}" y="{start_y - 25}"
-        font-family="'Courier New',Courier,monospace" font-size="9"
-        fill="#00ff9f" opacity="0.3">LANGUAGE</text>
-  <text x="{bar_x}" y="{start_y - 25}"
-        font-family="'Courier New',Courier,monospace" font-size="9"
-        fill="#00ff9f" opacity="0.3">VOLUME</text>
-  <text x="{pct_x}" y="{start_y - 25}"
-        font-family="'Courier New',Courier,monospace" font-size="9"
-        fill="#00ff9f" opacity="0.3">PCT</text>
+  <text x="{label_x}" y="72"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700"
+        fill="#64748b" letter-spacing="1">TECHNOLOGY</text>
+  <text x="{bar_x}" y="72"
+        font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700"
+        fill="#64748b" letter-spacing="1">PROFICIENCY / MASTERY</text>
 
   {rows_svg}
 
-  <!-- Footer -->
-  <rect x="20" y="{H - 28}" width="{W - 40}" height="1" fill="#00ff9f" fill-opacity="0.1"/>
+  <rect x="20" y="{H - 30}" width="{W - 40}" height="1" fill="#38bdf8" fill-opacity="0.1"/>
   <text x="40" y="{H - 12}"
-        font-family="'Courier New',Courier,monospace" font-size="9"
-        fill="#00ff9f" opacity="0.3">updated {now} · github.com/{USERNAME}</text>
+        font-family="system-ui, -apple-system, sans-serif" font-size="10"
+        fill="#64748b">Updated {now} · Kisal Nelaka Stack Profile</text>
 </svg>'''
 
     return svg
 
-
 def main():
-    print("Fetching language stats...")
-    lang_stats = fetch_lang_stats()
-
-    if not lang_stats:
-        print("  No data. Aborting.")
-        return
-
-    print(f"  Top langs: {[n for n, _ in lang_stats[:4]]}")
+    stack_data = load_stack_config()
     print("Generating tech-dashboard.svg...")
-    svg = generate_svg(lang_stats)
+    svg = generate_svg(stack_data)
 
     out = "tech-dashboard.svg"
     with open(out, "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"  Written -> {out}")
-
 
 if __name__ == "__main__":
     main()

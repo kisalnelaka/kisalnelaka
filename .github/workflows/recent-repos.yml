@@ -1,39 +1,52 @@
-name: Update Profile Dynamic Sections
+name: Update Profile
 
 on:
   schedule:
-    - cron: '0 * * * *' # Every hour
-  workflow_dispatch:
+    - cron: '0 * * * *'   # every hour
+  workflow_dispatch:        # manual trigger from Actions tab
 
 jobs:
-  update-profile:
+  update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Run Dynamic Update Scripts
+      # ── Dynamic SVG generation ──────────────────────────────────────────────
+      - name: Generate SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python .github/scripts/update_recent_repos.py
-          python .github/scripts/update_blog_posts.py
-          python .github/scripts/update_showcase.py
+          python .github/scripts/generate_banner.py
           python .github/scripts/generate_showcase_card.py
           python .github/scripts/generate_tech_dashboard.py
-          python .github/scripts/generate_banner.py
 
-      - name: Commit and Push Changes
+      # ── README section updates ──────────────────────────────────────────────
+      - name: Update recent repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/update_recent_repos.py
+
+      - name: Update blog posts
+        uses: gautamkrishnar/blog-post-workflow@master
+        with:
+          max_post_count: '6'
+          feed_list: 'https://medium.com/feed/@kisalnelaka6'
+          readme_path: 'README.md'
+
+      # ── Commit everything ───────────────────────────────────────────────────
+      - name: Commit and push
         run: |
-          git config --global user.name "github-actions[bot]"
+          git config --global user.name  "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md tech-dashboard.svg banner.svg showcase-card.svg
-          git commit -m "chore: auto-update profile [$(date -u +%Y-%m-%dT%H:%M:%SZ)]" || exit 0
+          git add banner.svg showcase-card.svg tech-dashboard.svg README.md
+          git diff --cached --quiet || git commit -m "chore: auto-update profile [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
           git push

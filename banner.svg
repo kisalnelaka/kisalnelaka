@@ -37,7 +37,7 @@
   <circle cx="26" cy="26" r="3" fill="#c9a96e">
     <animate attributeName="opacity" values="0.9;0.3;0.9" dur="4s" repeatCount="indefinite"/>
   </circle>
-  <text x="36" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#6b7280" letter-spacing="0.5">open to interesting problems</text>
+  <text x="36" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#6b7280" letter-spacing="0.5">available for senior engineering roles</text>
 
   <!-- Name: large, weight 300, generous letter spacing -->
   <text x="24" y="98" font-family="system-ui,-apple-system,sans-serif" font-size="44" font-weight="300" fill="#f4f4f5" letter-spacing="-1">Kisal Nelaka</text>
@@ -50,10 +50,10 @@
 
   <!-- Tagline: max 2 lines, human voice -->
   <text x="26" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#52525b">
-    I build multi-tenant SaaS systems, distributed mesh networks,
+    9+ years shipping production systems. Multi-tenant SaaS, distributed
   </text>
   <text x="26" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#52525b">
-    and occasionally read CVEs for fun.
+    architectures, offensive security, and the occasional 3 AM hotfix.
   </text>
 
   <!-- Stack line: compact, grey -->

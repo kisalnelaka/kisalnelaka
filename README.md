@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[LinkedIn](https://linkedin.com/in/kisalnelaka) &nbsp;&middot;&nbsp; [Portfolio](https://kisalnelaka.github.io) &nbsp;&middot;&nbsp; [Medium](https://medium.com/@kisalnelaka6) &nbsp;&middot;&nbsp; [Email](mailto:kisalnelaka6@gmail.com)
+[LinkedIn](https://linkedin.com/in/kisalnelaka) &nbsp;&middot;&nbsp; [Portfolio](https://kisalnelaka.github.io) &nbsp;&middot;&nbsp; [Email](mailto:kisalnelaka6@gmail.com) &nbsp;&middot;&nbsp; [Medium](https://medium.com/@kisalnelaka6)
 
 </div>
 
@@ -14,23 +14,23 @@
   <img src="showcase-card.svg" alt="Featured Systems" width="100%"/>
 </div>
 
-<br/>
-
 <div align="center">
   <img src="tech-dashboard.svg" alt="Stack" width="100%"/>
 </div>
 
-<br/>
+<div align="center">
+  <img src="writing-card.svg" alt="Writing" width="100%"/>
+</div>
 
 <div align="center">
   <img src="profile-3d-contrib/profile-night-rainbow.svg" alt="Contribution Activity" width="100%"/>
 </div>
 
+<details>
+<summary>All repos &amp; articles</summary>
 <br/>
 
-<details>
-<summary>Recent repos &amp; writing</summary>
-<br/>
+**Recent work**
 
 <!-- RECENT-REPOS:START -->
 - [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - Production-ready multi-tenant property management SaaS with Laravel 11, React, RBAC, and automated scoping.
@@ -40,7 +40,7 @@
 - [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Full-stack multi-tenant ERP platform.
 <!-- RECENT-REPOS:END -->
 
----
+**All articles**
 
 <!-- BLOG-POST-LIST:START -->
 - [AETHER: Building a PHP 8.3 Framework Without the Bloat](https://medium.com/@kisalnelaka6/aether-building-a-php-8-3-framework-without-the-bloat-f0c1a69780ed)

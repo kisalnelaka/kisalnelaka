@@ -28,6 +28,7 @@ jobs:
           python .github/scripts/generate_banner.py
           python .github/scripts/generate_showcase_card.py
           python .github/scripts/generate_tech_dashboard.py
+          python .github/scripts/generate_writing_card.py
 
       # ── README section updates ──────────────────────────────────────────────
       - name: Update recent repos
@@ -35,18 +36,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/update_recent_repos.py
 
-      - name: Update blog posts
-        uses: gautamkrishnar/blog-post-workflow@master
-        with:
-          max_post_count: '6'
-          feed_list: 'https://medium.com/feed/@kisalnelaka6'
-          readme_path: 'README.md'
+      - name: Update blog post list in README
+        run: python .github/scripts/update_blog_posts.py
 
       # ── Commit everything ───────────────────────────────────────────────────
       - name: Commit and push
         run: |
           git config --global user.name  "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add banner.svg showcase-card.svg tech-dashboard.svg README.md
+          git add banner.svg showcase-card.svg tech-dashboard.svg writing-card.svg README.md
           git diff --cached --quiet || git commit -m "chore: auto-update profile [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
           git push

@@ -65,13 +65,11 @@ def generate_stack():
     </filter>
   </defs>
 
-  <rect width="{W}" height="{H}" fill="url(#bg)"/>
-  <rect width="{W}" height="{H}" filter="url(#noise)" style="pointer-events:none;"/>
-  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" fill="none"/>
-  <rect x="0" y="0" width="2" height="{H}" fill="url(#rule-grad)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" stroke="#30363d" stroke-width="1" fill="none"/>
+  <rect x="1" y="8" width="2.5" height="{H - 16}" rx="1" fill="url(#rule-grad)"/>
 
   <!-- Section label -->
-  <text x="24" y="30" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151" letter-spacing="1.5">STACK</text>
+  <text x="24" y="30" font-family="'Courier New',Courier,monospace" font-size="10" fill="#8b949e" letter-spacing="1.5">STACK</text>
 
   {cols_svg}
 </svg>'''

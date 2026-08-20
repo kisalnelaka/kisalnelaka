@@ -85,8 +85,8 @@ def generate_showcase(repos):
         for i, (val, label) in enumerate(meta["key_facts"]):
             fx = fact_x_positions[i]
             facts_svg += f'''
-      <text x="{fx}" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#e4e4e7">{val}</text>
-      <text x="{fx}" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#4b5563">{label}</text>'''
+      <text x="{fx}" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#f0f6fc">{val}</text>
+      <text x="{fx}" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8b949e">{label}</text>'''
 
         # Live stats (stars, language, last push)
         live_line = f"updated {repo['updated']}"
@@ -96,15 +96,15 @@ def generate_showcase(repos):
 
         return f'''
   <g transform="translate({x_offset}, 55)">
-    <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="600" fill="#f4f4f5">{title}</text>
-    <text x="0" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#4b5563">{subtitle}</text>
-    <line x1="0" y1="34" x2="380" y2="34" stroke="#1f1f23" stroke-width="1"/>
-    <text x="0" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#52525b">{desc_lines[0]}</text>
-    <text x="0" y="71" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#52525b">{desc_lines[1]}</text>
+    <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="600" fill="#f0f6fc">{title}</text>
+    <text x="0" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#8b949e">{subtitle}</text>
+    <line x1="0" y1="34" x2="380" y2="34" stroke="#30363d" stroke-width="1"/>
+    <text x="0" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#c9d1d9">{desc_lines[0]}</text>
+    <text x="0" y="71" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#c9d1d9">{desc_lines[1]}</text>
     <g transform="translate(0, 98)">{facts_svg}
     </g>
-    <text x="0" y="138" font-family="'Courier New',Courier,monospace" font-size="10.5" fill="#374151">{meta["stack_line"]}</text>
-    <text x="0" y="152" font-family="'Courier New',Courier,monospace" font-size="9" fill="#27272a">{live_line}</text>
+    <text x="0" y="138" font-family="'Courier New',Courier,monospace" font-size="10.5" fill="#c9a96e">{meta["stack_line"]}</text>
+    <text x="0" y="152" font-family="'Courier New',Courier,monospace" font-size="9" fill="#8b949e">{live_line}</text>
   </g>'''
 
     card_svgs = ""
@@ -135,12 +135,10 @@ def generate_showcase(repos):
       <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0" in="n"/>
     </filter>
   </defs>
-  <rect width="{W}" height="{H}" fill="url(#bg)"/>
-  <rect width="{W}" height="{H}" filter="url(#noise)" style="pointer-events:none;"/>
-  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" fill="none"/>
-  <rect x="0" y="0" width="2" height="{H}" fill="url(#rule-grad)"/>
-  <text x="24" y="36" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151" letter-spacing="1.5">SYSTEMS</text>
-  <line x1="430" y1="20" x2="430" y2="{H - 20}" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" stroke="#30363d" stroke-width="1" fill="none"/>
+  <rect x="1" y="8" width="2.5" height="{H - 16}" rx="1" fill="url(#rule-grad)"/>
+  <text x="24" y="36" font-family="'Courier New',Courier,monospace" font-size="10" fill="#8b949e" letter-spacing="1.5">SYSTEMS</text>
+  <line x1="430" y1="20" x2="430" y2="{H - 20}" stroke="#30363d" stroke-width="1"/>
   {card_svgs}
 </svg>'''
     return svg

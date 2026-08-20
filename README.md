@@ -34,14 +34,8 @@ Warning:     will rewrite the framework instead of using it
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&theme=transparent&hide_border=true&title_color=c9a96e&icon_color=c9a96e&text_color=9ca3af&ring_color=c9a96e&count_private=true&show_icons=true&include_all_commits=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kisalnelaka&theme=transparent&hide_border=true&title_color=c9a96e&text_color=9ca3af&layout=compact&langs_count=7&hide=Jupyter+Notebook,HTML,CSS" />
-
-</div>
-
-<div align="center">
-
-[![streak](https://streak-stats.demolab.com?user=kisalnelaka&theme=transparent&hide_border=true&ring=C9A96E&fire=C9A96E&currStreakLabel=C9A96E&sideLabels=6B7280&currStreakNum=F4F4F5&sideNums=F4F4F5&dates=374151)](https://github.com/kisalnelaka)
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=kisalnelaka&theme=transparent&hide_border=true&title_color=c9a96e&icon_color=c9a96e&text_color=c9d1d9&ring_color=c9a96e&count_private=true&show_icons=true&include_all_commits=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kisalnelaka&theme=transparent&hide_border=true&title_color=c9a96e&text_color=c9d1d9&layout=compact&langs_count=7&hide=Jupyter+Notebook,HTML,CSS" />
 
 </div>
 
@@ -117,18 +111,8 @@ drwxr-xr-x  security-tooling/      pen testing · SIEM · things I can't talk ab
 
 <div align="center">
 
-[![activity](https://github-readme-activity-graph.vercel.app/graph?username=kisalnelaka&bg_color=0c0c0e&color=c9a96e&line=c9a96e&point=f4f4f5&area=true&area_color=c9a96e&hide_border=true&custom_title=commit+activity&radius=6)](https://github.com/kisalnelaka)
+[![activity](https://github-readme-activity-graph.vercel.app/graph?username=kisalnelaka&bg_color=00000000&color=c9a96e&line=c9a96e&point=f0f6fc&area=true&area_color=c9a96e&hide_border=true&custom_title=commit+activity&radius=6)](https://github.com/kisalnelaka)
 
-</div>
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=kisalnelaka&theme=onestar&no-frame=true&no-bg=true&margin-w=6&row=1&column=7)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
-<div align="center">
-  <img src="profile-3d-contrib/profile-night-rainbow.svg" width="100%"/>
 </div>
 
 ---

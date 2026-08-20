@@ -75,16 +75,11 @@ def generate_banner(stats):
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="{W}" height="{H}" fill="url(#bg)"/>
-  <!-- Grain -->
-  <rect width="{W}" height="{H}" filter="url(#noise)" style="pointer-events:none; mix-blend-mode:overlay"/>
+  <!-- Outer border: subtle rounded border matching GitHub dark theme -->
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" stroke="#30363d" stroke-width="1" fill="none"/>
 
-  <!-- Outer border: extremely subtle -->
-  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" fill="none"/>
-
-  <!-- The accent rule: one thin vertical bar, left edge -->
-  <rect x="0" y="0" width="2" height="{H}" fill="url(#rule-grad)"/>
+  <!-- The accent rule: thin vertical bar inside left edge -->
+  <rect x="1" y="8" width="2.5" height="{H - 16}" rx="1" fill="url(#rule-grad)"/>
 
   <!-- =============================== -->
   <!-- LEFT: Identity                  -->
@@ -97,24 +92,24 @@ def generate_banner(stats):
   <text x="36" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#6b7280" letter-spacing="0.5">available for senior engineering roles</text>
 
   <!-- Name: large, weight 300, generous letter spacing -->
-  <text x="24" y="98" font-family="system-ui,-apple-system,sans-serif" font-size="44" font-weight="300" fill="#f4f4f5" letter-spacing="-1">Kisal Nelaka</text>
+  <text x="24" y="98" font-family="system-ui,-apple-system,sans-serif" font-size="44" font-weight="300" fill="#f0f6fc" letter-spacing="-1">Kisal Nelaka</text>
 
   <!-- Role: monospace, muted -->
-  <text x="26" y="124" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#4b5563" letter-spacing="0.5">software engineer</text>
+  <text x="26" y="124" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#8b949e" letter-spacing="0.5">software engineer</text>
 
   <!-- Thin horizontal rule -->
-  <line x1="24" y1="144" x2="460" y2="144" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="24" y1="144" x2="460" y2="144" stroke="#30363d" stroke-width="1"/>
 
   <!-- Tagline: max 2 lines, human voice -->
-  <text x="26" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#52525b">
+  <text x="26" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#c9d1d9">
     9+ years shipping production systems. Multi-tenant SaaS, distributed
   </text>
-  <text x="26" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#52525b">
+  <text x="26" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#c9d1d9">
     architectures, offensive security, and the occasional 3 AM hotfix.
   </text>
 
   <!-- Stack line: compact, grey -->
-  <text x="26" y="208" font-family="'Courier New',Courier,monospace" font-size="11" fill="#374151" letter-spacing="0.3">
+  <text x="26" y="208" font-family="'Courier New',Courier,monospace" font-size="11" fill="#8b949e" letter-spacing="0.3">
     Laravel · React · Node.js · TypeScript · PHP 8.3
   </text>
 
@@ -123,22 +118,22 @@ def generate_banner(stats):
   <!-- =============================== -->
 
   <!-- Vertical separator -->
-  <line x1="520" y1="40" x2="520" y2="{H - 40}" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <line x1="520" y1="30" x2="520" y2="{H - 30}" stroke="#30363d" stroke-width="1"/>
 
   <!-- Stat 1: y=70 value, y=90 label -->
-  <text x="564" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{age}</text>
-  <text x="564" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">years building</text>
+  <text x="564" y="70" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#f0f6fc">{age}</text>
+  <text x="564" y="86" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#8b949e" letter-spacing="0.4">years building</text>
 
   <!-- Stat 2: y=130 value, y=148 label -->
-  <text x="564" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{commits:,}</text>
-  <text x="564" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">contributions this year</text>
+  <text x="564" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#f0f6fc">{commits:,}</text>
+  <text x="564" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#8b949e" letter-spacing="0.4">contributions this year</text>
 
   <!-- Stat 3: y=194 value, y=212 label -->
-  <text x="564" y="194" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#e4e4e7">{repos}</text>
-  <text x="564" y="210" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#4b5563" letter-spacing="0.4">public repositories</text>
+  <text x="564" y="194" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="600" fill="#f0f6fc">{repos}</text>
+  <text x="564" y="210" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="400" fill="#8b949e" letter-spacing="0.4">public repositories</text>
 
   <!-- Date: far right, quiet -->
-  <text x="{W - 24}" y="30" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#27272a">{now}</text>
+  <text x="{W - 24}" y="30" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#8b949e">{now}</text>
 
 </svg>'''
     return svg

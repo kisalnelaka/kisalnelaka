@@ -32,23 +32,23 @@
   <!-- Index number -->
   <text x="24" y="80" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">01</text>
   <!-- Title -->
-  <text x="56" y="80" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#d1d5db">AETHER: Building a PHP 8.3 Framework Without the Bloat</text>
+  <text x="56" y="80" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#d1d5db">Bypassing the “Mac Tax”: How I Built an Engine to Develop, Si...</text>
   <!-- Date, right-aligned -->
-  <text x="836" y="80" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">May 2026</text>
+  <text x="836" y="80" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">Aug 2026</text>
   <!-- Article 2 -->
   <line x1="24" y1="118" x2="836" y2="118" stroke="#1a1a1f" stroke-width="1"/>
   <!-- Index number -->
   <text x="24" y="112" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">02</text>
   <!-- Title -->
-  <text x="56" y="112" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#d1d5db">Building InfraFlow: A Production-Grade Multi-Tenant MSP Platf...</text>
+  <text x="56" y="112" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#d1d5db">AETHER: Building a PHP 8.3 Framework Without the Bloat</text>
   <!-- Date, right-aligned -->
-  <text x="836" y="112" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">Jan 2026</text>
+  <text x="836" y="112" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">May 2026</text>
   <!-- Article 3 -->
   <line x1="24" y1="150" x2="836" y2="150" stroke="#1a1a1f" stroke-width="1"/>
   <!-- Index number -->
   <text x="24" y="144" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">03</text>
   <!-- Title -->
-  <text x="56" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#d1d5db">Bunny: Revolutionizing Web Development with Laravel</text>
+  <text x="56" y="144" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="500" fill="#d1d5db">Building InfraFlow: A Production-Grade Multi-Tenant MSP Platf...</text>
   <!-- Date, right-aligned -->
-  <text x="836" y="144" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">Mar 2025</text>
+  <text x="836" y="144" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="10" fill="#374151">Jan 2026</text>
 </svg>

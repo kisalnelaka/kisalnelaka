@@ -43,10 +43,10 @@
 **All articles**
 
 <!-- BLOG-POST-LIST:START -->
+- [Bypassing the “Mac Tax”: How I Built an Engine to Develop, Sign, and Deploy iOS Apps on Linux](https://medium.com/@kisalnelaka6/bypassing-the-mac-tax-how-i-built-an-engine-to-develop-sign-and-deploy-ios-apps-on-linux-d23402944ce7)
 - [AETHER: Building a PHP 8.3 Framework Without the Bloat](https://medium.com/@kisalnelaka6/aether-building-a-php-8-3-framework-without-the-bloat-f0c1a69780ed)
 - [Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124)
 - [Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc)
-- [Bunny: The Laravel Scaffolding Package That Makes Web Development a Hop](https://medium.com/@kisalnelaka6/bunny-the-laravel-scaffolding-package-that-makes-web-development-a-hop-7276d4efdf57)
 <!-- BLOG-POST-LIST:END -->
 
 </details>

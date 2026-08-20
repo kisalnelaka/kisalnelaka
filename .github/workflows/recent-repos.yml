@@ -18,43 +18,18 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Generate SVGs
+      - name: Update dynamic README data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python .github/scripts/generate_banner.py
-          python .github/scripts/generate_showcase_card.py
-          python .github/scripts/generate_tech_dashboard.py
+          python .github/scripts/update_recent_repos.py
+          python .github/scripts/update_blog_posts.py
+          python .github/scripts/update_contributions.py
 
-      - name: Update recent repos
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python .github/scripts/update_recent_repos.py
-
-      - name: Update open source contributions
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python .github/scripts/update_contributions.py
-
-      - name: Refresh chess board
-        run: |
-          pip install chess
-          python .github/scripts/chess_game.py
-
-      - name: Commit SVGs and README
+      - name: Commit and push changes
         run: |
           git config --global user.name  "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add banner.svg showcase-card.svg tech-dashboard.svg README.md
-          git diff --cached --quiet || git commit -m "chore: auto-update profile [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: auto-update profile data [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
           git push
-
-      - name: Update blog posts
-        uses: gautamkrishnar/blog-post-workflow@v1
-        with:
-          feed_list: "https://medium.com/feed/@kisalnelaka6"
-          max_post_count: 5
-          readme_path: README.md
-          gh_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_username: "github-actions[bot]"
-          committer_email: "41898282+github-actions[bot]@users.noreply.github.com"

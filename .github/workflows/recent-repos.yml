@@ -2,8 +2,8 @@ name: Update Profile
 
 on:
   schedule:
-    - cron: '0 * * * *'   # every hour
-  workflow_dispatch:        # manual trigger from Actions tab
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -12,15 +12,12 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      # ── Dynamic SVG generation ──────────────────────────────────────────────
       - name: Generate SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,22 +25,31 @@ jobs:
           python .github/scripts/generate_banner.py
           python .github/scripts/generate_showcase_card.py
           python .github/scripts/generate_tech_dashboard.py
-          python .github/scripts/generate_writing_card.py
 
-      # ── README section updates ──────────────────────────────────────────────
       - name: Update recent repos
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python .github/scripts/update_recent_repos.py
 
-      - name: Update blog post list in README
-        run: python .github/scripts/update_blog_posts.py
+      - name: Refresh chess board
+        run: |
+          pip install chess
+          python .github/scripts/chess_game.py
 
-      # ── Commit everything ───────────────────────────────────────────────────
-      - name: Commit and push
+      - name: Commit SVGs and README
         run: |
           git config --global user.name  "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add banner.svg showcase-card.svg tech-dashboard.svg writing-card.svg README.md
+          git add banner.svg showcase-card.svg tech-dashboard.svg README.md
           git diff --cached --quiet || git commit -m "chore: auto-update profile [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
           git push
+
+      - name: Update blog posts
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: "https://medium.com/feed/@kisalnelaka6"
+          max_post_count: 5
+          readme_path: README.md
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
+          committer_username: "github-actions[bot]"
+          committer_email: "41898282+github-actions[bot]@users.noreply.github.com"

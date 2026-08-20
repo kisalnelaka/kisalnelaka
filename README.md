@@ -33,11 +33,11 @@
 **Recent work**
 
 <!-- RECENT-REPOS:START -->
+- [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - iOS Development in linux
 - [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - A production-ready, multi-tenant Property Management SaaS (TenancyOS) built with Laravel 11 and React. Features automated organization scoping, RBAC, and full audit logging.
 - [al-sharq-assesment](https://github.com/kisalnelaka/al-sharq-assesment) - small but production-minded content-management application
 - [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
 - [jeOS](https://github.com/kisalnelaka/jeOS) - just enough
-- [nexusflow_erp](https://github.com/kisalnelaka/nexusflow_erp) - Built from the ground up to showcase mastery over modern full-stack development, cloud orchestration, and high-performance inter-service communication.
 <!-- RECENT-REPOS:END -->
 
 **All articles**

@@ -6,12 +6,11 @@ from datetime import datetime, timezone
 USERNAME = "kisalnelaka"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
-# These are the two repos you want featured.
-# Edit these names to change which repos appear.
-FEATURED_REPOS = ["nexusflow_erp", "thenet"]
+# Target top priority projects (falls back to latest pushed if any not found)
+TARGET_PROJECTS = ["TenancyOS", "aether"]
 
 def gh_request(url):
-    headers = {"User-Agent": "gh-profile", "Accept": "application/vnd.github+json"}
+    headers = {"User-Agent": "gh-profile-showcase", "Accept": "application/vnd.github+json"}
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     req = urllib.request.Request(url, headers=headers)
@@ -22,143 +21,140 @@ def gh_request(url):
         print(f"  [warn] {url} -> {e}")
         return None
 
-def fetch_repo(name):
-    """Fetch live repo data from GitHub API."""
-    data = gh_request(f"https://api.github.com/repos/{USERNAME}/{name}")
-    if not data:
-        return None
-    return {
-        "name":        data.get("name", name),
-        "description": data.get("description") or "",
-        "stars":       data.get("stargazers_count", 0),
-        "forks":       data.get("forks_count", 0),
-        "language":    data.get("language") or "",
-        "url":         data.get("html_url", f"https://github.com/{USERNAME}/{name}"),
-        "updated":     data.get("pushed_at", "")[:10],
-    }
-
-# Static metadata that lives alongside the live data.
-# These are the things only you know (tagline, key metrics).
-FEATURED_META = {
-    "nexusflow_erp": {
-        "subtitle":   "multi-tenant saas infrastructure",
-        "key_facts":  [("100%", "data isolation"), ("&lt;12ms", "inter-service latency"), ("N+", "horizontal tenants")],
-        "stack_line": "Laravel 11 · Filament v3 · MySQL · Redis",
-    },
-    "thenet": {
-        "subtitle":   "decentralized p2p mesh network",
-        "key_facts":  [("0", "cloud dependencies"), ("P2P", "full mesh sync"), ("WS", "transport layer")],
-        "stack_line": "Node.js · WebSockets · Local-First",
-    },
-}
+def fetch_showcase_repos():
+    repos_data = []
+    
+    # Try fetching specified top projects
+    for name in TARGET_PROJECTS:
+        data = gh_request(f"https://api.github.com/repos/{USERNAME}/{name}")
+        if data and not data.get("message"):
+            repos_data.append(data)
+            
+    # If we need more, fetch latest non-fork public repositories
+    if len(repos_data) < 2:
+        all_repos = gh_request(f"https://api.github.com/users/{USERNAME}/repos?sort=pushed&per_page=10") or []
+        for r in all_repos:
+            if r["name"] not in [x["name"] for x in repos_data] and not r.get("fork") and r["name"] not in [USERNAME, f"{USERNAME}.github.io"]:
+                repos_data.append(r)
+                if len(repos_data) >= 2:
+                    break
+                    
+    formatted = []
+    for r in repos_data[:2]:
+        name = r.get("name", "")
+        desc = r.get("description") or "Production-ready open source system."
+        lang = r.get("language") or "Full-Stack"
+        stars = r.get("stargazers_count", 0)
+        forks = r.get("forks_count", 0)
+        issues = r.get("open_issues_count", 0)
+        size_kb = r.get("size", 0)
+        updated = (r.get("pushed_at") or "")[:10]
+        license_name = r.get("license", {}).get("spdx_id") if r.get("license") else "MIT"
+        
+        formatted.append({
+            "name": name,
+            "description": desc,
+            "language": lang,
+            "stars": stars,
+            "forks": forks,
+            "issues": issues,
+            "size": f"{size_kb} KB" if size_kb < 1024 else f"{round(size_kb/1024, 1)} MB",
+            "updated": updated,
+            "license": license_name or "MIT",
+            "url": r.get("html_url", f"https://github.com/{USERNAME}/{name}")
+        })
+        
+    return formatted
 
 def xml_escape(s):
-    """Escape characters that are invalid in SVG/XML text nodes."""
-    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
-def generate_showcase(repos):
+def generate_showcase():
     W, H = 860, 210
+    repos = fetch_showcase_repos()
 
-    def render_card(repo, meta, x_offset):
-        title    = xml_escape(repo["name"].replace("_", " ").title())
-        subtitle = xml_escape(meta["subtitle"])
-        desc_lines = []
+    def render_card(repo, x_offset):
+        title = xml_escape(repo["name"].replace("-", " ").replace("_", " ").title())
         desc = repo["description"]
-        # Word-wrap description into two lines of ~55 chars each
+        
+        # Word wrap description into 2 lines of max 56 chars
         words = desc.split()
-        line = ""
+        desc_lines = []
+        cur = ""
         for w in words:
-            if len(line) + len(w) + 1 > 56:
-                desc_lines.append(xml_escape(line.strip()))
-                line = w + " "
+            if len(cur) + len(w) + 1 > 56:
+                desc_lines.append(xml_escape(cur.strip()))
+                cur = w + " "
                 if len(desc_lines) == 2:
                     break
             else:
-                line += w + " "
-        if len(desc_lines) < 2 and line.strip():
-            desc_lines.append(xml_escape(line.strip()))
+                cur += w + " "
+        if len(desc_lines) < 2 and cur.strip():
+            desc_lines.append(xml_escape(cur.strip()))
         while len(desc_lines) < 2:
             desc_lines.append("")
 
-        facts_svg = ""
-        fact_x_positions = [0, 110, 250]
-        for i, (val, label) in enumerate(meta["key_facts"]):
-            fx = fact_x_positions[i]
-            facts_svg += f'''
-      <text x="{fx}" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#f0f6fc">{val}</text>
-      <text x="{fx}" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8b949e">{label}</text>'''
-
-        # Live stats (stars, language, last push)
-        live_line = f"updated {repo['updated']}"
-        if repo["language"]:
-            live_line = f"{repo['language']}  \u00b7  {live_line}"
-        live_line = xml_escape(live_line)
+        lang = xml_escape(repo["language"])
+        stars = repo["stars"]
+        forks = repo["forks"]
+        size = xml_escape(repo["size"])
+        license_id = xml_escape(repo["license"])
+        updated = xml_escape(repo["updated"])
 
         return f'''
   <g transform="translate({x_offset}, 55)">
     <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="600" fill="#f0f6fc">{title}</text>
-    <text x="0" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#8b949e">{subtitle}</text>
+    <text x="0" y="20" font-family="'Courier New',Courier,monospace" font-size="10" fill="#c9a96e">{lang} · {license_id}</text>
     <line x1="0" y1="34" x2="380" y2="34" stroke="#30363d" stroke-width="1"/>
+    
     <text x="0" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#c9d1d9">{desc_lines[0]}</text>
     <text x="0" y="71" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#c9d1d9">{desc_lines[1]}</text>
-    <g transform="translate(0, 98)">{facts_svg}
+    
+    <g transform="translate(0, 98)">
+      <text x="0"   y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#f0f6fc">{stars}</text>
+      <text x="0"   y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8b949e">stars</text>
+
+      <text x="95"  y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#f0f6fc">{forks}</text>
+      <text x="95"  y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8b949e">forks</text>
+
+      <text x="190" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="600" fill="#f0f6fc">{size}</text>
+      <text x="190" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8b949e">codebase size</text>
     </g>
-    <text x="0" y="138" font-family="'Courier New',Courier,monospace" font-size="10.5" fill="#c9a96e">{meta["stack_line"]}</text>
-    <text x="0" y="152" font-family="'Courier New',Courier,monospace" font-size="9" fill="#8b949e">{live_line}</text>
+    
+    <text x="0" y="145" font-family="'Courier New',Courier,monospace" font-size="9" fill="#8b949e">last active: {updated}</text>
   </g>'''
 
     card_svgs = ""
     positions = [24, 450]
-    for i, (repo_name, pos) in enumerate(zip(FEATURED_REPOS, positions)):
-        repo = repos[i]
-        meta = FEATURED_META.get(repo_name, {
-            "subtitle": repo_name,
-            "key_facts": [],
-            "stack_line": repo.get("language", ""),
-        })
-        card_svgs += render_card(repo, meta, pos)
+    for i, pos in enumerate(positions):
+        if i < len(repos):
+            card_svgs += render_card(repos[i], pos)
 
     svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="{W}" y2="{H}" gradientUnits="userSpaceOnUse">
-      <stop offset="0%"   stop-color="#0c0c0e"/>
-      <stop offset="100%" stop-color="#101014"/>
-    </linearGradient>
     <linearGradient id="rule-grad" x1="0" y1="0" x2="0" y2="{H}" gradientUnits="userSpaceOnUse">
       <stop offset="0%"   stop-color="#c9a96e" stop-opacity="0"/>
       <stop offset="35%"  stop-color="#c9a96e" stop-opacity="0.9"/>
       <stop offset="65%"  stop-color="#c9a96e" stop-opacity="0.9"/>
       <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
     </linearGradient>
-    <filter id="noise" color-interpolation-filters="linearRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="n"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0" in="n"/>
-    </filter>
   </defs>
+
   <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" stroke="#30363d" stroke-width="1" fill="none"/>
   <rect x="1" y="8" width="2.5" height="{H - 16}" rx="1" fill="url(#rule-grad)"/>
-  <text x="24" y="36" font-family="'Courier New',Courier,monospace" font-size="10" fill="#8b949e" letter-spacing="1.5">SYSTEMS</text>
+
+  <!-- Section label -->
+  <text x="24" y="36" font-family="'Courier New',Courier,monospace" font-size="10" fill="#8b949e" letter-spacing="1.5">FEATURED REPOSITORIES</text>
+  <text x="{W - 24}" y="36" text-anchor="end" font-family="'Courier New',Courier,monospace" font-size="9" fill="#8b949e">live metrics from GitHub API</text>
   <line x1="430" y1="20" x2="430" y2="{H - 20}" stroke="#30363d" stroke-width="1"/>
+
   {card_svgs}
 </svg>'''
     return svg
 
 def main():
-    print("Generating showcase-card.svg (live data)...")
-    repos = []
-    for name in FEATURED_REPOS:
-        r = fetch_repo(name)
-        if r:
-            print(f"  Fetched: {r['name']} ({r['stars']} stars, updated {r['updated']})")
-            repos.append(r)
-        else:
-            # Fallback: minimal stub so SVG still generates
-            repos.append({
-                "name": name, "description": "A featured project.", "stars": 0,
-                "forks": 0, "language": "", "url": f"https://github.com/{USERNAME}/{name}", "updated": ""
-            })
-
-    svg = generate_showcase(repos)
+    print("Generating showcase-card.svg from live GitHub data...")
+    svg = generate_showcase()
     with open("showcase-card.svg", "w", encoding="utf-8") as f:
         f.write(svg)
     print("  Written -> showcase-card.svg")

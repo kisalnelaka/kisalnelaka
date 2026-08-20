@@ -23,15 +23,6 @@
 
 ---
 
-### Featured Systems
-
-- **[TenancyOS](https://github.com/kisalnelaka/TenancyOS)** — Production-grade multi-tenant property management SaaS with Laravel 11, React, strict tenant data scoping, and automated RBAC.
-- **[AETHER](https://github.com/kisalnelaka/aether)** — High-performance zero-dependency PHP 8.3 framework built for clean architecture and minimal overhead.
-- **[NexusFlow ERP](https://github.com/kisalnelaka/nexusflow_erp)** — Enterprise ERP engine with tenant isolation, asynchronous worker pipelines, and sub-12ms inter-service communication.
-- **[TheNet](https://github.com/kisalnelaka/thenet)** — Decentralized peer-to-peer mesh networking architecture communicating directly over WebSockets without third-party cloud dependencies.
-
----
-
 ### Technical Writing & Research
 
 <!-- BLOG-POST-LIST:START -->

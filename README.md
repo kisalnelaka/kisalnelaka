@@ -134,6 +134,16 @@ drwxr-xr-x  security-tooling/      pen testing · SIEM · things I can't talk ab
 ---
 
 <details>
+<summary><code>open source contributions</code></summary>
+<br/>
+
+<!-- CONTRIBUTIONS:START -->
+- *Actively contributing to open source ecosystems across Laravel, PHP core tooling, and decentralized networks.*
+<!-- CONTRIBUTIONS:END -->
+
+</details>
+
+<details>
 <summary><code>recent repos</code></summary>
 <br/>
 

@@ -37,9 +37,9 @@
 ### Recent Active Repositories
 
 <!-- RECENT-REPOS:START -->
+- [ani-cli](https://github.com/kisalnelaka/ani-cli) - A cli tool to browse and play anime
 - [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - iOS Development in linux
 - [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - A production-ready, multi-tenant Property Management SaaS (TenancyOS) built with Laravel 11 and React. Features automated organization scoping, RBAC, and full audit logging.
-- [al-sharq-assesment](https://github.com/kisalnelaka/al-sharq-assesment) - small but production-minded content-management application
 - [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
 - [aether-playground](https://github.com/kisalnelaka/aether-playground) - Aether playground
 <!-- RECENT-REPOS:END -->
@@ -49,5 +49,5 @@
 ### Open Source Contributions
 
 <!-- CONTRIBUTIONS:START -->
-- *Actively contributing to open source ecosystems across Laravel, PHP core tooling, and decentralized networks.*
+- [pystardust/ani-cli](https://github.com/pystardust/ani-cli) — [feat: add interactive home dashboard, fzf preview engine, and thumbnail support](https://github.com/pystardust/ani-cli/pull/1874) `(🟢 closed)`
 <!-- CONTRIBUTIONS:END -->

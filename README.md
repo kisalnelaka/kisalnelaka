@@ -37,11 +37,11 @@
 ### Recent Active Repositories
 
 <!-- RECENT-REPOS:START -->
+- [log_horizon](https://github.com/kisalnelaka/log_horizon) - simple game
 - [ani-cli](https://github.com/kisalnelaka/ani-cli) - A cli tool to browse and play anime
 - [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - iOS Development in linux
 - [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - A production-ready, multi-tenant Property Management SaaS (TenancyOS) built with Laravel 11 and React. Features automated organization scoping, RBAC, and full audit logging.
 - [curd](https://github.com/kisalnelaka/curd) - Watch anime in cli with Anilist, MAL Integration and Discord RPC
-- [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
 <!-- RECENT-REPOS:END -->
 
 ---

@@ -37,7 +37,7 @@
 ### Recent Active Repositories
 
 <!-- RECENT-REPOS:START -->
-- [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - iOS Development in linux
+- [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - Native iOS Swift development on Linux & WSL. No macOS or Xcode required. Build, cross-compile, code-sign, deploy over USB, and interactively debug via LLDB directly inside VS Code. Powered by xtool, rcodesign, libimobiledevice, and SourceKit-LSP.
 - [loghorizon.online](https://github.com/kisalnelaka/loghorizon.online) - main Website for loghorizon.online
 - [Eldertale](https://github.com/kisalnelaka/Eldertale) - simple game
 - [ani-cli](https://github.com/kisalnelaka/ani-cli) - A cli tool to browse and play anime

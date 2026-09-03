@@ -95,22 +95,22 @@ def generate_banner(stats):
   <text x="24" y="98" font-family="system-ui,-apple-system,sans-serif" font-size="44" font-weight="300" fill="#f0f6fc" letter-spacing="-1">Kisal Nelaka</text>
 
   <!-- Role: monospace, muted -->
-  <text x="26" y="124" font-family="'Courier New',Courier,monospace" font-size="13" font-weight="400" fill="#8b949e" letter-spacing="0.5">software engineer</text>
+  <text x="26" y="124" font-family="'Courier New',Courier,monospace" font-size="12" font-weight="400" fill="#8b949e" letter-spacing="0.5">senior full-stack engineer &amp; systems architect</text>
 
   <!-- Thin horizontal rule -->
   <line x1="24" y1="144" x2="460" y2="144" stroke="#30363d" stroke-width="1"/>
 
   <!-- Tagline: max 2 lines, human voice -->
-  <text x="26" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#c9d1d9">
-    9+ years shipping production systems. Multi-tenant SaaS, distributed
+  <text x="26" y="165" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="400" fill="#c9d1d9">
+    9+ years shipping high-throughput multi-tenant SaaS, distributed
   </text>
-  <text x="26" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="13.5" font-weight="400" fill="#c9d1d9">
-    architectures, offensive security, and the occasional 3 AM hotfix.
+  <text x="26" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="400" fill="#c9d1d9">
+    architectures, zero-dependency engines, and security tooling.
   </text>
 
   <!-- Stack line: compact, grey -->
   <text x="26" y="208" font-family="'Courier New',Courier,monospace" font-size="11" fill="#8b949e" letter-spacing="0.3">
-    Laravel · React · Node.js · TypeScript · PHP 8.3
+    PHP 8.3 / Laravel · React / Vite · Node.js · TypeScript · Python · Swift
   </text>
 
   <!-- =============================== -->

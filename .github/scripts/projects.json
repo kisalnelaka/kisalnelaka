@@ -1,14 +1,30 @@
 [
     {
-        "title": "NexusFlow ERP",
-        "url": "https://github.com/kisalnelaka/nexusflow_erp",
-        "subtitle": "Multi-tenant SaaS Infrastructure",
-        "description": "Built a modular ERP with automated global tenant scoping. The kind that just works without you having to think about it. 100% data isolation, zero leakage, seamless UX across distributed modules."
+        "title": "LibreSwift",
+        "url": "https://github.com/kisalnelaka/LibreSwift",
+        "architecture": "Native iOS Swift toolchain on Linux & WSL. Decoupled from macOS and Xcode.",
+        "impact": "Full USB deployment, code-signing, and interactive LLDB debug sessions in VS Code",
+        "stack": "Swift, C++, LLDB, Linux"
+    },
+    {
+        "title": "TenancyOS",
+        "url": "https://github.com/kisalnelaka/TenancyOS",
+        "architecture": "Enterprise Multi-Tenant SaaS platform with automated global tenant scoping.",
+        "impact": "Zero data leakage guarantee, automatic tenant database isolation, automated RBAC",
+        "stack": "PHP 8.3, Laravel 11, PostgreSQL"
+    },
+    {
+        "title": "AETHER",
+        "url": "https://github.com/kisalnelaka/aether",
+        "architecture": "Zero-dependency high-throughput PHP 8.3 micro-framework for persistent runtimes.",
+        "impact": "Zero vendor bloat, sub-millisecond execution overhead, strict request lifecycle",
+        "stack": "PHP 8.3, OPcache, POSIX"
     },
     {
         "title": "TheNet",
         "url": "https://github.com/kisalnelaka/thenet",
-        "subtitle": "Decentralized Mesh Architecture",
-        "description": "Cloud dependency is a crutch. Built a secure, decentralized mesh network over WebSockets and Node.js. Peer-to-peer file orchestration, zero cloud involvement, zero-latency local sync."
+        "architecture": "Decentralized peer-to-peer mesh architecture over persistent WebSockets.",
+        "impact": "Zero cloud dependency, decentralized local sync, peer-to-peer file orchestration",
+        "stack": "Node.js, WebSockets, P2P"
     }
 ]

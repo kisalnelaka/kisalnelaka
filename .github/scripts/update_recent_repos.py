@@ -17,10 +17,13 @@ def main():
 
     markdown_lines = []
     count = 0
+    EXCLUDED_REPOS = {'kisalnelaka', 'kisalnelaka.github.io', 'Eldertale', 'curd'}
     for repo in data:
         name = repo.get('name')
-        # Exclude only the profile repository itself and personal site if desired
-        if name in ['kisalnelaka', 'kisalnelaka.github.io']:
+        if name in EXCLUDED_REPOS:
+            continue
+        # Exclude forks unless it's a recognized contribution repo
+        if repo.get('fork') and name != 'ani-cli':
             continue
             
         url = repo.get('html_url')

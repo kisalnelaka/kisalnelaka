@@ -37,11 +37,11 @@
 ### Recent Active Repositories
 
 <!-- RECENT-REPOS:START -->
-- [TenancyOS](https://github.com/kisalnelaka/TenancyOS) - A production-ready, multi-tenant Property Management SaaS (TenancyOS) built with Laravel 11 and React. Features automated organization scoping, RBAC, and full audit logging.
 - [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - Native iOS Swift development on Linux & WSL. No macOS or Xcode required. Build, cross-compile, code-sign, deploy over USB, and interactively debug via LLDB directly inside VS Code. Powered by xtool, rcodesign, libimobiledevice, and SourceKit-LSP.
 - [loghorizon.online](https://github.com/kisalnelaka/loghorizon.online) - main Website for loghorizon.online
 - [Eldertale](https://github.com/kisalnelaka/Eldertale) - simple game
 - [ani-cli](https://github.com/kisalnelaka/ani-cli) - A cli tool to browse and play anime
+- [curd](https://github.com/kisalnelaka/curd) - Watch anime in cli with Anilist, MAL Integration and Discord RPC
 <!-- RECENT-REPOS:END -->
 
 ---

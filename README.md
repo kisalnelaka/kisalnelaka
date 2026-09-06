@@ -55,11 +55,11 @@ Security Rigor      : Dynamic Multi-Tenant Data Scoping, RBAC Automation, Threat
 
 #### Production Activity Log
 <!-- RECENT-REPOS:START -->
+- [cosmic-compass](https://github.com/kisalnelaka/cosmic-compass) - Handcrafted multi-cultural astrological field guide and Japanese Oha Asa daily horoscope companion built in Flutter.
 - [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - Native iOS Swift development on Linux & WSL. No macOS or Xcode required. Build, cross-compile, code-sign, deploy over USB, and interactively debug via LLDB directly inside VS Code. Powered by xtool, rcodesign, libimobiledevice, and SourceKit-LSP.
 - [loghorizon.online](https://github.com/kisalnelaka/loghorizon.online) - main Website for loghorizon.online
 - [ani-cli](https://github.com/kisalnelaka/ani-cli) - A cli tool to browse and play anime
 - [resu_me](https://github.com/kisalnelaka/resu_me) - Easy resume modifier
-- [aether-playground](https://github.com/kisalnelaka/aether-playground) - Aether playground
 <!-- RECENT-REPOS:END -->
 
 ---

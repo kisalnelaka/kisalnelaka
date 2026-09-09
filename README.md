@@ -55,11 +55,11 @@ Security Rigor      : Dynamic Multi-Tenant Data Scoping, RBAC Automation, Threat
 
 #### Production Activity Log
 <!-- RECENT-REPOS:START -->
+- [loghorizon.online](https://github.com/kisalnelaka/loghorizon.online) - main Website for loghorizon.online
+- [a-Ha](https://github.com/kisalnelaka/a-Ha) - Dopamine-neutral Android launcher for AuDHD brains. Text-only, zero icons, executive function scaffolding, real-time binaural DSP (40Hz/14Hz), notification air-gap, and instant AI task breakdown. 4.3MB, 100% private.
 - [cosmic-compass](https://github.com/kisalnelaka/cosmic-compass) - Handcrafted multi-cultural astrological field guide and Japanese Oha Asa daily horoscope companion built in Flutter.
 - [circles](https://github.com/kisalnelaka/circles) - Private, DPI-camouflaged group video calling and encrypted messaging app engineered to bypass strict firewalls and survive extreme packet loss.
 - [LibreSwift](https://github.com/kisalnelaka/LibreSwift) - Native iOS Swift development on Linux & WSL. No macOS or Xcode required. Build, cross-compile, code-sign, deploy over USB, and interactively debug via LLDB directly inside VS Code. Powered by xtool, rcodesign, libimobiledevice, and SourceKit-LSP.
-- [loghorizon.online](https://github.com/kisalnelaka/loghorizon.online) - main Website for loghorizon.online
-- [ani-cli](https://github.com/kisalnelaka/ani-cli) - A cli tool to browse and play anime
 <!-- RECENT-REPOS:END -->
 
 ---

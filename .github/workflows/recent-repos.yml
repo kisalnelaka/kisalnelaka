@@ -27,11 +27,12 @@ jobs:
           python .github/scripts/update_blog_posts.py
           python .github/scripts/update_contributions.py
           python .github/scripts/generate_banner.py
+          python .github/scripts/generate_retro_assets.py
 
       - name: Commit and push changes
         run: |
           git config --global user.name  "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md banner.svg
+          git add README.md banner.svg construction-stripe.svg groove-rule.svg
           git diff --cached --quiet || git commit -m "chore: auto-update profile data [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
           git push

@@ -31,7 +31,7 @@ def main():
         if not description:
             description = 'Production repository.'
             
-        markdown_lines.append(f"- [{name}]({url}) - {description}")
+        markdown_lines.append(f"- 📄 **[{name}]({url})** - {description}")
         count += 1
         
         # Only show the top 5

@@ -1,0 +1,12 @@
+<svg width="100%" height="14" viewBox="0 0 880 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hazard" width="28.28" height="28.28" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="28.28" stroke="#FFFF00" stroke-width="14.14" />
+      <line x1="14.14" y1="0" x2="14.14" y2="28.28" stroke="#000000" stroke-width="14.14" />
+    </pattern>
+  </defs>
+  <!-- 3D outer bevel -->
+  <rect x="0" y="0" width="880" height="14" fill="url(#hazard)" stroke="#808080" stroke-width="1"/>
+  <line x1="0" y1="0" x2="880" y2="0" stroke="#FFFFFF" stroke-width="1.5"/>
+  <line x1="0" y1="13.5" x2="880" y2="13.5" stroke="#404040" stroke-width="1.5"/>
+</svg>

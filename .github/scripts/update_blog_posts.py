@@ -26,7 +26,7 @@ def update_readme(posts):
     if not posts:
         print("  No posts fetched, skipping README update.")
         return
-    lines = "\n".join(f"- [{p['title']}]({p['link']})" for p in posts)
+    lines = "\n".join(f"- 📝 **[{p['title']}]({p['link']})**" for p in posts)
     readme = "README.md"
     with open(readme, "r", encoding="utf-8") as f:
         content = f.read()

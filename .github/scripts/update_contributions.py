@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.parse
 import json
 import os
 import re
@@ -79,8 +80,8 @@ def update_readme(contributions):
     else:
         lines = []
         for c in contributions:
-            badge = "🟣 merged" if c["status"] == "merged" else "🟢 " + c["status"]
-            lines.append(f"- [{c['repo_name']}]({c['repo_url']}) — [{c['pr_title']}]({c['pr_url']}) `({badge})`")
+            badge = "merged" if c["status"] == "merged" else c["status"]
+            lines.append(f"- 🔌 **[{c['repo_name']}]({c['repo_url']})** — [{c['pr_title']}]({c['pr_url']}) `[{badge}]`")
         contributions_md = "\n".join(lines)
 
     pattern = re.compile(rf"({re.escape(START_MARKER)}).*?({re.escape(END_MARKER)})", re.DOTALL)

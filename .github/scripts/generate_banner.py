@@ -46,280 +46,141 @@ def fetch_stats():
     return stats
 
 def generate_banner(stats):
-    W, H = 880, 280
+    W, H = 880, 240
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     age     = stats["age"]
     commits = stats["commits"]
     repos   = stats["repos"]
+    stars   = stats.get("stars", 0)
 
-    # Authentic Windows 95 Desktop Window Banner
+    # Sleek, minimalist Dark Obsidian HUD Banner
     svg = f'''<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Windows 98 Active Title Bar Gradient -->
-    <linearGradient id="titlebar-grad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#000080"/>
-      <stop offset="100%" stop-color="#1084D0"/>
+    <!-- Radial ambient glow -->
+    <radialGradient id="ambient-glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="hud-card-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0.95"/>
     </linearGradient>
 
-    <!-- CRT Scanlines Filter -->
-    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
-      <line x1="0" y1="0" x2="{W}" y2="0" stroke="#000000" stroke-opacity="0.35" stroke-width="1"/>
-    </pattern>
+    <!-- Accent Line Gradient -->
+    <linearGradient id="accent-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
 
-    <!-- Rainbow cycling header animation -->
     <style>
-      @keyframes rainbow {{
-        0% {{ fill: #00FF66; }}
-        25% {{ fill: #00FFFF; }}
-        50% {{ fill: #FFFF00; }}
-        75% {{ fill: #FF0055; }}
-        100% {{ fill: #00FF66; }}
-      }}
-      .rainbow-text {{
-        animation: rainbow 6s linear infinite;
-      }}
-      .cursor-blink {{
-        animation: blink 1s step-end infinite;
-      }}
-      @keyframes blink {{
-        0%, 100% {{ opacity: 1; }}
-        50% {{ opacity: 0; }}
-      }}
+      .mono {{ font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace; }}
+      .sans {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }}
+      .cursor-blink {{ animation: blink 1.2s step-end infinite; }}
+      .pulse-dot {{ animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }}
+      @keyframes blink {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
+      @keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.3; }} }}
     </style>
   </defs>
 
-  <!-- ============================================== -->
-  <!-- WINDOW OUTER FRAME (Windows 95 Silver #C0C0C0) -->
-  <!-- ============================================== -->
-  <rect x="0" y="0" width="{W}" height="{H}" fill="#C0C0C0"/>
+  <!-- Background Base -->
+  <rect width="{W}" height="{H}" rx="10" fill="#080a0f"/>
+  <rect width="{W}" height="{H}" rx="10" fill="url(#ambient-glow)"/>
 
-  <!-- 3D Outset Outer Bevel -->
-  <!-- Top & Left Light Edge -->
-  <line x1="0" y1="0" x2="{W}" y2="0" stroke="#FFFFFF" stroke-width="2"/>
-  <line x1="0" y1="0" x2="0" y2="{H}" stroke="#FFFFFF" stroke-width="2"/>
-  <line x1="1" y1="1" x2="{W - 1}" y2="1" stroke="#DFDFDF" stroke-width="1"/>
-  <line x1="1" y1="1" x2="1" y2="{H - 1}" stroke="#DFDFDF" stroke-width="1"/>
-
-  <!-- Bottom & Right Dark Edge -->
-  <line x1="0" y1="{H - 1}" x2="{W}" y2="{H - 1}" stroke="#000000" stroke-width="2"/>
-  <line x1="{W - 1}" y1="0" x2="{W - 1}" y2="{H}" stroke="#000000" stroke-width="2"/>
-  <line x1="2" y1="{H - 2}" x2="{W - 2}" y2="{H - 2}" stroke="#808080" stroke-width="2"/>
-  <line x1="{W - 2}" y1="2" x2="{W - 2}" y2="{H - 2}" stroke="#808080" stroke-width="2"/>
+  <!-- Border -->
+  <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="9" stroke="#1f2937" stroke-width="1.2"/>
+  
+  <!-- Top Laser Accent Line -->
+  <path d="M10 1 H{W - 10}" stroke="url(#accent-line)" stroke-width="2"/>
 
   <!-- ============================================== -->
-  <!-- TITLE BAR                                      -->
+  <!-- TOP TELEMETRY BAR                              -->
   <!-- ============================================== -->
-  <rect x="4" y="4" width="{W - 8}" height="22" fill="url(#titlebar-grad)"/>
-
-  <!-- 16x16 Pixel Computer Icon -->
-  <g transform="translate(8, 7)">
-    <rect x="0" y="0" width="14" height="11" fill="#C0C0C0" stroke="#000000" stroke-width="1"/>
-    <rect x="2" y="2" width="10" height="7" fill="#000080"/>
-    <rect x="4" y="12" width="6" height="2" fill="#808080"/>
-    <rect x="2" y="14" width="10" height="1" fill="#000000"/>
-  </g>
-
-  <!-- Title Text -->
-  <text x="28" y="19" font-family="'MS Sans Serif', Tahoma, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#FFFFFF" letter-spacing="0.5">
-    C:\\KISAL\\KISALNELAKA.EXE - Systems Architect &amp; Senior Engineer
+  <!-- Status Indicator Dot -->
+  <circle cx="28" cy="24" r="4" fill="#10b981" class="pulse-dot"/>
+  <text x="40" y="28" class="mono" font-size="11" font-weight="600" fill="#10b981" letter-spacing="1">
+    AUDHD_HYPERFOCUS // THREAD_PINNED
   </text>
 
-  <!-- Title Bar Buttons: Minimize, Maximize, Close -->
-  <!-- Button: Minimize -->
-  <g transform="translate({W - 64}, 6)">
-    <rect x="0" y="0" width="16" height="16" fill="#C0C0C0"/>
-    <line x1="0" y1="0" x2="16" y2="0" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="16" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="0" y1="15" x2="16" y2="15" stroke="#000000" stroke-width="1"/>
-    <line x1="15" y1="0" x2="15" y2="16" stroke="#000000" stroke-width="1"/>
-    <line x1="1" y1="14" x2="15" y2="14" stroke="#808080" stroke-width="1"/>
-    <line x1="14" y1="1" x2="14" y2="15" stroke="#808080" stroke-width="1"/>
-    <rect x="4" y="10" width="8" height="2" fill="#000000"/>
-  </g>
-
-  <!-- Button: Maximize -->
-  <g transform="translate({W - 46}, 6)">
-    <rect x="0" y="0" width="16" height="16" fill="#C0C0C0"/>
-    <line x1="0" y1="0" x2="16" y2="0" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="16" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="0" y1="15" x2="16" y2="15" stroke="#000000" stroke-width="1"/>
-    <line x1="15" y1="0" x2="15" y2="16" stroke="#000000" stroke-width="1"/>
-    <line x1="1" y1="14" x2="15" y2="14" stroke="#808080" stroke-width="1"/>
-    <line x1="14" y1="1" x2="14" y2="15" stroke="#808080" stroke-width="1"/>
-    <rect x="3" y="3" width="10" height="9" fill="none" stroke="#000000" stroke-width="1.5"/>
-    <line x1="3" y1="5" x2="13" y2="5" stroke="#000000" stroke-width="1.5"/>
-  </g>
-
-  <!-- Button: Close -->
-  <g transform="translate({W - 26}, 6)">
-    <rect x="0" y="0" width="16" height="16" fill="#C0C0C0"/>
-    <line x1="0" y1="0" x2="16" y2="0" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="16" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="0" y1="15" x2="16" y2="15" stroke="#000000" stroke-width="1"/>
-    <line x1="15" y1="0" x2="15" y2="16" stroke="#000000" stroke-width="1"/>
-    <line x1="1" y1="14" x2="15" y2="14" stroke="#808080" stroke-width="1"/>
-    <line x1="14" y1="1" x2="14" y2="15" stroke="#808080" stroke-width="1"/>
-    <path d="M4,4 L12,12 M12,4 L4,12" stroke="#000000" stroke-width="1.5"/>
-  </g>
-
-  <!-- ============================================== -->
-  <!-- MENU BAR                                       -->
-  <!-- ============================================== -->
-  <g transform="translate(10, 39)" font-family="'MS Sans Serif', Tahoma, Arial, sans-serif" font-size="11" fill="#000000">
-    <text x="0" y="0"><tspan text-decoration="underline">F</tspan>ile</text>
-    <text x="35" y="0"><tspan text-decoration="underline">E</tspan>dit</text>
-    <text x="70" y="0"><tspan text-decoration="underline">V</tspan>iew</text>
-    <text x="110" y="0"><tspan text-decoration="underline">T</tspan>erminal</text>
-    <text x="175" y="0"><tspan text-decoration="underline">S</tspan>ystems</text>
-    <text x="235" y="0"><tspan text-decoration="underline">H</tspan>elp</text>
-  </g>
-  <line x1="6" y1="46" x2="{W - 6}" y2="46" stroke="#808080" stroke-width="1"/>
-  <line x1="6" y1="47" x2="{W - 6}" y2="47" stroke="#FFFFFF" stroke-width="1"/>
-
-  <!-- ============================================== -->
-  <!-- MAIN CRT SCREEN (Inset Bevel Sunken Box)       -->
-  <!-- ============================================== -->
-  <!-- Inset Border -->
-  <rect x="6" y="52" width="{W - 12}" height="196" fill="#03080e"/>
-  <line x1="6" y1="52" x2="{W - 6}" y2="52" stroke="#808080" stroke-width="2"/>
-  <line x1="6" y1="52" x2="6" y2="248" stroke="#808080" stroke-width="2"/>
-  <line x1="7" y1="53" x2="{W - 7}" y2="53" stroke="#404040" stroke-width="1"/>
-  <line x1="7" y1="53" x2="7" y2="247" stroke="#404040" stroke-width="1"/>
-  <line x1="6" y1="248" x2="{W - 6}" y2="248" stroke="#FFFFFF" stroke-width="2"/>
-  <line x1="{W - 6}" y1="52" x2="{W - 6}" y2="248" stroke="#FFFFFF" stroke-width="2"/>
-
-  <!-- Scanlines Overlay -->
-  <rect x="7" y="53" width="{W - 14}" height="194" fill="url(#scanlines)" pointer-events="none"/>
-
-  <!-- Command Prompt & Identity -->
-  <text x="22" y="78" font-family="'Courier New', Courier, monospace" font-size="12" fill="#00FF66" font-weight="bold">
-    C:\\SYSTEM&gt; KISAL.EXE --init --profile=ARCHITECT --rigor=MAX
+  <text x="{W - 28}" y="28" text-anchor="end" class="mono" font-size="10.5" fill="#64748b" letter-spacing="0.5">
+    LATENCY: &lt;0.1ms · ZERO_BLOAT_DIRECTIVE · KERNEL_NATIVE
   </text>
 
-  <!-- Big Hero Title -->
-  <text x="22" y="112" font-family="'Arial Black', Impact, sans-serif" font-size="28" font-weight="900" class="rainbow-text" letter-spacing="1">
+  <line x1="20" y1="42" x2="{W - 20}" y2="42" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ============================================== -->
+  <!-- HERO IDENTITY AREA                             -->
+  <!-- ============================================== -->
+  <text x="28" y="80" class="sans" font-size="30" font-weight="900" fill="#f8fafc" letter-spacing="-0.5">
     KISAL NELAKA
   </text>
-  <text x="265" y="108" font-family="'MS Sans Serif', Tahoma, sans-serif" font-size="11" font-weight="bold" fill="#00FFFF">
-    [v9.3 CORE]
+
+  <rect x="238" y="63" width="168" height="22" rx="4" fill="#1e1e38" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="246" y="78" class="mono" font-size="10" font-weight="700" fill="#818cf8" letter-spacing="0.5">
+    SYSTEMS ARCHITECT
   </text>
 
-  <!-- Subtitle Tagline -->
-  <text x="22" y="136" font-family="'Courier New', Courier, monospace" font-size="12" fill="#E0E0E0">
-    SYSTEMS ARCHITECT &amp; SENIOR FULL-STACK ENGINEER
-  </text>
-  <text x="22" y="156" font-family="'Courier New', Courier, monospace" font-size="11" fill="#A0A0A0">
-    Engineering native Swift/Linux toolchains, offline-first Android apps, zero-dependency micro-frameworks &amp; encrypted mesh networks.
-  </text>
-
-  <!-- Retro Diagnostic Stats Box (Outset inside CRT) -->
-  <g transform="translate(22, 172)">
-    <rect x="0" y="0" width="560" height="38" fill="#0d141e" stroke="#00AA00" stroke-width="1"/>
-    
-    <text x="14" y="16" font-family="'Courier New', monospace" font-size="10" fill="#808080">EXPERIENCE</text>
-    <text x="14" y="30" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#00FF66">{age} YRS</text>
-
-    <line x1="120" y1="4" x2="120" y2="34" stroke="#005500" stroke-width="1"/>
-    <text x="134" y="16" font-family="'Courier New', monospace" font-size="10" fill="#808080">ANNUAL COMMITS</text>
-    <text x="134" y="30" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#00FF66">{commits:,}+</text>
-
-    <line x1="270" y1="4" x2="270" y2="34" stroke="#005500" stroke-width="1"/>
-    <text x="284" y="16" font-family="'Courier New', monospace" font-size="10" fill="#808080">PUBLIC REPOS</text>
-    <text x="284" y="30" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#00FF66">{repos}</text>
-
-    <line x1="410" y1="4" x2="410" y2="34" stroke="#005500" stroke-width="1"/>
-    <text x="424" y="16" font-family="'Courier New', monospace" font-size="10" fill="#808080">KERNEL STATUS</text>
-    <text x="424" y="30" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#00FFFF">100% ONLINE</text>
-  </g>
-
-  <!-- Odometer Hit Counter (Authentic 90s Web Shrine Component) -->
-  <g transform="translate({W - 250}, 168)">
-    <rect x="0" y="0" width="226" height="46" fill="#000000" stroke="#808080" stroke-width="2"/>
-    <text x="113" y="14" text-anchor="middle" font-family="'MS Sans Serif', Tahoma, sans-serif" font-size="9" font-weight="bold" fill="#FFFF00" letter-spacing="1">
-      ★ HIT COUNTER ★
-    </text>
-    <!-- Odometer Digits Box -->
-    <g transform="translate(18, 20)">
-      <rect x="0" y="0" width="190" height="20" fill="#111111" stroke="#333333"/>
-      <!-- Individual digit cells with inset borders -->
-      <rect x="4" y="2" width="22" height="16" fill="#000000" stroke="#444444"/>
-      <text x="15" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#00FF00">0</text>
-      
-      <rect x="30" y="2" width="22" height="16" fill="#000000" stroke="#444444"/>
-      <text x="41" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#00FF00">0</text>
-      
-      <rect x="56" y="2" width="22" height="16" fill="#000000" stroke="#444444"/>
-      <text x="67" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#00FF00">4</text>
-      
-      <rect x="82" y="2" width="22" height="16" fill="#000000" stroke="#444444"/>
-      <text x="93" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#00FF00">8</text>
-      
-      <rect x="108" y="2" width="22" height="16" fill="#000000" stroke="#444444"/>
-      <text x="119" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#00FF00">1</text>
-      
-      <rect x="134" y="2" width="22" height="16" fill="#000000" stroke="#444444"/>
-      <text x="145" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#00FF00">9</text>
-      
-      <rect x="160" y="2" width="22" height="16" fill="#000000" stroke="#444444"/>
-      <text x="171" y="14" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#00FF00">2</text>
-    </g>
-  </g>
-
-  <!-- Blinking Terminal Prompt -->
-  <text x="22" y="234" font-family="'Courier New', Courier, monospace" font-size="12" fill="#00FF66">
-    C:\\SYSTEM&gt; AWAITING_INPUT<tspan class="cursor-blink" fill="#00FF66">_</tspan>
+  <!-- Arrogant / Sociopathic ADHD Manifesto Quote -->
+  <text x="28" y="107" class="mono" font-size="12" fill="#94a3b8">
+    &quot;I don't write software to collaborate. I write software because your architecture offended my central nervous system.&quot;
   </text>
 
   <!-- ============================================== -->
-  <!-- STATUS BAR (Bottom Inset Panels)              -->
+  <!-- TELEMETRY METRICS GRID (4 CARDS)               -->
   <!-- ============================================== -->
-  <!-- Panel 1: Ready -->
-  <g transform="translate(6, 254)">
-    <rect x="0" y="0" width="180" height="20" fill="#C0C0C0"/>
-    <line x1="0" y1="0" x2="180" y2="0" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="20" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="19" x2="180" y2="19" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="179" y1="0" x2="179" y2="20" stroke="#FFFFFF" stroke-width="1"/>
-    <circle cx="12" cy="10" r="3.5" fill="#00AA00"/>
-    <text x="22" y="14" font-family="'MS Sans Serif', Tahoma, sans-serif" font-size="10" fill="#000000">STATUS: ACTIVE / READY</text>
+  <!-- Card 1: Production Uptime -->
+  <g transform="translate(28, 126)">
+    <rect width="192" height="58" rx="6" fill="url(#hud-card-grad)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="22" class="mono" font-size="9.5" font-weight="600" fill="#64748b" letter-spacing="1">PROD UPTIME</text>
+    <text x="14" y="44" class="sans" font-size="19" font-weight="800" fill="#38bdf8">{age} YRS</text>
+    <text x="178" y="44" text-anchor="end" class="mono" font-size="10" fill="#0284c7">ACTIVE</text>
   </g>
 
-  <!-- Panel 2: Display specs -->
-  <g transform="translate(190, 254)">
-    <rect x="0" y="0" width="240" height="20" fill="#C0C0C0"/>
-    <line x1="0" y1="0" x2="240" y2="0" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="20" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="19" x2="240" y2="19" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="239" y1="0" x2="239" y2="20" stroke="#FFFFFF" stroke-width="1"/>
-    <text x="10" y="14" font-family="'MS Sans Serif', Tahoma, sans-serif" font-size="10" fill="#000000">800x600 16-BIT HIGH COLOR</text>
+  <!-- Card 2: Annual Commits -->
+  <g transform="translate(234, 126)">
+    <rect width="192" height="58" rx="6" fill="url(#hud-card-grad)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="22" class="mono" font-size="9.5" font-weight="600" fill="#64748b" letter-spacing="1">LIFETIME COMMITS</text>
+    <text x="14" y="44" class="sans" font-size="19" font-weight="800" fill="#10b981">{commits:,}+</text>
+    <text x="178" y="44" text-anchor="end" class="mono" font-size="10" fill="#059669">SYNCED</text>
   </g>
 
-  <!-- Panel 3: Architecture -->
-  <g transform="translate(434, 254)">
-    <rect x="0" y="0" width="250" height="20" fill="#C0C0C0"/>
-    <line x1="0" y1="0" x2="250" y2="0" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="20" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="19" x2="250" y2="19" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="249" y1="0" x2="249" y2="20" stroke="#FFFFFF" stroke-width="1"/>
-    <text x="10" y="14" font-family="'MS Sans Serif', Tahoma, sans-serif" font-size="10" fill="#000000">ZERO CLOUD LEAK / PRIVACY AIR-GAP</text>
+  <!-- Card 3: Public Repos -->
+  <g transform="translate(440, 126)">
+    <rect width="192" height="58" rx="6" fill="url(#hud-card-grad)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="22" class="mono" font-size="9.5" font-weight="600" fill="#64748b" letter-spacing="1">SHIPPED CODEBASES</text>
+    <text x="14" y="44" class="sans" font-size="19" font-weight="800" fill="#a855f7">{repos}</text>
+    <text x="178" y="44" text-anchor="end" class="mono" font-size="10" fill="#7c3aed">PUBLIC</text>
   </g>
 
-  <!-- Panel 4: Date -->
-  <g transform="translate(688, 254)">
-    <rect x="0" y="0" width="{W - 694}" height="20" fill="#C0C0C0"/>
-    <line x1="0" y1="0" x2="{W - 694}" y2="0" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="0" x2="0" y2="20" stroke="#808080" stroke-width="1"/>
-    <line x1="0" y1="19" x2="{W - 694}" y2="19" stroke="#FFFFFF" stroke-width="1"/>
-    <line x1="{W - 695}" y1="0" x2="{W - 695}" y2="20" stroke="#FFFFFF" stroke-width="1"/>
-    <text x="12" y="14" font-family="'MS Sans Serif', Tahoma, sans-serif" font-size="10" fill="#000000">{now}</text>
+  <!-- Card 4: Executive Directive -->
+  <g transform="translate(646, 126)">
+    <rect width="206" height="58" rx="6" fill="url(#hud-card-grad)" stroke="#1e293b" stroke-width="1"/>
+    <text x="14" y="22" class="mono" font-size="9.5" font-weight="600" fill="#64748b" letter-spacing="1">DOPAMINE ENGINE</text>
+    <text x="14" y="44" class="sans" font-size="18" font-weight="800" fill="#f43f5e">PURE SPITE</text>
+    <text x="192" y="44" text-anchor="end" class="mono" font-size="10" fill="#e11d48">100%</text>
   </g>
 
+  <!-- ============================================== -->
+  <!-- BOTTOM TERMINAL PROMPT                         -->
+  <!-- ============================================== -->
+  <line x1="20" y1="198" x2="{W - 20}" y2="198" stroke="#1e293b" stroke-width="1"/>
+
+  <text x="28" y="222" class="mono" font-size="11" fill="#475569">
+    root@kisalnelaka:~$ <tspan fill="#38bdf8">./execute_superiority.sh</tspan> <tspan fill="#64748b">--bypass-bloat --compile-native --no-human-error</tspan><tspan class="cursor-blink" fill="#38bdf8">_</tspan>
+  </text>
+
+  <text x="{W - 28}" y="222" text-anchor="end" class="mono" font-size="10" fill="#475569">
+    UPSTREAM_TARGET: ALL // {now}
+  </text>
 </svg>'''
     return svg
 
 def main():
-    print("Generating retro Windows 95 banner.svg...")
+    print("Generating lethal dark HUD banner.svg...")
     stats = fetch_stats()
     svg = generate_banner(stats)
     with open("banner.svg", "w", encoding="utf-8") as f:

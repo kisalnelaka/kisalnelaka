@@ -2,50 +2,50 @@
     {
         "title": "LibreSwift",
         "url": "https://github.com/kisalnelaka/LibreSwift",
-        "architecture": "Native iOS Swift toolchain on Linux & WSL. Decoupled from macOS and Xcode.",
-        "impact": "Full USB deployment, code-signing, and interactive LLDB debug sessions in VS Code",
+        "architecture": "Decoupled iOS Swift compilation from macOS. Runs natively on Linux & WSL because paying Apple a hardware tax to compile code offended me.",
+        "impact": "Direct USB device provisioning, rcodesign, and interactive LLDB debugging inside Linux VS Code.",
         "stack": "Swift, TypeScript, LLDB, Linux"
     },
     {
         "title": "a-Ha",
         "url": "https://github.com/kisalnelaka/a-Ha",
         "architecture": "Dopamine-neutral Android launcher for AuDHD brains. Text-only, zero icons, executive function scaffolding.",
-        "impact": "Real-time binaural DSP (40Hz/14Hz), notification air-gap, instant AI task breakdown. 4.3MB, 100% private",
-        "stack": "Kotlin, Android, DSP, Audio Synthesis"
+        "impact": "Real-time 40Hz/14Hz binaural DSP synthesis, notification quarantine, instant recursive AI task breakdown. 4.3MB, 100% private.",
+        "stack": "Kotlin, Android NDK, DSP, Audio Synthesis"
     },
     {
         "title": "circles",
         "url": "https://github.com/kisalnelaka/circles",
-        "architecture": "Private, DPI-camouflaged group video calling & encrypted messaging engineered to bypass strict firewalls.",
-        "impact": "Survives extreme packet loss, encrypted transport, zero-leak identity protocol",
-        "stack": "Flutter, Dart, Supabase, Docker, PostgreSQL"
-    },
-    {
-        "title": "Imladris",
-        "url": "https://github.com/kisalnelaka/Imladris",
-        "architecture": "Offline-first Android spatial Mind Palace library app inspired by Rivendell.",
-        "impact": "Glassmorphic gateways, neural knowledge graph, intelligent memory recall, distraction-free reader",
-        "stack": "Kotlin, Android, SQLite, Knowledge Graph"
+        "architecture": "DPI-camouflaged, end-to-end encrypted group video & messaging engineered to defeat state-level Deep Packet Inspection.",
+        "impact": "Zero-leak identity protocol that survives aggressive packet drops, hostile networks, and censorship.",
+        "stack": "Flutter, Dart, WebRTC, Docker, PostgreSQL"
     },
     {
         "title": "aether",
         "url": "https://github.com/kisalnelaka/aether",
-        "architecture": "Zero-dependency high-throughput PHP 8.3 micro-framework designed for persistent runtimes.",
-        "impact": "Zero vendor bloat, sub-millisecond execution overhead, strict POSIX request lifecycle",
+        "architecture": "Zero-dependency PHP 8.3 persistent micro-framework. Vendor directories are a formal confession of cognitive failure.",
+        "impact": "Sub-millisecond execution overhead via OPcache preloading and strict POSIX request lifecycles.",
         "stack": "PHP 8.3, OPcache, POSIX, Micro-Framework"
+    },
+    {
+        "title": "Imladris",
+        "url": "https://github.com/kisalnelaka/Imladris",
+        "architecture": "Offline-first Android spatial Mind Palace engine. Biological working memory is volatile; external cognitive graph storage is permanent.",
+        "impact": "Local SQLite vector graph, neural knowledge indexing, distraction-free spatial reading sanctuary.",
+        "stack": "Kotlin, Android, SQLite, Knowledge Graph"
     },
     {
         "title": "thenet",
         "url": "https://github.com/kisalnelaka/thenet",
-        "architecture": "Decentralized peer-to-peer mesh network dashboard for local Wi-Fi orchestration.",
-        "impact": "Zero cloud dependency, decentralized local sync, peer-to-peer file & media streaming",
+        "architecture": "Decentralized P2P mesh network for local Wi-Fi orchestration. Cloud dependency is architectural weakness.",
+        "impact": "Decentralized local discovery, real-time WebSockets synchronization, peer-to-peer data transport.",
         "stack": "React, Node.js, WebSockets, P2P Mesh"
     },
     {
         "title": "Adaptive-Block-Sort",
         "url": "https://github.com/kisalnelaka/Adaptive-Block-Sort",
-        "architecture": "High-performance, cache-efficient sorting algorithm combining block partitioning & adaptive in-place merging.",
-        "impact": "Outperforms QuickSort & TimSort on partially sorted datasets; ideal for memory-constrained systems",
+        "architecture": "High-performance cache-conscious sorting algorithm combining block partitioning & adaptive in-place merging.",
+        "impact": "Consistently outperforms QuickSort & TimSort on partially sorted memory arrays. Cache lines don't care about feelings.",
         "stack": "Python, Cache Optimization, Algorithms"
     }
 ]

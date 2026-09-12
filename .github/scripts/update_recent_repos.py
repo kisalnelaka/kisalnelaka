@@ -4,12 +4,15 @@ import os
 import re
 
 def main():
-    # Fetch 20 to ensure we get 5 even after filtering
     url = "https://api.github.com/users/kisalnelaka/repos?sort=pushed&per_page=20"
-    req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+    token = os.getenv("GITHUB_TOKEN")
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    if token:
+        headers['Authorization'] = f"Bearer {token}"
+    req = urllib.request.Request(url, headers=headers)
     
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             data = json.loads(response.read().decode())
     except Exception as e:
         print(f"Error fetching repos: {e}")
@@ -31,7 +34,7 @@ def main():
         if not description:
             description = 'Production repository.'
             
-        markdown_lines.append(f"- 📄 **[{name}]({url})** - {description}")
+        markdown_lines.append(f"- ⚡ **[{name}]({url})** — {description}")
         count += 1
         
         # Only show the top 5

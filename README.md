@@ -75,11 +75,11 @@ Data & Persistence    = PostgreSQL (RLS, Zero-Leak Partitioning), Redis (In-Memo
 
 #### ⚡ Recent Codebases
 <!-- RECENT-REPOS:START -->
+- ⚡ **[potatoFace](https://github.com/kisalnelaka/potatoFace)** — Ultra-lightweight, Apple-tier biometric facial authentication for Linux/Wayland. Zero neural bloat, 14MB RAM, Haar+LBPH integer math, and native layer-shell pill UI.
 - ⚡ **[Bento](https://github.com/kisalnelaka/Bento)** — marie kendo for digital
 - ⚡ **[live-tab-stasher](https://github.com/kisalnelaka/live-tab-stasher)** — High-performance Chrome Manifest V3 extension that stashes tab groups into local storage and instantly terminates tabs to reclaim browser memory. Features live search, memory estimation metrics, undo buffers, and zero external runtime dependencies
 - ⚡ **[loghorizon.online](https://github.com/kisalnelaka/loghorizon.online)** — main Website for loghorizon.online
 - ⚡ **[a-Ha](https://github.com/kisalnelaka/a-Ha)** — Dopamine-neutral Android launcher for AuDHD brains. Text-only, zero icons, executive function scaffolding, real-time binaural DSP (40Hz/14Hz), notification air-gap, and instant AI task breakdown. 4.3MB, 100% private.
-- ⚡ **[cosmic-compass](https://github.com/kisalnelaka/cosmic-compass)** — Handcrafted multi-cultural astrological field guide and Japanese Oha Asa daily horoscope companion built in Flutter.
 <!-- RECENT-REPOS:END -->
 
 ---

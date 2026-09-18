@@ -7,9 +7,16 @@
         "stack": "Swift, TypeScript, LLDB, Linux"
     },
     {
+        "title": "potatoFace",
+        "url": "https://github.com/kisalnelaka/potatoFace",
+        "architecture": "Ultra-lightweight biometric facial authentication engine for Linux and Wayland desktop environments.",
+        "impact": "Zero neural bloat operating at 14MB RAM overhead using Haar+LBPH integer mathematics and native layer-shell UI.",
+        "stack": "Python, QML, Wayland, Linux"
+    },
+    {
         "title": "a-Ha",
         "url": "https://github.com/kisalnelaka/a-Ha",
-        "architecture": "Dopamine-neutral Android launcher designed for high-focus workflows. Text-only interface with zero app icons and executive function scaffolding.",
+        "architecture": "Dopamine-neutral Android launcher designed for high-focus workflows. Text-only interface with executive function scaffolding.",
         "impact": "Real-time binaural DSP synthesis (40Hz/14Hz), notification containment, and recursive task breakdown. Lightweight (4.3MB) and fully offline.",
         "stack": "Kotlin, Android NDK, DSP, Audio Synthesis"
     },
@@ -28,6 +35,13 @@
         "stack": "PHP 8.3, OPcache, POSIX, Micro-Framework"
     },
     {
+        "title": "Adaptive-Block-Sort",
+        "url": "https://github.com/kisalnelaka/Adaptive-Block-Sort",
+        "architecture": "High-performance cache-conscious sorting algorithm combining block partitioning with adaptive in-place merging.",
+        "impact": "Optimized memory locality outperforming conventional QuickSort and TimSort implementations on partially sorted arrays.",
+        "stack": "Python, Cache Optimization, Algorithms"
+    },
+    {
         "title": "Imladris",
         "url": "https://github.com/kisalnelaka/Imladris",
         "architecture": "Offline-first Android spatial knowledge engine.",
@@ -35,17 +49,10 @@
         "stack": "Kotlin, Android, SQLite, Knowledge Graph"
     },
     {
-        "title": "thenet",
-        "url": "https://github.com/kisalnelaka/thenet",
-        "architecture": "Decentralized P2P mesh network for local network orchestration.",
-        "impact": "Decentralized local peer discovery, real-time WebSockets synchronization, and peer-to-peer data transport.",
-        "stack": "React, Node.js, WebSockets, P2P Mesh"
-    },
-    {
-        "title": "Adaptive-Block-Sort",
-        "url": "https://github.com/kisalnelaka/Adaptive-Block-Sort",
-        "architecture": "High-performance cache-conscious sorting algorithm combining block partitioning with adaptive in-place merging.",
-        "impact": "Optimized memory locality outperforming conventional QuickSort and TimSort implementations on partially sorted arrays.",
-        "stack": "Python, Cache Optimization, Algorithms"
+        "title": "intraflow",
+        "url": "https://github.com/kisalnelaka/intraflow",
+        "architecture": "Unified multi-tenant operations, automation, and security infrastructure platform for MSPs/MSSPs.",
+        "impact": "Automated system orchestration, real-time audit controls, and granular role-based tenant isolation.",
+        "stack": "PHP, Laravel, Filament, Docker"
     }
 ]

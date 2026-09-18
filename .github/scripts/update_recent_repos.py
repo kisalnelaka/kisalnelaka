@@ -32,9 +32,9 @@ def main():
         url = repo.get('html_url')
         description = repo.get('description')
         if not description:
-            description = 'Production repository.'
+            description = 'Repository codebase.'
             
-        markdown_lines.append(f"- ⚡ **[{name}]({url})** — {description}")
+        markdown_lines.append(f"- **[{name}]({url})** — {description}")
         count += 1
         
         # Only show the top 5
@@ -56,7 +56,6 @@ def main():
     
     pattern = re.compile(f"({start_marker}).*?({end_marker})", re.DOTALL)
     
-    # \1 matches the start marker, \2 matches the end marker
     new_readme = pattern.sub(rf"\1\n{repo_list}\n\2", readme_content)
     
     with open(readme_path, "w", encoding="utf-8") as f:

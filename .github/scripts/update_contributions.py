@@ -40,13 +40,11 @@ def fetch_contributions(limit=6):
         pr_title = item.get("title", "")
         pr_url = item.get("html_url", "")
         state = item.get("state", "open")
-        # Check if merged
         pull_request = item.get("pull_request", {})
         merged_at = pull_request.get("merged_at")
         
         status_tag = "merged" if merged_at else state
         
-        # repo url is like https://api.github.com/repos/owner/repo
         repo_api_url = item.get("repository_url", "")
         repo_full_name = "/".join(repo_api_url.split("/")[-2:]) if repo_api_url else ""
         repo_html_url = f"https://github.com/{repo_full_name}" if repo_full_name else pr_url
@@ -73,15 +71,14 @@ def update_readme(contributions):
         readme_content = f.read()
 
     if not contributions:
-        # Fallback if no external PRs found or rate limited
         contributions_md = (
-            "- *Actively contributing to open source ecosystems across Laravel, PHP core tooling, and decentralized networks.*"
+            "- Active contributor to open-source systems, developer tooling, and distributed networks."
         )
     else:
         lines = []
         for c in contributions:
             badge = "merged" if c["status"] == "merged" else c["status"]
-            lines.append(f"- 🔌 **[{c['repo_name']}]({c['repo_url']})** — [{c['pr_title']}]({c['pr_url']}) `[{badge}]`")
+            lines.append(f"- **[{c['repo_name']}]({c['repo_url']})** — [{c['pr_title']}]({c['pr_url']}) (`{badge}`)")
         contributions_md = "\n".join(lines)
 
     pattern = re.compile(rf"({re.escape(START_MARKER)}).*?({re.escape(END_MARKER)})", re.DOTALL)

@@ -12,14 +12,14 @@ def update_readme():
         projects = json.load(f)
 
     rows = [
-        "| System | Strategic Intent &amp; Engineering Rationale | Stack |",
+        "| Project | Description & Architecture | Stack |",
         "| :--- | :--- | :--- |"
     ]
     for p in projects:
         title = p["title"]
         stack_badges = " ".join([f"`{s.strip()}`" for s in p["stack"].split(",")])
         intent = f"{p['architecture']} {p['impact']}"
-        rows.append(f"| ⚡ **[{title}]({p['url']})** | {intent} | {stack_badges} |")
+        rows.append(f"| **[{title}]({p['url']})** | {intent} | {stack_badges} |")
 
     table_markdown = "\n" + "\n".join(rows) + "\n\n"
 

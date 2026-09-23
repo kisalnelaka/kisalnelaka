@@ -62,8 +62,8 @@ Systems architect specializing in low-level toolchains, persistent application r
 ### Recent Repositories
 
 <!-- RECENT-REPOS:START -->
-- **[live-tab-stasher](https://github.com/kisalnelaka/live-tab-stasher)** — High-performance Chrome Manifest V3 extension that stashes tab groups into local storage and instantly terminates tabs to reclaim browser memory. Features live search, memory estimation metrics, undo buffers, and zero external runtime dependencies
 - **[Imladris](https://github.com/kisalnelaka/Imladris)** — An ethereal, offline-first Android library app. Navigate your knowledge through a spatial Mind Palace -glassmorphic gateways, a neural knowledge graph, intelligent memory recall, and a distraction-free reader. Inspired by Rivendell.
+- **[live-tab-stasher](https://github.com/kisalnelaka/live-tab-stasher)** — High-performance Chrome Manifest V3 extension that stashes tab groups into local storage and instantly terminates tabs to reclaim browser memory. Features live search, memory estimation metrics, undo buffers, and zero external runtime dependencies
 - **[loghorizon.online](https://github.com/kisalnelaka/loghorizon.online)** — main Website for loghorizon.online
 - **[zgo](https://github.com/kisalnelaka/zgo)** — zeego demo
 - **[potatoFace](https://github.com/kisalnelaka/potatoFace)** — Ultra-lightweight, Apple-tier biometric facial authentication for Linux/Wayland. Zero neural bloat, 14MB RAM, Haar+LBPH integer math, and native layer-shell pill UI.

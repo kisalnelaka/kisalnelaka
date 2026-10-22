@@ -56,7 +56,7 @@ Systems architect specializing in low-level toolchains, persistent application r
 ### Upstream Contributions
 
 <!-- CONTRIBUTIONS:START -->
-- **[pystardust/ani-cli](https://github.com/pystardust/ani-cli)** — [feat: add interactive home dashboard, fzf preview engine, and thumbnail support](https://github.com/pystardust/ani-cli/pull/1874) (`closed`)
+- Active contributor to open-source systems, developer tooling, and distributed networks.
 <!-- CONTRIBUTIONS:END -->
 
 ### Recent Repositories

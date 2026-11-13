@@ -43,10 +43,10 @@ Systems architect specializing in low-level toolchains, persistent application r
 ## Publications & Articles
 
 <!-- BLOG-POST-LIST:START -->
+- **[Meet potatoFace: The Ultra-Lightweight Face ID Born from “Hardware Poverty”](https://medium.com/@kisalnelaka6/meet-potatoface-the-ultra-lightweight-face-id-born-from-hardware-poverty-0cf63e0f32f4)**
 - **[Bypassing the “Mac Tax”: How I Built an Engine to Develop, Sign, and Deploy iOS Apps on Linux](https://medium.com/@kisalnelaka6/bypassing-the-mac-tax-how-i-built-an-engine-to-develop-sign-and-deploy-ios-apps-on-linux-d23402944ce7)**
 - **[AETHER: Building a PHP 8.3 Framework Without the Bloat](https://medium.com/@kisalnelaka6/aether-building-a-php-8-3-framework-without-the-bloat-f0c1a69780ed)**
 - **[Building InfraFlow: A Production-Grade Multi-Tenant MSP Platform with Laravel 11 and Filament v3](https://medium.com/@kisalnelaka6/building-infraflow-a-production-grade-multi-tenant-msp-platform-with-laravel-11-and-filament-v3-b0070a377124)**
-- **[Bunny: Revolutionizing Web Development with Laravel](https://medium.com/@kisalnelaka6/bunny-revolutionizing-web-development-with-laravel-12c1f26d14fc)**
 <!-- BLOG-POST-LIST:END -->
 
 ---
@@ -62,9 +62,9 @@ Systems architect specializing in low-level toolchains, persistent application r
 ### Recent Repositories
 
 <!-- RECENT-REPOS:START -->
+- **[foodstall_erp](https://github.com/kisalnelaka/foodstall_erp)** — foodstall
 - **[lellama](https://github.com/kisalnelaka/lellama)** — Repository codebase.
 - **[Imladris](https://github.com/kisalnelaka/Imladris)** — An ethereal, offline-first Android library app. Navigate your knowledge through a spatial Mind Palace -glassmorphic gateways, a neural knowledge graph, intelligent memory recall, and a distraction-free reader. Inspired by Rivendell.
 - **[live-tab-stasher](https://github.com/kisalnelaka/live-tab-stasher)** — High-performance Chrome Manifest V3 extension that stashes tab groups into local storage and instantly terminates tabs to reclaim browser memory. Features live search, memory estimation metrics, undo buffers, and zero external runtime dependencies
 - **[loghorizon.online](https://github.com/kisalnelaka/loghorizon.online)** — main Website for loghorizon.online
-- **[zgo](https://github.com/kisalnelaka/zgo)** — zeego demo
 <!-- RECENT-REPOS:END -->
